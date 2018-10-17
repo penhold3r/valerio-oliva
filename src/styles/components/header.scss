@@ -31,20 +31,51 @@ header.header {
 
          .nav-list {
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
 
             .nav-item {
-               padding: 0;
                display: inline-block;
+               padding: 0;
 
                .nav-link {
                   color: $main-color;
                   font-family: 'Cairo';
+                  letter-spacing: 0.05em;
                   padding: 3px 6px;
+                  position: relative;
                   text-decoration: none;
                   text-transform: uppercase;
-                  letter-spacing: 0.05em;
+                  transition: all 0.3s;
+
+                  &:before {
+                     background: $light;
+                     height: 1px;
+                     position: absolute;
+                     width: 100%;
+                     bottom: 0;
+                     content: '';
+                     left: 0;
+                  }
+
+                  &:after {
+                     background: $accent-color;
+                     height: 1px;
+                     position: absolute;
+                     width: 0%;
+                     bottom: 0;
+                     content: '';
+                     left: 0;
+                     transition: all 0.3s;
+                  }
+
+                  &:hover {
+                     color: $accent-color;
+
+                     &:after {
+                        width: 100%;
+                     }
+                  }
                }
             }
          }

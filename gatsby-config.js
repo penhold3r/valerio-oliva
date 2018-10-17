@@ -1,6 +1,7 @@
 module.exports = {
    siteMetadata: {
-      title: 'Valerio Oliva'
+      title: 'Valerio Oliva',
+      siteUrl: `https://www.valeriooliva.com`
    },
    plugins: [
       {
