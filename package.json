@@ -1,0 +1,31 @@
+{
+   "name": "valerio-oliva",
+   "description": "Valerio Oliva",
+   "version": "1.0.0",
+   "author": "penHolder Designerd <penhold3r@gmail.com>",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/penhold3r/valerio-oliva"
+   },
+   "license": "MIT",
+   "scripts": {
+      "build": "gatsby build",
+      "develop": "gatsby develop",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "dependencies": {
+      "gatsby": "^2.0.19",
+      "gatsby-plugin-offline": "^2.0.5",
+      "gatsby-plugin-react-helmet": "^3.0.0",
+      "react": "^16.5.1",
+      "react-dom": "^16.5.1",
+      "react-helmet": "^5.2.0"
+   },
+   "devDependencies": {
+      "gatsby-plugin-manifest": "^2.0.5",
+      "gatsby-plugin-sass": "^2.0.1",
+      "gatsby-plugin-sitemap": "^2.0.1",
+      "node-sass": "^4.9.4",
+      "sanitize.css": "^8.0.0"
+   }
+}

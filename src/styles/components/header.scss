@@ -1,0 +1,53 @@
+header.header {
+   background: #fff;
+   height: 100px;
+
+   .inner-header {
+      display: flex;
+      height: 100%;
+      margin: 0 auto;
+      max-width: 1300px;
+
+      .logo {
+         height: 100%;
+         margin: 0;
+         padding: 15px;
+         width: 250px;
+
+         a {
+            display: block;
+            text-decoration: none;
+
+            img {
+               height: 100%;
+               object-fit: contain;
+               width: 100%;
+            }
+         }
+      }
+
+      .main-nav {
+         margin: auto 0 auto auto;
+
+         .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .nav-item {
+               padding: 0;
+               display: inline-block;
+
+               .nav-link {
+                  color: $main-color;
+                  font-family: 'Cairo';
+                  padding: 3px 6px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  letter-spacing: 0.05em;
+               }
+            }
+         }
+      }
+   }
+}
