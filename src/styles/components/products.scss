@@ -1,32 +1,54 @@
 section.landing {
    display: grid;
-   grid-gap: 1px;
    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
    height: 75vh;
    min-width: 400px;
 
    .products-options {
-      background: lighten($main-color, 50);
+      background: rgba(#000, 0.8);
 
       a {
          display: flex;
          height: 100%;
+         overflow: hidden;
          position: relative;
          text-decoration: none;
 
          img {
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            opacity: 0.5;
             position: absolute;
+            top: 0;
+            transition: all 0.3s;
+            width: 100%;
             z-index: 0;
          }
 
          h2 {
             color: #fff;
-            font: 3em 'Cairo';
+            font: 3em "Cairo";
             letter-spacing: 0.05em;
             margin: auto;
             position: relative;
             text-transform: uppercase;
+            transition: all 0.3s;
             z-index: 1;
+         }
+
+         &:hover {
+            img {
+               height: 110%;
+               left: -5%;
+               top: -5%;
+               width: 110%;
+            }
+
+            h2 {
+               color: $accent-color;
+               text-shadow: $box-shadow;
+            }
          }
       }
    }

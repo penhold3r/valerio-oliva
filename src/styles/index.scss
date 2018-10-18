@@ -10,9 +10,15 @@
 body {
    background: $light;
    color: #666;
+   font-size: 18px;
    font-family: 'Open Sans', sans-serif;
    font-weight: lighter;
    font-weight: 300;
+
+   p {
+      line-height: 1.25;
+      margin: 0 0 1em;
+   }
 
    strong,
    b {
@@ -32,3 +38,5 @@ body {
 
 @import './components/header';
 @import './components/products';
+@import './components/about';
+@import './components/vigas';

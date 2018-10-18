@@ -1,12 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
+import image from '../images/empresa.jpg'
 
 const AboutPage = () => (
    <Layout>
       <section className="about">
-         <h1 className="main-title">Nuestra Empresa</h1>
+         <header className="about-header">
+            <h1 className="main-title">Nuestra Empresa</h1>
+            <img src={image} alt="[Empresa]" className="about-image" />
+         </header>
          <div className="about-text">
             <p>
                <strong>VALERIO OLIVA S.A.C.I.A.,</strong> comenzó su trayectoria
