@@ -1,4 +1,52 @@
 section.laminated {
    max-width: 1300px;
    margin: 0 auto;
+
+   .specs {
+      .spec-block {
+         .specs-table {
+            width: 600px;
+
+            tr {
+               th {
+                  border: 1px solid #fff;
+                  font-size: 0.8em;
+                  font-weight: 300;
+                  padding: 6px 9px;
+                  text-transform: uppercase;
+               }
+            }
+
+            thead {
+               position: sticky;
+               top: 0;
+
+               tr {
+                  color: #fff;
+
+                  &:nth-child(even) {
+                     background: lighten($accent-color, 15);
+                  }
+                  &:nth-child(odd) {
+                     background: lighten($accent-color, 10);
+                  }
+                  &:first-child {
+                     background: $accent-color;
+                  }
+               }
+            }
+
+            tbody {
+               tr {
+                  &:nth-child(even) {
+                     background: lighten($main-color, 55);
+                  }
+                  &:nth-child(odd) {
+                     background: lighten($main-color, 50);
+                  }
+               }
+            }
+         }
+      }
+   }
 }
