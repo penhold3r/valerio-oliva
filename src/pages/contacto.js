@@ -36,7 +36,12 @@ const ContactPage = () => (
                <label htmlFor="msg">Mensaje</label>
                <textarea className="field textarea" name="msg" id="msg" />
             </div>
-            <input className="submit" type="submit" value="Enviar" />
+            <input
+               className="submit"
+               type="submit"
+               value="Enviar"
+               onClick={e => e.preventDefault()}
+            />
          </form>
          <div className="gmap">
             <GoogleMapReact

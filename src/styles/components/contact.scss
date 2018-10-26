@@ -97,6 +97,10 @@ section.contact {
             background: rgba($accent-color, 0.2);
             color: $accent-color;
          }
+
+         &:focus {
+            outline: none;
+         }
       }
    }
 

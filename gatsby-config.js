@@ -4,6 +4,15 @@ module.exports = {
       siteUrl: `https://www.valeriooliva.com`
    },
    plugins: [
+      `gatsby-transformer-sharp`,
+      `gatsby-plugin-sharp`,
+      {
+         resolve: `gatsby-source-filesystem`,
+         options: {
+            name: `gallery`, // you can use multiple source-filesystem instances
+            path: `${__dirname}/src/images/gallery/`
+         }
+      },
       {
          resolve: `gatsby-plugin-sass`,
          options: {
