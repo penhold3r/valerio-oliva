@@ -24,9 +24,7 @@
       "google-map-react": "^1.0.9",
       "react": "^16.5.1",
       "react-dom": "^16.5.1",
-      "react-helmet": "^5.2.0"
-   },
-   "devDependencies": {
+      "react-helmet": "^5.2.0",
       "gatsby-plugin-manifest": "^2.0.5",
       "gatsby-plugin-sass": "^2.0.1",
       "gatsby-plugin-sitemap": "^2.0.1",
