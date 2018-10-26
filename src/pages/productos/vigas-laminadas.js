@@ -1,6 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 //import { Link } from "gatsby"
 
 import Layout from '../../components/Layout'
@@ -10,11 +8,20 @@ import estructuras from '../../images/tipos-de-estructura.svg'
 import cortes from '../../images/tipos-de-corte.svg'
 import specs from '../../products/vigas'
 
-const LaminatedPage = ({ data }) => {
+const LaminatedPage = () => {
    const specsTable = specs.map((row, trk) => {
       const th = Object.values(row).map((val, thk) => <th key={thk}>{val}</th>)
       return <tr key={trk}>{th}</tr>
    })
+
+   const galleryList = require.context(
+      '../../images/gallery',
+      false,
+      /.*\.jpg$/
+   )
+   //const gal = galleryList.keys().forEach(key => galleryList(key))
+
+   //console.log(req.keys())
 
    return (
       <Layout>
@@ -109,19 +116,12 @@ const LaminatedPage = ({ data }) => {
                      trayectoria de nuestra empresa.
                   </p>
                   <div className="gallery-grid">
-                     {data.allFile.edges.map((img, key) => {
-                        console.log(img.node.childImageSharp.fluid)
-                        const { src } = img.node.childImageSharp.fluid
+                     {galleryList.keys().map((img, key) => {
+                        //console.log(img)
+                        const src = galleryList(img)
                         return (
-                           <div className="gallery-item">
-                              <Img
-                                 key={key}
-                                 resolutions={{
-                                    ...img.node.childImageSharp.fluid,
-                                    height: 300,
-                                    width: 400
-                                 }}
-                              />
+                           <div key={key} className="gallery-item">
+                              <img className="thumb-image" src={src} alt="" />
                               <div className="modal-image">
                                  <img src={src} alt="" />
                               </div>
@@ -137,19 +137,3 @@ const LaminatedPage = ({ data }) => {
 }
 
 export default LaminatedPage
-
-export const query = graphql`
-   query ImagesQuery {
-      allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
-         edges {
-            node {
-               childImageSharp {
-                  fluid(maxWidth: 900) {
-                     ...GatsbyImageSharpFluid
-                  }
-               }
-            }
-         }
-      }
-   }
-`

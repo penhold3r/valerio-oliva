@@ -134,6 +134,7 @@ section.laminated {
             .gallery-item {
                cursor: pointer;
                filter: grayscale(0.5);
+               height: 300px;
                opacity: 0.75;
                transition: all 0.3s;
 
@@ -142,8 +143,10 @@ section.laminated {
                   opacity: 1;
                }
 
-               .gatsby-image-wrapper {
-                  width: 100% !important;
+               .thumb-image {
+                  height: 100%;
+                  object-fit: cover;
+                  width: 100%;
                }
 
                .modal-image {
