@@ -52,11 +52,11 @@ const LaminatedPage = () => {
                   <table className="specs-table">
                      <thead>
                         <tr>
-                           <th colspan="4">Dimensión</th>
+                           <th colSpan="4">Dimensión</th>
                         </tr>
                         <tr>
-                           <th colspan="2">Nominal</th>
-                           <th colspan="2">Neto</th>
+                           <th colSpan="2">Nominal</th>
+                           <th colSpan="2">Neto</th>
                         </tr>
                         <tr>
                            <th>Pul</th>
