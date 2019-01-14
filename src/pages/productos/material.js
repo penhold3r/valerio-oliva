@@ -19,7 +19,8 @@ const Material = ({ pageContext }) => {
 					</div>
 				</header>
 				<div className="material-content">
-					{content.length > 0 &&
+					{content &&
+						content.length > 0 &&
 						content.map(
 							(
 								{ item, thickness, measure, link, desc, subItems },
