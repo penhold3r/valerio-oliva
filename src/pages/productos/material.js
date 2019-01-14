@@ -4,7 +4,8 @@ import Layout from '../../components/Layout'
 
 const Material = ({ pageContext }) => {
 	const { slug, name, image, content } = pageContext
-	const cardClass = content.length > 2 ? 'material-card' : 'material-card c50'
+	const cardClass =
+		content && content.length > 2 ? 'material-card' : 'material-card c50'
 
 	console.log(pageContext)
 
