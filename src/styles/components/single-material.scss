@@ -1,0 +1,136 @@
+.material-section {
+	.material-header {
+		margin: 0 auto;
+		max-width: 1300px;
+
+		.main-title {
+			background: $accent-color;
+			color: #fff;
+			margin: 0;
+			padding: 15px;
+			text-align: center;
+		}
+
+		.material-hero {
+			background: #ddd;
+			padding-top: 3px;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.material-content {
+		// display: grid;
+		// grid-gap: 15px;
+		// grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 30px auto;
+		max-width: 1330px;
+		padding: 0 15px;
+
+		dl.material-card {
+			background: #fff;
+			border-radius: 2px;
+			border-top: 1px solid $accent-color;
+			display: flex;
+			margin: 6px;
+			padding: 15px;
+			width: calc(25% - 12px);
+			min-width: 300px;
+			min-height: 275px;
+			position: relative;
+
+			&:hover {
+				.inner-card {
+					.card-title {
+						&:not(.empty-content) {
+							opacity: 0;
+						}
+					}
+				}
+			}
+
+			.inner-card {
+				margin: auto;
+				width: 100%;
+
+				dt.card-title {
+					align-items: center;
+					background: #fff;
+					color: #6c5d35;
+					display: flex;
+					font-weight: bold;
+					height: 100%;
+					justify-content: center;
+					margin: 0 0 15px;
+					position: absolute;
+					pointer-events: none;
+					text-align: center;
+					text-transform: uppercase;
+					top: 0;
+					left: 0;
+					width: 100%;
+					//cursor: pointer;
+					transition: all 0.3s;
+					z-index: 2;
+				}
+
+				dd {
+					color: $accent-color;
+					font-size: 16px;
+					margin: 0;
+					position: relative;
+					padding: 0;
+					text-align: center;
+					z-index: 1;
+
+					p {
+						a.ext-link {
+							color: $main-color;
+
+							&:hover {
+								opacity: 0.7;
+							}
+						}
+					}
+
+					dl.sub-item {
+						margin: 0;
+
+						dt {
+							color: $accent-color;
+							font-weight: bold;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+
+			&.c50 {
+				width: calc(50% - 12px);
+			}
+
+			&.mdf {
+				dd {
+					dl.sub-item {
+						dt {
+							cursor: pointer;
+
+							&:hover {
+								opacity: 0.7;
+							}
+						}
+						dd {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,84 +1,181 @@
 header.header {
-   background: #fff;
-   height: 100px;
+	background: #fff;
+	box-shadow: 0 3px 5px rgba(#000, 0.25);
+	height: 100px;
+	position: sticky;
+	top: 0;
+	z-index: 99;
 
-   .inner-header {
-      display: flex;
-      height: 100%;
-      margin: 0 auto;
-      max-width: 1300px;
+	@include tablet {
+		height: 85px;
+	}
 
-      .logo {
-         height: 100%;
-         margin: 0;
-         padding: 15px;
-         width: 250px;
+	.inner-header {
+		display: flex;
+		height: 100%;
+		margin: 0 auto;
+		max-width: 1330px;
+		padding: 0 15px;
 
-         a {
-            display: block;
-            text-decoration: none;
+		.logo {
+			display: flex;
+			margin: 0;
+			padding: 0;
+			width: 250px;
 
-            img {
-               height: 100%;
-               object-fit: contain;
-               width: 100%;
-            }
-         }
-      }
+			@include tablet {
+				width: 200px;
+			}
 
-      .main-nav {
-         margin: auto 0 auto auto;
+			a {
+				display: block;
+				padding: 12px 0;
+				text-decoration: none;
 
-         .nav-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+				img {
+					height: 100%;
+					object-fit: contain;
+					object-position: 0 50%;
+					width: 100%;
+				}
+			}
+		}
 
-            .nav-item {
-               display: inline-block;
-               padding: 0;
+		@include tablet {
+			.hamb-menu {
+				height: 35px;
+				margin: auto 15px auto auto;
+				position: relative;
+				width: 35px;
 
-               .nav-link {
-                  color: $main-color;
-                  font-family: 'Cairo';
-                  letter-spacing: 0.05em;
-                  padding: 3px 6px;
-                  position: relative;
-                  text-decoration: none;
-                  text-transform: uppercase;
-                  transition: all 0.3s;
+				.hamb-bar {
+					background: $accent-color;
+					height: 3px;
+					position: absolute;
+					right: 0;
+					transition: all 0.3s;
 
-                  &:before {
-                     background: $light;
-                     height: 1px;
-                     position: absolute;
-                     width: 100%;
-                     bottom: 0;
-                     content: '';
-                     left: 0;
-                  }
+					&:first-child {
+						top: 12px;
+						width: 100%;
+					}
 
-                  &:after {
-                     background: $accent-color;
-                     height: 1px;
-                     position: absolute;
-                     width: 0%;
-                     bottom: 0;
-                     content: '';
-                     left: 0;
-                     transition: all 0.3s;
-                  }
+					&:last-child {
+						bottom: 9px;
+						width: 80%;
+					}
+				}
 
-                  &:hover {
-                     color: $accent-color;
+				&.crossed {
+					.hamb-bar {
+						right: 10%;
 
-                     &:after {
-                        width: 100%;
-                     }
-                  }
-               }
-            }
-         }
-      }
-   }
+						&:first-child {
+							top: 18px;
+							width: 80%;
+							transform: rotate(-40deg);
+						}
+
+						&:last-child {
+							bottom: 14px;
+							transform: rotate(40deg);
+						}
+					}
+				}
+			}
+		}
+
+		.main-nav {
+			margin: auto 0 auto auto;
+
+			@include tablet {
+				background: #fff;
+				box-shadow: 0 0px 0px rgba(#000, 0);
+				height: 1px;
+				left: 0;
+				overflow: hidden;
+				padding: 0 60px;
+				position: fixed;
+				right: 0;
+				top: 83px;
+				transition: all 0.3s;
+				z-index: 99;
+
+				&.open {
+					height: 300px;
+					box-shadow: 0 100px 90px rgba(#000, 0.75);
+					padding: 60px;
+				}
+			}
+
+			.nav-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				@include tablet {
+					.nav-list {
+						display: flex;
+						flex-direction: column;
+					}
+				}
+
+				.nav-item {
+					display: inline-block;
+					padding: 0;
+
+					@include tablet {
+						display: block;
+						margin-bottom: 15px;
+					}
+
+					.nav-link {
+						color: $main-color;
+						font-family: 'Cairo';
+						letter-spacing: 0.05em;
+						padding: 3px 6px;
+						position: relative;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.3s;
+
+						@include tablet {
+							display: block;
+							padding: 12px 9px;
+							text-align: right;
+						}
+
+						&:before {
+							background: $light;
+							height: 1px;
+							position: absolute;
+							width: 100%;
+							bottom: 0;
+							content: '';
+							left: 0;
+						}
+
+						&:after {
+							background: $accent-color;
+							height: 1px;
+							position: absolute;
+							width: 0%;
+							bottom: 0;
+							content: '';
+							left: 0;
+							transition: all 0.3s;
+						}
+
+						&:hover {
+							color: $accent-color;
+
+							&:after {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,174 @@
+section.contact {
+	margin: 30px auto;
+	max-width: 1330px;
+	padding: 0 15px;
+
+	.contact-header {
+		display: flex;
+
+		@include tablet {
+			grid-column: 1 / -1;
+		}
+
+		.main-title {
+			color: $accent-color;
+			padding: 15px;
+		}
+	}
+
+	.contact-content {
+		display: grid;
+		grid-gap: 30px;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+		.form {
+			display: flex;
+			flex-direction: column;
+
+			@include tablet {
+				grid-column: 1 / -1;
+			}
+
+			.field-block {
+				margin-bottom: 15px;
+				position: relative;
+
+				label {
+					//background: rgba(#fff, 0.5);
+					display: block;
+					color: $main-color;
+					font-size: 0.8em;
+					letter-spacing: 0.05em;
+					padding: 6px 9px;
+					text-transform: uppercase;
+				}
+
+				.field {
+					background: rgba(#fff, 0.25);
+					border: 1px solid #ddd;
+					padding: 6px 9px;
+					transition: all 0.3s;
+					width: 100%;
+
+					&:focus {
+						background: #fff;
+						outline: none;
+					}
+
+					&.textarea {
+						resize: none;
+						height: 100px;
+					}
+				}
+
+				&.message {
+					&:focus {
+						background: #fff;
+					}
+					&:before {
+						font-size: 1.5em;
+						top: 39px;
+						left: 15px;
+						color: $accent-color;
+						position: absolute;
+					}
+				}
+			}
+
+			.submit {
+				background: #ff6c0e;
+				border: none;
+				color: #fff;
+				display: inline-block;
+				letter-spacing: 0.05em;
+				padding: 15px;
+				text-transform: uppercase;
+				transition: all 0.3s;
+				width: fit-content;
+
+				&:hover {
+					background: rgba($accent-color, 0.2);
+					color: $accent-color;
+				}
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		.gmap {
+			background: $main-color;
+			border: 3px solid #ddd;
+			position: relative;
+
+			@include tablet {
+				grid-column: 1 / -1;
+			}
+
+			.mark {
+				left: 50%;
+				position: absolute;
+				transform: translateX(-50%) translateY(calc(-50% - 30px));
+				top: 50%;
+				z-index: 10;
+
+				span {
+					background: $accent-color;
+					color: #fff;
+					display: block;
+					position: relative;
+					text-transform: uppercase;
+					padding: 9px;
+					z-index: 2;
+
+					&:before {
+						background: $accent-color;
+						top: calc(100% - 10px);
+						content: '';
+						height: 20px;
+						left: calc(50% - 10px);
+						position: absolute;
+						transform: rotate(45deg);
+						width: 20px;
+						z-index: -1;
+					}
+				}
+			}
+		}
+
+		.contact-info {
+			@include tablet {
+				grid-column: 1 / -1;
+			}
+
+			.contact-block {
+				border-bottom: 3px solid $main-color;
+				margin-bottom: 30px;
+				padding: 0 0 15px 60px;
+				position: relative;
+				font-size: 16px;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 2em;
+					color: $accent-color;
+				}
+
+				h4 {
+					font-family: 'Cairo';
+					margin: 0;
+					text-transform: uppercase;
+				}
+
+				p {
+					a {
+						color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+}
