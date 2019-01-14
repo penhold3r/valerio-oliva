@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import Helmet from 'react-helmet'
 
 import 'sanitize.css'
@@ -9,7 +8,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({ children }) => (
-	<PageTransition>
+	<React.Helmet>
 		<Helmet
 			title="Valerio Oliva"
 			meta={[
@@ -43,7 +42,7 @@ const Layout = ({ children }) => (
 		<main className="animated fadeIn">{children}</main>
 
 		<Footer />
-	</PageTransition>
+	</React.Helmet>
 )
 
 Layout.propTypes = {
