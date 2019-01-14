@@ -15,7 +15,7 @@ const Material = ({ pageContext }) => {
 				<header className="material-header">
 					<h2 className="main-title">{name}</h2>
 					<div className="material-hero">
-						<img src={image.publicURL} alt="" />
+						<img src={image && image.publicURL} alt="" />
 					</div>
 				</header>
 				<div className="material-content">
