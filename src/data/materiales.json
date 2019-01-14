@@ -9,7 +9,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Maderas para construcción",
@@ -17,7 +17,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -61,7 +61,7 @@
 				"thickness": "15mm, 18mm",
 				"measure": "1.83m x 2.75m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Enchapados",
@@ -85,7 +85,7 @@
 				"thickness": "18mm",
 				"measure": "2.80m x 1.30m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Terciados",
@@ -93,7 +93,7 @@
 				"thickness": "3mm, 4mm",
 				"measure": "1.60m x 2.10m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Chapadur",
@@ -101,7 +101,7 @@
 				"thickness": "3mm, 4mm",
 				"measure": "1.22m x 2.44m, 1.22m x 2.75m, 1.22m x 3.05m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "OSB",
@@ -109,7 +109,7 @@
 				"thickness": "9.5mm, 11.1mm, 15.1mm, 18.3mm, 25mm",
 				"measure": "1.22m x 2.44m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Fenólicos",
@@ -117,7 +117,7 @@
 				"thickness": "6mm, 10mm, 12mm, 15mm, 18mm, 25mm",
 				"measure": "1.22m x 2.44m, 1.60m x 2.20m",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -131,7 +131,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": "https://www.arauco.cl/argentina/ayuda-para-tus-proyectos/optimizador-de-corte/",
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Pegado de canto",
@@ -139,7 +139,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -153,7 +153,7 @@
 				"thickness": null,
 				"measure": "22mm x 0.45mm, 22mm x 2mm, 45mm x 0.45mm",
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Herrajes para muebles de cocina y placares",
@@ -161,7 +161,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Platinas",
@@ -169,7 +169,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -183,7 +183,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Tirantería maciza",
@@ -191,7 +191,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Rollizos canteados 1, 2 o 4 caras",
@@ -199,7 +199,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Machimbre",
@@ -207,7 +207,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -221,7 +221,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": "http://www.cerronegro.com.ar/bundles/app/front/pdf/tejas-catalogo-2017.pdf",
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Metálicas Iñaqu",
@@ -229,7 +229,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": "http://www.inaqui.com.ar/decra",
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -243,7 +243,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Sin aluminio",
@@ -251,7 +251,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Geotextil",
@@ -259,7 +259,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Líquida",
@@ -267,7 +267,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Ruberiod",
@@ -275,7 +275,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Barrera de viento",
@@ -283,7 +283,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Emulsión y pintura asfáltica",
@@ -291,7 +291,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -305,7 +305,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Lana de vidrio Isover",
@@ -313,7 +313,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": "https://www.isover.com.ar/productos/fieltro-liviano",
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Polietileno expandido Estisol",
@@ -321,7 +321,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -335,7 +335,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Cal",
@@ -343,7 +343,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Aditivos para el hormigón",
@@ -351,7 +351,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Adhesivos para cerámicos y porcelanatos",
@@ -359,7 +359,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Viguetas y losetas",
@@ -367,7 +367,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Yeso tradicional y proyectable",
@@ -375,7 +375,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": "https://www.knauf.com.ar/productos/6-revoques",
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -389,7 +389,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Pre-finish",
@@ -397,7 +397,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Ingenieriles",
@@ -405,7 +405,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Pisos Flotantes",
@@ -413,7 +413,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Decks",
@@ -421,7 +421,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	},
@@ -435,7 +435,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Protectores para exterior",
@@ -443,7 +443,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Plastificantes",
@@ -451,7 +451,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Lacas",
@@ -459,7 +459,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Adhesivos",
@@ -467,7 +467,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			},
 			{
 				"item": "Protectores para deck",
@@ -475,7 +475,7 @@
 				"thickness": null,
 				"measure": null,
 				"link": null,
-				"subItems": []
+				"subItems": null
 			}
 		]
 	}

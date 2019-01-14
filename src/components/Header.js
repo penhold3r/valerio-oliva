@@ -41,7 +41,7 @@ class Header extends React.Component {
 									className="nav-link"
 									to="/productos/vigas-laminadas"
 								>
-									Vigas Laminadas
+									Vigas Laminada
 								</Link>
 							</li>
 							<li className="nav-item">

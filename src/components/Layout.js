@@ -8,7 +8,7 @@ import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({ children }) => (
-	<React.Helmet>
+	<React.Fragment>
 		<Helmet
 			title="Valerio Oliva"
 			meta={[
@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
 		<main className="animated fadeIn">{children}</main>
 
 		<Footer />
-	</React.Helmet>
+	</React.Fragment>
 )
 
 Layout.propTypes = {

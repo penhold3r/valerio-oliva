@@ -37,7 +37,7 @@ const Material = ({ pageContext }) => {
 												measure ||
 												link ||
 												desc ||
-												subItems.length > 0
+												subItems
 													? 'card-title'
 													: 'card-title empty-content'
 											}
