@@ -12,7 +12,19 @@ section.contact {
 
 		.main-title {
 			color: $accent-color;
-			padding: 15px;
+			padding: 0 30px 30px 0;
+			margin: 0 auto 0 0;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 30%;
+				left: 100%;
+				width: 100vw;
+				height: 1px;
+				background: $main-color;
+			}
 		}
 	}
 
@@ -155,6 +167,10 @@ section.contact {
 					left: 0;
 					font-size: 2em;
 					color: $accent-color;
+				}
+
+				&:last-child {
+					margin: 0;
 				}
 
 				h4 {

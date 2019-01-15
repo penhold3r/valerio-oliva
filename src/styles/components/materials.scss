@@ -21,24 +21,57 @@ section.materials {
 	.materials-list {
 		display: grid;
 		grid-gap: 30px;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		margin: 30px 0;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		margin: 90px auto 30px;
+		max-width: 900px;
 
 		.product-icon {
+			color: $main-color;
 			position: relative;
+			text-decoration: none;
 
 			.icon {
+				align-items: center;
 				background: #fff;
 				border-radius: 100%;
 				box-shadow: 0 2px 3px rgba(#000, 0.5);
+				display: flex;
+				height: 100px;
+				justify-content: center;
 				justify-self: center;
 				margin: 0 auto;
-				height: 150px;
-				width: 150px;
+				padding: 21px;
+				transition: all 0.3s;
+				width: 100px;
+
+				img {
+					height: 100%;
+					object-fit: contain;
+					transition: all 0.3s;
+					width: 100%;
+				}
 			}
 
 			h3 {
+				font-size: 1em;
 				text-align: center;
+				font-weight: normal;
+				text-transform: uppercase;
+				transition: all 0.3s;
+			}
+
+			&:hover {
+				.icon {
+					padding: 24px;
+
+					img {
+						opacity: 0.8;
+					}
+				}
+
+				h3 {
+					color: $accent-color;
+				}
 			}
 		}
 	}

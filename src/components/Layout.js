@@ -6,6 +6,7 @@ import 'sanitize.css'
 import '../styles/index.scss'
 import Header from './Header'
 import Footer from './Footer'
+import Carrousel from './Carrousel'
 
 const Layout = ({ children }) => (
 	<React.Fragment>
@@ -40,6 +41,8 @@ const Layout = ({ children }) => (
 		<Header />
 
 		<main className="animated fadeIn">{children}</main>
+
+		<Carrousel />
 
 		<Footer />
 	</React.Fragment>

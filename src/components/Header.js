@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../images/valerio_oliva_logo.svg'
+import logo from '../assets/images/valerio_oliva_logo.svg'
 
 class Header extends React.Component {
 	state = { menuOpen: false }

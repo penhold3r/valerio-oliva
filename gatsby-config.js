@@ -14,18 +14,42 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				path: `${__dirname}/src/data/`
+				name: 'icons',
+				path: `${__dirname}/src/assets/icons/`
 			}
 		},
 		{
-			resolve: `gatsby-plugin-sitemap`
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'images',
+				path: `${__dirname}/src/assets/images/`
+			}
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'brands',
+				path: `${__dirname}/src/assets/brands/`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'data',
+				path: `${__dirname}/src/data/`
+			}
+		},
+		`gatsby-plugin-sharp`,
+		`gatsby-transformer-sharp`,
+		{
+			resolve: `gatsby-plugin-sitemap`
+		},
+		/*{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				background_color: '#F2EEEB',
 				display: 'standalone',
-				icon: 'src/images/favicon.png',
+				//icon: 'src/assets/images/favicon.png',
 				name: 'Valerio Oliva',
 				orientation: 'portrait',
 				scope: '/',
@@ -33,7 +57,7 @@ module.exports = {
 				start_url: '.',
 				theme_color: '#F2EEEB'
 			}
-		},
+		},*/
 		'gatsby-plugin-offline',
 		'gatsby-plugin-react-helmet'
 	]

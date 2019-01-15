@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import slugify from 'slugify'
 
 import Layout from '../../components/Layout'
-import headerImg from '../../images/maderas.jpg'
+import headerImg from '../../assets/images/maderas.jpg'
 
 const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
@@ -25,7 +25,12 @@ const MaterialsPage = ({ data }) => {
 									lower: true
 								})}`}
 							>
-								<div className="icon" />
+								<div className="icon">
+									<img
+										src={node.icon && node.icon.publicURL}
+										alt="node.name"
+									/>
+								</div>
 
 								<h3>{node.name}</h3>
 							</Link>
@@ -44,6 +49,9 @@ export const query = graphql`
 			edges {
 				node {
 					name
+					icon {
+						publicURL
+					}
 				}
 			}
 		}

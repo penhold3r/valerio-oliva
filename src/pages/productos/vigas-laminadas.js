@@ -2,18 +2,13 @@ import React from 'react'
 //import { Link } from "gatsby"
 
 import Layout from '../../components/Layout'
+import Gallery from '../../components/Gallery'
 
-import vigasImg from '../../images/vigas.jpg'
-import estructuras from '../../images/tipos-de-estructura.svg'
-import cortes from '../../images/tipos-de-corte.svg'
+import vigasImg from '../../assets/images/vigas.jpg'
+import estructuras from '../../assets/images/tipos-de-estructura.svg'
+import cortes from '../../assets/images/tipos-de-corte.svg'
 
 const LaminatedPage = () => {
-	const galleryList = require.context(
-		'../../images/gallery',
-		false,
-		/.*\.jpg$/
-	)
-
 	return (
 		<Layout>
 			<section className="laminated">
@@ -81,20 +76,7 @@ const LaminatedPage = () => {
 							Múltiples obras a lo largo de todo el país avalan la
 							trayectoria de nuestra empresa.
 						</p>
-						<div className="gallery-grid">
-							{galleryList.keys().map((img, key) => {
-								//console.log(img)
-								const src = galleryList(img)
-								return (
-									<div key={key} className="gallery-item">
-										<img className="thumb-image" src={src} alt="" />
-										<div className="modal-image">
-											<img src={src} alt="" />
-										</div>
-									</div>
-								)
-							})}
-						</div>
+						<Gallery />
 					</div>
 				</div>
 			</section>

@@ -88,16 +88,20 @@ class ContactPage extends React.Component {
 							<div className="contact-block icon icon-phone">
 								<h4>Llamanos al:</h4>
 								<p>
-									<a href="tel:+542614316010">54 - 261- 431 6010</a>
+									<a href="tel:+542614316010">
+										54 - 261- <strong>431 6010</strong>
+									</a>
 								</p>
 							</div>
 							<div className="contact-block icon icon-clock">
 								<h4>Horarios de atención:</h4>
 								<p>
-									Lun a Vier, de 8:30 a 12:30 hs. y de 15:30 a 20:00
-									hs.
+									Lun a Vier, de <strong>8:30 a 12:30 hs.</strong> y de{' '}
+									<strong>15:30 a 20:00 hs.</strong>
 								</p>
-								<p>Sábados de 8:30 a 13:00 hs.</p>
+								<p>
+									Sábados de <strong>8:30 a 13:00 hs.</strong>
+								</p>
 							</div>
 						</div>
 					</div>
