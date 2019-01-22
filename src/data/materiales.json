@@ -389,6 +389,69 @@
 		]
 	},
 	{
+		"name": "Construcción en Seco",
+		"image": "../assets/images/material.test.jpg",
+		"icon": "../assets/icons/construccion_seco-icon.svg",
+		"content": [
+			{
+				"item": "Placas de yeso Knauf",
+				"desc": "Estandar / Resistente Humedad / Resistente Fuego / NEBULA",
+				"thickness": "9.5mm, 12.5mm, 15mm",
+				"measure": "1.20m x 2.40m, 1.20m x 3.00m",
+				"link": "https://www.knauf.com.ar/productos/1-construccion-en-seco",
+				"subItems": null
+			},
+			{
+				"item": "Placas especiales Knauf",
+				"desc": "Diamant",
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Perfiles Knauf",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Masillas Knauf",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Cintas y bandas Knauf",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Yeso tradicional y proyectable",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": "https://www.knauf.com.ar/productos/6-revoques",
+				"subItems": null
+			},
+			{
+				"item": "Placas SUPERBOARD",
+				"desc": null,
+				"thickness": "6mm, 8mm, 10mm",
+				"measure": "1.20m x 2.40m, 1.20m x 3.00m",
+				"link": null,
+				"subItems": null
+			}
+		]
+	},
+	{
 		"name": "Pisos y Decks",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/pisos-icon.svg",

@@ -10,7 +10,7 @@ class ContactPage extends React.Component {
 	render() {
 		const textClass = this.state.focused
 			? 'field-block'
-			: 'field-block message icon-comment-line'
+			: 'field-block message icon-bubble'
 		return (
 			<Layout>
 				<section className="contact">

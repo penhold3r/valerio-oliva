@@ -21,7 +21,7 @@ section.materials {
 	.materials-list {
 		display: grid;
 		grid-gap: 30px;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 		margin: 90px auto 30px;
 		max-width: 900px;
 
@@ -41,8 +41,22 @@ section.materials {
 				justify-self: center;
 				margin: 0 auto;
 				padding: 21px;
+				position: relative;
 				transition: all 0.3s;
 				width: 100px;
+
+				&:after {
+					border-radius: 50%;
+					border: 1px solid #ddd;
+					content: '';
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					transform: scale(1.15);
+					transition: all 0.3s;
+					width: 100%;
+				}
 
 				img {
 					height: 100%;
@@ -63,6 +77,10 @@ section.materials {
 			&:hover {
 				.icon {
 					padding: 24px;
+
+					&:after {
+						border-color: $accent-color;
+					}
 
 					img {
 						opacity: 0.8;

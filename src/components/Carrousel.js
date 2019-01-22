@@ -9,12 +9,9 @@ const Carrousel = ({ data }) => {
 			<Slider
 				showArrows={false}
 				showDots={false}
-				cardsToShow={5}
+				cardsToShow={6}
 				autoSlide={true}
-				responsive={[
-					{ breakPoint: 1280, cardsToShow: 5 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
-					{ breakPoint: 460, cardsToShow: 3 }
-				]}
+				responsive={[{ breakPoint: 460, cardsToShow: 3 }]}
 			>
 				{data &&
 					data.map(({ node: { id, name, childImageSharp } }) => {
