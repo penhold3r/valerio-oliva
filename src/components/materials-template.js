@@ -4,10 +4,6 @@ import Layout from './Layout'
 
 const Material = ({ pageContext }) => {
 	const { slug, name, image, content } = pageContext
-	const cardClass =
-		content && content.length > 2 ? 'material-card' : 'material-card c50'
-
-	console.log(pageContext)
 
 	return (
 		<Layout>
@@ -30,9 +26,24 @@ const Material = ({ pageContext }) => {
 									key={key}
 									className={`${slugify(item, {
 										lower: true
-									})} ${cardClass}`}
+									})} material-item`}
+									onClick={e => {
+										const isActive = e.currentTarget.classList.contains(
+											'active'
+										)
+										const allItems = e.currentTarget.parentElement.querySelectorAll(
+											'.material-item'
+										)
+
+										for (let item of allItems)
+											item.classList.remove('active')
+
+										isActive
+											? e.currentTarget.classList.remove('active')
+											: e.currentTarget.classList.add('active')
+									}}
 								>
-									<div className="inner-card">
+									<div className="item-content">
 										<dt
 											className={
 												thickness ||
@@ -40,13 +51,23 @@ const Material = ({ pageContext }) => {
 												link ||
 												desc ||
 												subItems
-													? 'card-title'
-													: 'card-title empty-content'
+													? 'item-title icon-angle-down'
+													: 'item-title empty-content'
 											}
 										>
 											{item}
 										</dt>
-										<dd>
+										<dd
+											className={
+												thickness ||
+												measure ||
+												link ||
+												desc ||
+												subItems
+													? 'dd'
+													: 'dd empty-content'
+											}
+										>
 											{desc && (
 												<p>
 													<strong>{desc}</strong>

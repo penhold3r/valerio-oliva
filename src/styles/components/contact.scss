@@ -88,9 +88,10 @@ section.contact {
 			}
 
 			.submit {
-				background: #ff6c0e;
-				border: none;
-				color: #fff;
+				background: transparent;
+				border: 3px solid $main-color;
+				color: #ff6c0e;
+				cursor: pointer;
 				display: inline-block;
 				letter-spacing: 0.05em;
 				padding: 15px;
@@ -99,8 +100,8 @@ section.contact {
 				width: fit-content;
 
 				&:hover {
-					background: rgba($accent-color, 0.2);
-					color: $accent-color;
+					background: $accent-color;
+					color: #fff;
 				}
 
 				&:focus {
@@ -156,8 +157,8 @@ section.contact {
 
 			.contact-block {
 				border-bottom: 3px solid $main-color;
-				margin-bottom: 30px;
-				padding: 0 0 15px 60px;
+				margin-bottom: 21px;
+				padding: 0 0 6px 60px;
 				position: relative;
 				font-size: 16px;
 
