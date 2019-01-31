@@ -91,9 +91,10 @@ section.contact {
 			.submit {
 				background: transparent;
 				border: 3px solid $main-color;
-				color: #ff6c0e;
+				color: $accent-color;
 				cursor: pointer;
 				display: inline-block;
+				font-weight: bold;
 				letter-spacing: 0.05em;
 				padding: 15px;
 				text-transform: uppercase;

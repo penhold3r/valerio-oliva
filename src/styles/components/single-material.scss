@@ -89,7 +89,8 @@
 			}
 
 			dd {
-				background: #eee;
+				background: #fff;
+				box-shadow: 0 2px 3px rgba(#000, 0.25);
 				color: $accent-color;
 				margin: 0;
 				max-height: 1px;
@@ -106,22 +107,27 @@
 					position: relative;
 				}
 
-				.ext-link {
-					margin: 0;
+				p {
+					font-size: 0.9em;
+					margin: 0 0 0.5em;
 
-					.link {
-						border: 1px solid $light;
-						color: $main-color;
-						display: inline-block;
-						font-size: 0.8em;
-						padding: 6px 9px;
-						text-decoration: none;
-						text-transform: uppercase;
-						transition: all 0.3s;
+					&.ext-link {
+						margin: 0;
 
-						&:hover {
-							background: $grey;
-							color: $accent-color;
+						.link {
+							border: 1px solid $light;
+							color: $main-color;
+							display: inline-block;
+							font-size: 0.8em;
+							padding: 6px 9px;
+							text-decoration: none;
+							text-transform: uppercase;
+							transition: all 0.3s;
+
+							&:hover {
+								background: $grey;
+								color: $accent-color;
+							}
 						}
 					}
 				}
@@ -167,6 +173,8 @@
 		display: grid;
 		grid-gap: 15px;
 		grid-template-columns: 1fr 1fr;
+		max-width: 1300px;
+		margin: 0 auto 15px;
 		width: 100%;
 
 		@include tablet {

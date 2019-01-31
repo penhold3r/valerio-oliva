@@ -98,8 +98,7 @@ class ContactPage extends React.Component {
 								<p>
 									Lun a Vier, de <strong>8:30 a 12:30 hs.</strong>
 									<br />y de <strong>15:30 a 20:00 hs.</strong>
-								</p>
-								<p>
+									<br />
 									Sábados de <strong>8:30 a 13:00 hs.</strong>
 								</p>
 							</div>

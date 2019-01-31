@@ -72,8 +72,10 @@ const Material = ({ pageContext }) => {
 											}
 										>
 											{desc && (
-												<p>
-													<strong>{desc}</strong>
+												<p className="desc">
+													<strong>
+														<em>{desc}</em>
+													</strong>
 												</p>
 											)}
 											{thickness && (
@@ -114,8 +116,10 @@ const Material = ({ pageContext }) => {
 															<dt>{subItem}</dt>
 															<dd>
 																{desc && (
-																	<p>
-																		<strong>{desc}</strong>
+																	<p className="desc">
+																		<strong>
+																			<em>{desc}</em>
+																		</strong>
 																	</p>
 																)}
 																{thickness && (
@@ -133,12 +137,12 @@ const Material = ({ pageContext }) => {
 																	</p>
 																)}
 																{link && (
-																	<p>
+																	<p className="ext-link">
 																		<a
 																			href={link}
 																			rel="noopener noreferrer"
 																			target="_blank"
-																			className="ext-link"
+																			className="link"
 																		>
 																			<strong>{link}</strong>
 																		</a>
