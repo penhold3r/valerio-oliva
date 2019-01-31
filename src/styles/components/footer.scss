@@ -8,8 +8,16 @@
 		max-width: 800px;
 		margin: 0 auto;
 
+		@include tablet {
+			flex-wrap: wrap;
+		}
+
 		.footer-block {
 			margin: 0 15px;
+
+			@include tablet {
+				width: 100%;
+			}
 
 			h4 {
 				color: $accent-color;
@@ -22,6 +30,10 @@
 			.links {
 				display: flex;
 				justify-content: center;
+
+				@include tablet {
+					margin-bottom: 30px;
+				}
 
 				a {
 					display: inline-block;
@@ -47,8 +59,25 @@
 					}
 
 					&.social {
+						@include tablet {
+							font-size: 1.5em;
+						}
 						span {
 							display: none;
+						}
+					}
+				}
+
+				&.contact-links {
+					@include tablet {
+						flex-wrap: wrap;
+						max-width: 250px;
+						margin: 0 auto;
+					}
+
+					a {
+						@include tablet {
+							font-size: 1.25em;
 						}
 					}
 				}

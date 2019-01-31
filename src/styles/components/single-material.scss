@@ -26,9 +26,13 @@
 		display: grid;
 		grid-gap: 15px;
 		grid-template-columns: 1fr 1fr;
-		margin: 60px auto 120px;
+		margin: 60px auto 150px;
 		max-width: 930px;
 		padding: 0 15px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
 
 		dl.material-item {
 			border-bottom: 1px solid #ddd;
@@ -47,6 +51,12 @@
 					max-height: 500px;
 					opacity: 1;
 					padding: 15px;
+				}
+
+				.sub-item {
+					dd {
+						padding: 0;
+					}
 				}
 			}
 
@@ -92,8 +102,41 @@
 				width: 100%;
 				z-index: 90;
 
-				dl {
+				@include tablet {
+					position: relative;
+				}
+
+				.ext-link {
 					margin: 0;
+
+					.link {
+						border: 1px solid $light;
+						color: $main-color;
+						display: inline-block;
+						font-size: 0.8em;
+						padding: 6px 9px;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: all 0.3s;
+
+						&:hover {
+							background: $grey;
+							color: $accent-color;
+						}
+					}
+				}
+
+				dl.sub-item {
+					margin: 0;
+
+					dt {
+						margin-bottom: 15px;
+					}
+
+					dd {
+						padding: 0;
+						position: relative;
+					}
 				}
 			}
 
@@ -125,6 +168,11 @@
 		grid-gap: 15px;
 		grid-template-columns: 1fr 1fr;
 		width: 100%;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			padding: 15px;
+		}
 
 		img {
 			display: block;

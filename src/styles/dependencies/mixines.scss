@@ -29,7 +29,7 @@
 		@content;
 	}
 }
-@mixin tablet($width: 750px) {
+@mixin tablet($width: 780px) {
 	@media screen and (max-width: $width) {
 		@content;
 	}

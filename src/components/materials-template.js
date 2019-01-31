@@ -87,12 +87,12 @@ const Material = ({ pageContext }) => {
 												</p>
 											)}
 											{link && (
-												<p>
+												<p className="ext-link">
 													<a
 														href={link}
 														rel="noopener noreferrer"
 														target="_blank"
-														className="ext-link"
+														className="link"
 													>
 														<strong>ver más</strong>
 													</a>

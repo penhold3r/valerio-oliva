@@ -12,8 +12,9 @@ const Carrousel = ({ data }) => {
 				//cardsToShow={3}
 				autoSlide={true}
 				responsive={[
-					{ breakPoint: 740, cardsToShow: 6 }, // this will be applied if screen size is greater than 1280px. cardsToShow will become 4.
-					{ breakPoint: 480, cardsToShow: 4 }
+					{ breakPoint: 1, cardsToShow: 2 },
+					{ breakPoint: 800, cardsToShow: 4 },
+					{ breakPoint: 1000, cardsToShow: 6 }
 				]}
 			>
 				{data &&
