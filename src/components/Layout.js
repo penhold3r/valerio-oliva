@@ -8,45 +8,53 @@ import Header from './Header'
 import Footer from './Footer'
 import Carrousel from './Carrousel'
 
-const Layout = ({ children }) => (
-	<React.Fragment>
-		<Helmet
-			title="Valerio Oliva"
-			meta={[
-				{
-					name: 'description',
-					content: 'Maderas Laminadas para la construcción'
-				},
-				{
-					name: 'keywords',
-					content: 'maderas, maderas laminadas, construcción, materiales'
-				}
-			]}
-		>
-			<html lang="es" />
-			<link
-				href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i"
-				rel="stylesheet"
+const Layout = ({ title, children }) => {
+	const pageTitle = title ? `${title} - Valerio Oliva` : 'Valerio Oliva'
+
+	return (
+		<React.Fragment>
+			<Helmet
+				htmlAttributes={{ lang: 'es' }}
+				title={pageTitle}
+				meta={[
+					{
+						name: 'description',
+						content: 'Maderas Laminadas para la construcción'
+					},
+					{
+						name: 'keywords',
+						content:
+							'maderas, maderas laminadas, construcción, materiales'
+					}
+				]}
+				link={[
+					{
+						href:
+							'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i',
+						rel: 'stylesheet'
+					},
+					{
+						href: 'https://fonts.googleapis.com/css?family=Cairo:300',
+						rel: 'stylesheet'
+					},
+					{
+						href:
+							'https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css',
+						rel: 'stylesheet'
+					}
+				]}
 			/>
-			<link
-				href="https://fonts.googleapis.com/css?family=Cairo:300"
-				rel="stylesheet"
-			/>
-			<link
-				href="https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css"
-				rel="stylesheet"
-			/>
-		</Helmet>
 
-		<Header />
+			<Header />
 
-		<main className="animated fadeIn">{children}</main>
+			<main>{children}</main>
 
-		<Carrousel />
+			<Carrousel />
 
-		<Footer />
-	</React.Fragment>
-)
+			<Footer />
+		</React.Fragment>
+	)
+}
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired

@@ -5,13 +5,11 @@ import slugify from 'slugify'
 
 import Layout from '../../components/Layout'
 import headerImg from '../../assets/images/maderas.jpg'
-import banner01 from '../../assets/images/valerio_oliva-banner-01.jpg'
-import banner02 from '../../assets/images/valerio_oliva-banner-02.jpg'
 
 const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
 	return (
-		<Layout>
+		<Layout title={'Maderas y Materiales'}>
 			<section className="materials animated fadeIn">
 				<header className="materials-header">
 					<h2 className="main-title">Maderas y Materiales</h2>
@@ -37,10 +35,6 @@ const MaterialsPage = ({ data }) => {
 								<h3>{node.name}</h3>
 							</Link>
 						))}
-				</div>
-				<div className="banners">
-					<img src={banner01} alt="[Publicidad]" />
-					<img src={banner02} alt="[Publicidad]" />
 				</div>
 			</section>
 		</Layout>

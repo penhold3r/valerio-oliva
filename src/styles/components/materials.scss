@@ -93,16 +93,4 @@ section.materials {
 			}
 		}
 	}
-
-	.banners {
-		display: grid;
-		grid-gap: 15px;
-		grid-template-columns: 1fr 1fr;
-		width: 100%;
-
-		img {
-			display: block;
-			width: 100%;
-		}
-	}
 }

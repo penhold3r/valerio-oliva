@@ -26,6 +26,7 @@ class Header extends React.Component {
 					>
 						<div className="hamb-bar" />
 						<div className="hamb-bar" />
+						<div className="hamb-bar" />
 					</div>
 					<nav
 						className={this.state.menuOpen ? 'main-nav open' : 'main-nav'}
@@ -41,7 +42,7 @@ class Header extends React.Component {
 									className="nav-link"
 									to="/productos/vigas-laminadas"
 								>
-									Vigas Laminada
+									Vigas Laminadas
 								</Link>
 							</li>
 							<li className="nav-item">

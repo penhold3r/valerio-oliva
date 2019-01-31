@@ -12,7 +12,7 @@ class ContactPage extends React.Component {
 			? 'field-block'
 			: 'field-block message icon-bubble'
 		return (
-			<Layout>
+			<Layout title={'Contacto'}>
 				<section className="contact">
 					<header className="contact-header">
 						<h1 className="main-title">Contacto</h1>

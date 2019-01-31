@@ -44,12 +44,12 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sitemap`
 		},
-		/*{
+		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				background_color: '#F2EEEB',
 				display: 'standalone',
-				//icon: 'src/assets/images/favicon.png',
+				icon: './src/assets/images/favicon.png',
 				name: 'Valerio Oliva',
 				orientation: 'portrait',
 				scope: '/',
@@ -57,7 +57,7 @@ module.exports = {
 				start_url: '.',
 				theme_color: '#F2EEEB'
 			}
-		},*/
+		},
 		'gatsby-plugin-offline',
 		'gatsby-plugin-react-helmet'
 	]

@@ -5,6 +5,7 @@ section.contact {
 
 	.contact-header {
 		display: flex;
+		overflow-x: hidden;
 
 		@include tablet {
 			grid-column: 1 / -1;
@@ -117,6 +118,8 @@ section.contact {
 
 			@include tablet {
 				grid-column: 1 / -1;
+				height: 300px;
+				margin-bottom: 30px;
 			}
 
 			.mark {

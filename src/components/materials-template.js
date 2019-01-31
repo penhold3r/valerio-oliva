@@ -2,6 +2,9 @@ import React from 'react'
 import slugify from 'slugify'
 import Layout from './Layout'
 
+import banner01 from '../assets/images/valerio_oliva-banner-01.jpg'
+import banner02 from '../assets/images/valerio_oliva-banner-02.jpg'
+
 const Material = ({ pageContext }) => {
 	const { slug, name, image, content } = pageContext
 
@@ -150,6 +153,10 @@ const Material = ({ pageContext }) => {
 								</dl>
 							)
 						)}
+				</div>
+				<div className="banners">
+					<img src={banner01} alt="[Publicidad]" />
+					<img src={banner02} alt="[Publicidad]" />
 				</div>
 			</section>
 		</Layout>
