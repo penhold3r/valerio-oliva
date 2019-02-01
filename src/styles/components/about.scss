@@ -1,22 +1,28 @@
 section.about {
 	.about-header {
 		position: relative;
+		height: 350px;
+
+		@include tablet {
+			height: 250px;
+		}
 
 		.main-title {
-			background: $main-color;
-			color: #fff;
+			background: rgba($main-color, 0.75);
 			margin: 0;
+			color: #fff;
 			padding: 15px;
 			text-align: center;
+			position: relative;
+			z-index: 1;
 		}
 
 		.about-image {
-			height: 300px;
+			height: 100%;
 			width: 100%;
-
-			@include tablet {
-				height: 200px;
-			}
+			position: absolute !important;
+			top: 0;
+			z-index: 0;
 
 			img {
 				width: 100% !important;
@@ -27,52 +33,57 @@ section.about {
 	.about-content {
 		margin: 0 auto;
 		max-width: 1330px;
-		padding: 0 15px 90px;
+		padding: 0 15px;
 
-		.about-text {
+		.about-block {
 			background: #fff;
 			border-bottom: 1px solid $accent-color;
-			margin: 0 auto;
-			max-width: 850px;
-			padding: 30px;
+			padding: 60px 15px 45px;
 			position: relative;
 			top: -30px;
+			max-width: 1100px;
+			margin: 0 auto;
 
-			.sub-title {
-				color: $accent-color;
-				font-size: 1em;
-				letter-spacing: 0.05em;
-				margin: 0 0 1em;
-				padding-bottom: 9px;
-				position: relative;
-				text-align: center;
-				text-transform: uppercase;
+			.about-text {
+				margin: 0 auto;
+				max-width: 780px;
 
-				&:after {
-					background: $light;
-					bottom: 0;
-					content: '';
-					height: 1px;
-					left: 0;
-					margin: 0 auto;
-					position: absolute;
-					right: 0;
-					width: 50px;
-				}
-			}
-
-			p {
-				text-align: center;
-			}
-
-			.color-block {
-				p {
+				.sub-title {
 					color: $accent-color;
+					font-size: 1em;
+					letter-spacing: 0.05em;
+					margin: 0 0 1em;
+					padding-bottom: 15px;
+					position: relative;
+					text-align: center;
+					text-transform: uppercase;
 
-					span.border {
-						border: 1px solid $light;
-						display: block;
-						padding: 15px;
+					&:after {
+						background: $light;
+						bottom: 0;
+						content: '';
+						height: 1px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 50px;
+					}
+				}
+
+				p {
+					text-align: center;
+				}
+
+				.color-block {
+					p {
+						color: $accent-color;
+
+						span.border {
+							border: 1px solid $light;
+							display: block;
+							padding: 15px;
+						}
 					}
 				}
 			}

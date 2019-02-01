@@ -119,6 +119,7 @@ header.header {
 			@include tablet {
 				background: #fff;
 				box-shadow: 0 0px 0px rgba(#000, 0);
+				flex-direction: column;
 				height: 1px;
 				left: 0;
 				overflow: hidden;
@@ -209,19 +210,36 @@ header.header {
 				display: flex;
 
 				@include tablet {
-					display: none;
+					justify-content: flex-end;
 				}
 
 				a {
 					display: block;
 					text-decoration: none;
-					color: $main-color;
+					color: $accent-color;
 					margin-left: 15px;
-					font-size: 1.5em;
+					font-size: 1.25em;
+					transition: all 0.3s;
 
-					img {
-						display: block;
-						width: 60px;
+					.afip {
+						height: 25px;
+						margin-top: -6px;
+						width: 50px;
+
+						path {
+							fill: $accent-color;
+							transition: all 0.3s;
+						}
+					}
+
+					&:hover {
+						color: $main-color;
+
+						.afip {
+							path {
+								fill: $main-color;
+							}
+						}
 					}
 				}
 			}

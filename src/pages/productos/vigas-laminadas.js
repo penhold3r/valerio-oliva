@@ -23,37 +23,41 @@ const LaminatedPage = () => {
 					/>
 				</header>
 				<div className="vigas-content">
-					<div className="vigas-text">
-						<h3 className="sub-title">
-							Diseño, Ingeniería y Fabricación
-						</h3>
-						<div className="border-block">
-							<p>
-								La madera multilaminada está constituida por láminas de
-								distintos largos, seleccionados, de un espesor
-								determinado que permite eliminar los defectos. Se unen
-								entre sí por el sistema de entalladuras múltiples, hasta
-								alcanzar la longitud de la pieza a construir.
-							</p>
+					<div className="vigas-block">
+						<div className="vigas-text">
+							<h3 className="sub-title">
+								Diseño, Ingeniería y Fabricación
+							</h3>
+							<div className="border-block">
+								<p>
+									La madera multilaminada está constituida por láminas
+									de distintos largos, seleccionados, de un espesor
+									determinado que permite eliminar los defectos. Se
+									unen entre sí por el sistema de entalladuras
+									múltiples, hasta alcanzar la longitud de la pieza a
+									construir.
+								</p>
 
-							<p>
-								Estas láminas son encoladas, obteniéndose un elemento
-								con resistencia mecánica superior a la misma madera que
-								lo compone y de gran estabilidad dimensional.
-							</p>
-						</div>
+								<p>
+									Estas láminas son encoladas, obteniéndose un elemento
+									con resistencia mecánica superior a la misma madera
+									que lo compone y de gran estabilidad dimensional.
+								</p>
+							</div>
 
-						<div className="color-block">
-							<p>
-								La firma elabora industrialmente Maderas Multilaminadas
-								desde hace cuatro décadas.
-							</p>
+							<div className="color-block">
+								<p>
+									La firma elabora industrialmente Maderas
+									Multilaminadas desde hace cuatro décadas.
+								</p>
 
-							<p>
-								A ese efecto cuenta con una planta de 3000m2 cubiertos,
-								personal capacitado y el más moderno equipamiento, que
-								nos permite asegurar el mantenimiento de la calidad.
-							</p>
+								<p>
+									A ese efecto cuenta con una planta de 3000m2
+									cubiertos, personal capacitado y el más moderno
+									equipamiento, que nos permite asegurar el
+									mantenimiento de la calidad.
+								</p>
+							</div>
 						</div>
 					</div>
 					<div className="specs">

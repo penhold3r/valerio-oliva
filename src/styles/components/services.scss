@@ -12,9 +12,17 @@
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 1px;
 
+			@include tablet {
+				grid-template-columns: 1fr;
+			}
+
 			.service-block {
 				background: $accent-color;
 				padding: 0 15px;
+
+				@include tablet {
+					padding: 15px;
+				}
 
 				h3 {
 					color: #fff;
