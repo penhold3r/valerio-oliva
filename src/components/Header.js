@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../assets/images/valerio_oliva_logo.svg'
+import afip from '../assets/images/afip-logo.svg'
 
 class Header extends React.Component {
 	state = { menuOpen: false }
@@ -56,6 +57,21 @@ class Header extends React.Component {
 								</Link>
 							</li>
 						</ul>
+						<div className="nav-icons">
+							<a
+								href="http://afip.gov.ar"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={afip} alt="" />
+							</a>
+							<a
+								href="whatsapp://send?text=Hola!&phone=tel:+542615320000"
+								title="Whatsapp"
+							>
+								<i className="icon icon-whatsapp" />
+							</a>
+						</div>
 					</nav>
 				</div>
 			</header>

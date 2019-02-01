@@ -1,7 +1,4 @@
 section.laminated {
-	max-width: 1300px;
-	margin: 0 auto;
-
 	.vigas-header {
 		position: relative;
 
@@ -20,19 +17,25 @@ section.laminated {
 			@include tablet {
 				height: 200px;
 			}
+
+			img {
+				width: 100% !important;
+			}
 		}
 	}
 
 	.vigas-content {
+		margin: 0 auto;
+		max-width: 1330px;
 		padding: 0 15px;
 
 		.vigas-text {
 			background: #fff;
 			border-bottom: 1px solid $accent-color;
-			padding: 30px;
-			max-width: 850px;
-			position: relative;
 			margin: 0 auto;
+			max-width: 850px;
+			padding: 30px;
+			position: relative;
 			top: -30px;
 
 			.sub-title {

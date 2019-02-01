@@ -1,7 +1,4 @@
 section.about {
-	margin: 0 auto;
-	max-width: 1300px;
-
 	.about-header {
 		position: relative;
 
@@ -20,11 +17,17 @@ section.about {
 			@include tablet {
 				height: 200px;
 			}
+
+			img {
+				width: 100% !important;
+			}
 		}
 	}
 
 	.about-content {
-		padding: 0 15px;
+		margin: 0 auto;
+		max-width: 1330px;
+		padding: 0 15px 90px;
 
 		.about-text {
 			background: #fff;

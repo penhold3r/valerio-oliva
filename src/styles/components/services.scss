@@ -1,0 +1,36 @@
+.services {
+	background: $accent-color;
+	padding: 15px;
+
+	.wrapper {
+		background: #fff;
+		max-width: 1300px;
+		margin: 0 auto;
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 1px;
+
+			.service-block {
+				background: $accent-color;
+				padding: 0 15px;
+
+				h3 {
+					color: #fff;
+					font-family: 'Cairo', sans-serif;
+					margin: 0;
+					text-transform: uppercase;
+					text-align: center;
+					font-size: 1em;
+				}
+
+				p {
+					color: #fff;
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

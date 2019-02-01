@@ -36,25 +36,30 @@
 				}
 
 				a {
+					color: #fff;
 					display: inline-block;
 					padding: 3px 6px;
 					position: relative;
 					text-decoration: none;
 
+					&:hover {
+						opacity: 0.7;
+					}
+
 					.icon {
 						color: $accent-color;
 						display: inline-block;
-						height: 1em;
-						width: 1em;
+						height: 1.25em;
+						width: 1.25em;
 
 						&:before {
 							position: absolute;
-							top: 2px;
+							top: 4px;
+							font-size: 1.25em;
 						}
 					}
 
 					span {
-						color: #999;
 						padding-left: 6px;
 					}
 
@@ -89,6 +94,8 @@
 		padding: 30px 15px;
 
 		p {
+			color: #fff;
+			font-size: 0.8em;
 			text-align: center;
 		}
 	}

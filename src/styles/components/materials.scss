@@ -1,7 +1,4 @@
 section.materials {
-	max-width: 1300px;
-	margin: 0 auto;
-
 	.materials-header {
 		.main-title {
 			background: $accent-color;
@@ -11,10 +8,17 @@ section.materials {
 			text-align: center;
 		}
 
-		img {
+		.materials-img {
 			height: 300px;
-			object-fit: cover;
 			width: 100%;
+
+			@include tablet {
+				height: 200px;
+			}
+
+			img {
+				width: 100% !important;
+			}
 		}
 	}
 
@@ -23,7 +27,8 @@ section.materials {
 		grid-gap: 30px;
 		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 		margin: 90px auto 30px;
-		max-width: 900px;
+		max-width: 930px;
+		padding: 0 30px;
 
 		.product-icon {
 			color: $main-color;

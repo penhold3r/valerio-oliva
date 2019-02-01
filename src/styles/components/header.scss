@@ -113,6 +113,7 @@ header.header {
 		}
 
 		.main-nav {
+			display: flex;
 			margin: auto 0 auto auto;
 
 			@include tablet {
@@ -200,6 +201,27 @@ header.header {
 								width: 100%;
 							}
 						}
+					}
+				}
+			}
+
+			.nav-icons {
+				display: flex;
+
+				@include tablet {
+					display: none;
+				}
+
+				a {
+					display: block;
+					text-decoration: none;
+					color: $main-color;
+					margin-left: 15px;
+					font-size: 1.5em;
+
+					img {
+						display: block;
+						width: 60px;
 					}
 				}
 			}

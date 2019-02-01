@@ -2,9 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import slugify from 'slugify'
+import { Parallax } from 'react-parallax'
 
 import Layout from '../../components/Layout'
-import headerImg from '../../assets/images/maderas.jpg'
+import materialesHero from '../../assets/images/maderas.jpg'
 
 const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
@@ -13,7 +14,13 @@ const MaterialsPage = ({ data }) => {
 			<section className="materials animated fadeIn">
 				<header className="materials-header">
 					<h2 className="main-title">Maderas y Materiales</h2>
-					<img src={headerImg} alt="" />
+
+					<Parallax
+						bgImage={materialesHero}
+						bgImageAlt={'[ Maderas y Materiales ]'}
+						strength={400}
+						className="materials-img"
+					/>
 				</header>
 				<div className="materials-list">
 					{edges &&
