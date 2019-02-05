@@ -43,7 +43,7 @@ class Gallery extends React.Component {
 							className="close-modal"
 							onClick={() => this.setState({ modalOpen: false })}
 						>
-							x
+							&#215;
 						</div>
 						<img src={this.state.currentImage} alt="" />
 					</div>
