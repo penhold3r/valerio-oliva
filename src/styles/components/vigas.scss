@@ -227,6 +227,12 @@ section.laminated {
 							width: 100vw;
 							z-index: 90;
 
+							@include tablet {
+								height: calc(100vh - 60px);
+								padding: 15px;
+								top: 60px;
+							}
+
 							.inner-modal {
 								margin: 0 auto;
 								max-width: 900px;
@@ -236,18 +242,18 @@ section.laminated {
 
 								.close-modal {
 									background: #fff;
+									color: $accent-color;
+									cursor: pointer;
+									font-size: 30px;
+									font-weight: bold;
+									height: 26px;
+									line-height: 20px;
+									padding: 3px;
 									position: absolute;
 									right: 3px;
-									top: 3px;
-									font-size: 30px;
-									height: 26px;
-									width: 26px;
-									line-height: 20px;
-									color: $accent-color;
-									font-weight: bold;
 									text-align: center;
-									padding: 3px;
-									cursor: pointer;
+									top: 3px;
+									width: 26px;
 								}
 
 								img {

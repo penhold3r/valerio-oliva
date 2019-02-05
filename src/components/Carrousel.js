@@ -9,10 +9,9 @@ const Carrousel = ({ data }) => {
 			<Slider
 				showArrows={false}
 				showDots={false}
-				//cardsToShow={3}
 				autoSlide={true}
 				responsive={[
-					{ breakPoint: 1, cardsToShow: 2 },
+					{ breakPoint: 1, cardsToShow: 3 },
 					{ breakPoint: 800, cardsToShow: 4 },
 					{ breakPoint: 1000, cardsToShow: 6 }
 				]}

@@ -7,6 +7,7 @@ header.header {
 	z-index: 99;
 
 	@include tablet {
+		background: #f2eeeb;
 		height: 60px;
 	}
 

@@ -4,6 +4,10 @@ import Helmet from 'react-helmet'
 
 import 'sanitize.css'
 import '../styles/index.scss'
+
+import favicon from '../assets/images/favicon.ico'
+import bookmark from '../assets/images/bookmark-image.png'
+
 import Header from './Header'
 import Footer from './Footer'
 import Carrousel from './Carrousel'
@@ -17,6 +21,10 @@ const Layout = ({ title, children }) => {
 				htmlAttributes={{ lang: 'es' }}
 				title={pageTitle}
 				meta={[
+					{
+						property: 'og:image',
+						content: bookmark
+					},
 					{
 						name: 'description',
 						content: 'Maderas Laminadas para la construcción'
@@ -41,6 +49,11 @@ const Layout = ({ title, children }) => {
 						href:
 							'https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css',
 						rel: 'stylesheet'
+					},
+					{
+						href: favicon,
+						rel: 'shortcut icon',
+						type: 'image/x-icon'
 					}
 				]}
 			/>

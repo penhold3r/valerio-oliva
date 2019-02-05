@@ -2,11 +2,11 @@ import React from 'react'
 import slugify from 'slugify'
 import Layout from './Layout'
 
-import banner01 from '../assets/images/valerio_oliva-banner-01.jpg'
-import banner02 from '../assets/images/valerio_oliva-banner-02.jpg'
+//import banner01 from '../assets/images/valerio_oliva-banner-01.jpg'
+//import banner02 from '../assets/images/valerio_oliva-banner-02.jpg'
 
 const Material = ({ pageContext }) => {
-	const { slug, name, image, content } = pageContext
+	const { slug, name, image, banners, content } = pageContext
 
 	return (
 		<Layout>
@@ -159,8 +159,14 @@ const Material = ({ pageContext }) => {
 						)}
 				</div>
 				<div className="banners">
-					<img src={banner01} alt="[Publicidad]" />
-					<img src={banner02} alt="[Publicidad]" />
+					{banners &&
+						banners.map(banner => (
+							<img
+								key={banner.id}
+								src={banner.publicURL}
+								alt="[ publicidad ]"
+							/>
+						))}
 				</div>
 			</section>
 		</Layout>

@@ -65,6 +65,10 @@
 			justify-content: center;
 			padding: 15px;
 
+			img {
+				width: 100%;
+			}
+
 			.table-wrapper {
 				width: 100%;
 
@@ -114,5 +118,10 @@
 		height: calc(100vh - 100px);
 		overflow: auto;
 		pointer-events: initial;
+
+		@include tablet {
+			height: calc(100vh - 60px);
+			top: 60px;
+		}
 	}
 }

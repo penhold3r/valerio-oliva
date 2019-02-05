@@ -16,6 +16,10 @@ exports.createPages = ({ graphql, actions }) => {
 							icon {
 								publicURL
 							}
+							banners {
+								id
+								publicURL
+							}
 							content {
 								item
 								thickness
@@ -47,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
 							name: node.name,
 							image: node.image,
 							icon: node.icon,
+							banners: node.banners,
 							content: node.content
 						}
 					})
