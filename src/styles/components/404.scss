@@ -1,0 +1,24 @@
+section.not-found {
+	background: linear-gradient($accent-color, $main-color);
+	padding: 30px 15px 90px;
+
+	h2 {
+		color: #666;
+		font-size: 8em;
+		margin: 0 auto 30px;
+		max-width: 800px;
+		text-align: center;
+		background: -webkit-linear-gradient(lighten($accent-color, 30) 10%, $accent-color);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	p {
+		font-size: 1.5em;
+		text-align: center;
+		font-weight: bold;
+		margin: 0 auto;
+		color: #fff;
+		max-width: 800px;
+	}
+}

@@ -20,18 +20,14 @@ class Header extends React.Component {
 						</Link>
 					</h1>
 					<div
-						className={
-							this.state.menuOpen ? 'hamb-menu crossed' : 'hamb-menu'
-						}
+						className={this.state.menuOpen ? 'hamb-menu crossed' : 'hamb-menu'}
 						onClick={this.handleMenu}
 					>
 						<div className="hamb-bar" />
 						<div className="hamb-bar" />
 						<div className="hamb-bar" />
 					</div>
-					<nav
-						className={this.state.menuOpen ? 'main-nav open' : 'main-nav'}
-					>
+					<nav className={this.state.menuOpen ? 'main-nav open' : 'main-nav'}>
 						<ul className="nav-list">
 							<li className="nav-item">
 								<Link className="nav-link" to="/productos/materiales">
@@ -39,10 +35,7 @@ class Header extends React.Component {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link
-									className="nav-link"
-									to="/productos/vigas-laminadas"
-								>
+								<Link className="nav-link" to="/productos/vigas-laminadas">
 									Vigas Laminadas
 								</Link>
 							</li>
@@ -66,10 +59,7 @@ class Header extends React.Component {
 							>
 								<AFIP className="afip" />
 							</a>
-							<a
-								href="whatsapp://send?text=Hola!&phone=tel:+542615320000"
-								title="Whatsapp"
-							>
+							<a href="whatsapp://send?text=Hola!&phone=tel:+542615320000" title="Whatsapp">
 								<i className="icon icon-whatsapp" />
 							</a>
 						</div>

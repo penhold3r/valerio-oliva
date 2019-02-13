@@ -33,10 +33,7 @@ const MaterialsPage = ({ data }) => {
 								})}`}
 							>
 								<div className="icon">
-									<img
-										src={node.icon && node.icon.publicURL}
-										alt="node.name"
-									/>
+									<img src={node.icon && node.icon.publicURL} alt="node.name" />
 								</div>
 
 								<h3>{node.name}</h3>

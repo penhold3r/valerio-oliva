@@ -68,10 +68,25 @@
 			{
 				"item": "Aglomerado",
 				"desc": null,
-				"thickness": "15mm, 18mm",
-				"measure": "1.83m x 2.75m",
+				"thickness": null,
+				"measure": null,
 				"link": null,
-				"subItems": null
+				"subItems": [
+					{
+						"subItem": "Crudo",
+						"desc": null,
+						"thickness": "15mm, 18mm",
+						"measure": "1.83m x 2.75m",
+						"link": null
+					},
+					{
+						"subItem": "Melamina FAPLAC",
+						"desc": null,
+						"thickness": "3mm, 5mm, 15mm, 18mm",
+						"measure": "1.83m x 2.60m, 1.83m x 2.75m",
+						"link": "https://www.arauco.cl/argentina/marcas/faplacmelamina/"
+					}
+				]
 			},
 			{
 				"item": "Enchapados",
@@ -81,17 +96,17 @@
 				"link": null,
 				"subItems": [
 					{
-						"subItem": "Sobre mdf y sobre aglomerado",
+						"subItem": "Sobre MDL y sobre aglomerado",
 						"desc": "Paraiso, Guatambu, Cerejeira, Cedro, Goiabao, Laurel, Pino, Peteriby, Itauba",
 						"thickness": "3mm, 5.5mm, 19mm",
-						"measure": "1.8m x 2.60m",
+						"measure": "1.83m x 2.60m",
 						"link": null
 					}
 				]
 			},
 			{
-				"item": "Rauvisio Rehau",
-				"desc": null,
+				"item": "Placa Brillante Rehau",
+				"desc": "RAUVISIO",
 				"thickness": "18mm",
 				"measure": "2.80m x 1.30m",
 				"link": null,
@@ -150,7 +165,7 @@
 			},
 			{
 				"item": "Pegado de canto",
-				"desc": "Ofrecemos el pegado de canto de pvc de 0.45 y 2mm de espesor",
+				"desc": "Ofrecemos el pegado de canto de pvc de 0.45 y 2mm de espesor, con amplia variedad de colores.",
 				"thickness": null,
 				"measure": null,
 				"link": null,
@@ -159,7 +174,7 @@
 		]
 	},
 	{
-		"name": "Herrajes y Platinas",
+		"name": "Herrajes y Accesorios",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/herrajes-icon.svg",
 		"banners": [
@@ -169,22 +184,46 @@
 		"content": [
 			{
 				"item": "Tapacantos Rehau",
-				"desc": "pvc, pvc con adhesivo, melaminico con adhesivo",
+				"desc": "pvc, pvc con adhesivo, melamínico con adhesivo",
 				"thickness": null,
 				"measure": "22mm x 0.45mm, 22mm x 2mm, 45mm x 0.45mm",
 				"link": null,
 				"subItems": null
 			},
 			{
-				"item": "Herrajes para muebles de cocina y placares",
-				"desc": "Correderas, bisagras, perfiles, manijas, tiradores, etc.",
+				"item": "Herrajes para muebles de cocina",
+				"desc": null,
 				"thickness": null,
 				"measure": null,
 				"link": null,
 				"subItems": null
 			},
 			{
-				"item": "Platinas",
+				"item": "Kit para placares",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Correderas",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Bisagras",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Perfiles / Manijas / Tiradores",
 				"desc": null,
 				"thickness": null,
 				"measure": null,
@@ -229,6 +268,14 @@
 			{
 				"item": "Machimbre",
 				"desc": null,
+				"thickness": "¾”, ½”, 1”",
+				"measure": null,
+				"link": null,
+				"subItems": null
+			},
+			{
+				"item": "Platinas",
+				"desc": null,
 				"thickness": null,
 				"measure": null,
 				"link": null,
@@ -247,7 +294,7 @@
 		"content": [
 			{
 				"item": "Cerámicas Cerro Negro",
-				"desc": "francesa, classic, portuguesa",
+				"desc": "Francesa, Classic, Portuguesa",
 				"thickness": null,
 				"measure": null,
 				"link": "http://www.cerronegro.com.ar/bundles/app/front/pdf/tejas-catalogo-2017.pdf",
@@ -341,7 +388,7 @@
 		"content": [
 			{
 				"item": "Isolant",
-				"desc": null,
+				"desc": "TVA5, TVA10, Multicapa",
 				"thickness": null,
 				"measure": null,
 				"link": null,
@@ -359,7 +406,7 @@
 				"item": "Polietileno expandido Estisol",
 				"desc": null,
 				"thickness": null,
-				"measure": null,
+				"measure": "1mm x 1mm x 25mm, 1mm x 1mm x 50mm, 1mm x 1mm x 75mm",
 				"link": null,
 				"subItems": null
 			}
@@ -435,7 +482,7 @@
 		"content": [
 			{
 				"item": "Placas de yeso Knauf",
-				"desc": "Estandar / Resistente Humedad / Resistente Fuego / NEBULA",
+				"desc": "Estándar / Resistente Humedad / Resistente Fuego / NEBULA",
 				"thickness": "9.5mm, 12.5mm, 15mm",
 				"measure": "1.20m x 2.40m, 1.20m x 3.00m",
 				"link": "https://www.knauf.com.ar/productos/1-construccion-en-seco",
@@ -502,7 +549,7 @@
 		"content": [
 			{
 				"item": "Entablonados",
-				"desc": null,
+				"desc": "Rostrata, Grapia, Anchico, Viraro, Incienso",
 				"thickness": null,
 				"measure": null,
 				"link": null,
@@ -513,7 +560,7 @@
 				"desc": null,
 				"thickness": null,
 				"measure": null,
-				"link": null,
+				"link": "http://www.indusparquet.com.ar/productos/pisos-de-madera.html",
 				"subItems": null
 			},
 			{
@@ -521,16 +568,61 @@
 				"desc": null,
 				"thickness": null,
 				"measure": null,
-				"link": null,
+				"link": "http://www.indusparquet.com.ar/productos/pisos-de-madera.html",
 				"subItems": null
 			},
 			{
-				"item": "Pisos Flotantes",
+				"item": "Pisos flotantes",
 				"desc": null,
 				"thickness": null,
 				"measure": null,
 				"link": null,
 				"subItems": null
+			},
+			{
+				"item": "Accesorios para pisos flotantes",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": "http://www.maxipiso.com.ar/productos.php?n=2&i=4",
+				"subItems": null
+			},
+			{
+				"item": "Pisos vinílicos",
+				"desc": null,
+				"thickness": null,
+				"measure": null,
+				"link": "http://www.maxipiso.com.ar/productos.php?n=3&i=3125",
+				"subItems": [
+					{
+						"subItem": "Click Collection",
+						"desc": "4mm | AC4 | 4/0.3 x 177 x1219mm | 2.17",
+						"thickness": null,
+						"measure": null,
+						"link": null
+					},
+					{
+						"subItem": "Challet Click",
+						"desc": "4mm | AC4 | 4/0.3 x 180 x1217mm | 2.63",
+						"thickness": null,
+						"measure": null,
+						"link": null
+					},
+					{
+						"subItem": "SPC Vinyl",
+						"desc": "4mm | AC4 | 4 x 180 x 1220mm | 2.20",
+						"thickness": null,
+						"measure": null,
+						"link": null
+					},
+					{
+						"subItem": "SPC LUXURY Vinyl",
+						"desc": "4.5mm | AC4 | 4.5 x 125 x 1220mm | 1.37",
+						"thickness": null,
+						"measure": null,
+						"link": null
+					}
+				]
 			},
 			{
 				"item": "Decks",

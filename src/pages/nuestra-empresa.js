@@ -25,28 +25,25 @@ const AboutPage = () => (
 							<strong>
 								<em>Mendoza - Argentina,</em>
 							</strong>{' '}
-							en 1956, iniciando un proceso de permanente crecimiento,
-							instalándose también en{' '}
+							en 1956, iniciando un proceso de permanente crecimiento, instalándose también
+							en{' '}
 							<strong>
 								<em>Misiones - Argentina,</em>
 							</strong>{' '}
-							donde cuenta con aserraderos y forestaciones de pinos
-							complementado con amplios secaderos; cepillada, molduras y
-							además piezas clear para el mercado externo.
+							donde cuenta con aserraderos y forestaciones de pinos complementado con amplios
+							secaderos; cepillada, molduras y además piezas clear para el mercado externo.
 						</p>
 
 						<div className="color-block">
 							<p>
-								Mantiene un permanente stock de maderas nacionales e
-								importadas, destinadas a la venta y a la
-								industrialización; en constante desarollo y
-								modernización y con muchos años de eficaz desempeño.
+								Mantiene un permanente stock de maderas nacionales e importadas, destinadas
+								a la venta y a la industrialización; en constante desarollo y modernización
+								y con muchos años de eficaz desempeño.
 							</p>
 							<p>
 								<span className="border">
 									<strong>
-										Ha logrado un sólido prestigio por múltiples
-										clientes en todo el país.
+										Ha logrado un sólido prestigio por múltiples clientes en todo el país.
 									</strong>
 								</span>
 							</p>

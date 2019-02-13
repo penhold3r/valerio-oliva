@@ -11,19 +11,11 @@ const Footer = () => {
 					<div className="footer-block">
 						<h4>Seguinos en</h4>
 						<div className="links">
-							<a
-								href="https://facebook.com"
-								title="Facebook"
-								className="social"
-							>
+							<a href="https://facebook.com" title="Facebook" className="social">
 								<i className="icon icon-facebook" />
 								<span>Facebook</span>
 							</a>
-							<a
-								href="https://instagram.com"
-								title="Instagram"
-								className="social"
-							>
+							<a href="https://instagram.com" title="Instagram" className="social">
 								<i className="icon icon-instagram" />
 								<span>Instagram</span>
 							</a>
@@ -50,8 +42,8 @@ const Footer = () => {
 				<div className="copy">
 					<p>
 						<em>
-							<strong>&copy; 2018 Valerio Oliva</strong> - Maderas y
-							Materiales. Todos los derechos reservados.
+							<strong>&copy; 2018 Valerio Oliva</strong> - Maderas y Materiales. Todos los
+							derechos reservados.
 						</em>
 					</p>
 				</div>

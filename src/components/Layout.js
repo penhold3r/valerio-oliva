@@ -31,14 +31,12 @@ const Layout = ({ title, children }) => {
 					},
 					{
 						name: 'keywords',
-						content:
-							'maderas, maderas laminadas, construcción, materiales'
+						content: 'maderas, maderas laminadas, construcción, materiales'
 					}
 				]}
 				link={[
 					{
-						href:
-							'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i',
+						href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i',
 						rel: 'stylesheet'
 					},
 					{
@@ -46,8 +44,7 @@ const Layout = ({ title, children }) => {
 						rel: 'stylesheet'
 					},
 					{
-						href:
-							'https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css',
+						href: 'https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css',
 						rel: 'stylesheet'
 					},
 					{

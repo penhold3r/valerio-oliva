@@ -8,9 +8,7 @@ class ContactPage extends React.Component {
 	state = { focused: false }
 
 	render() {
-		const textClass = this.state.focused
-			? 'field-block'
-			: 'field-block message icon-bubble'
+		const textClass = this.state.focused ? 'field-block' : 'field-block message icon-bubble'
 		return (
 			<Layout title={'Contacto'}>
 				<section className="contact">
@@ -21,21 +19,11 @@ class ContactPage extends React.Component {
 						<form action="" className="form">
 							<div className="field-block">
 								<label htmlFor="name">Nombre</label>
-								<input
-									className="field"
-									type="text"
-									name="name"
-									id="name"
-								/>
+								<input className="field" type="text" name="name" id="name" />
 							</div>
 							<div className="field-block">
 								<label htmlFor="email">Email</label>
-								<input
-									className="field"
-									type="text"
-									name="email"
-									id="email"
-								/>
+								<input className="field" type="text" name="email" id="email" />
 							</div>
 							<div className={textClass}>
 								<label htmlFor="msg">Mensaje</label>
@@ -72,17 +60,12 @@ class ContactPage extends React.Component {
 						<div className="contact-info">
 							<div className="contact-block icon icon-map-mark">
 								<h4>Visitanos en:</h4>
-								<p>
-									Rodriguez Peña 2250 - (5501) - Godoy Cruz - Mendoza -
-									Argentina.
-								</p>
+								<p>Rodriguez Peña 2250 - (5501) - Godoy Cruz - Mendoza - Argentina.</p>
 							</div>
 							<div className="contact-block icon icon-mail-line">
 								<h4>Nuestro e-mail:</h4>
 								<p>
-									<a href="mailto:ventas@valeriooliva.com">
-										ventas@valeriooliva.com
-									</a>
+									<a href="mailto:ventas@valeriooliva.com">ventas@valeriooliva.com</a>
 								</p>
 							</div>
 							<div className="contact-block icon icon-phone">

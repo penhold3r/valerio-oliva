@@ -9,40 +9,31 @@ class Gallery extends React.Component {
 	}
 
 	render() {
-		const imgs = this.props.data.map(
-			({ node: { id, name, publicURL, childImageSharp } }) => {
-				const thumb = childImageSharp.fluid
+		const imgs = this.props.data.map(({ node: { id, name, publicURL, childImageSharp } }) => {
+			const thumb = childImageSharp.fluid
 
-				return (
-					<div key={id} className="gallery-item">
-						<div
-							className="thumb-image"
-							onClick={() =>
-								this.setState({
-									currentImage: publicURL,
-									modalOpen: true
-								})
-							}
-						>
-							<Img className="thumb-image" fluid={thumb} alt={name} />
-						</div>
+			return (
+				<div key={id} className="gallery-item">
+					<div
+						className="thumb-image"
+						onClick={() =>
+							this.setState({
+								currentImage: publicURL,
+								modalOpen: true
+							})
+						}
+					>
+						<Img className="thumb-image" fluid={thumb} alt={name} />
 					</div>
-				)
-			}
-		)
+				</div>
+			)
+		})
 
 		return (
 			<div className="gallery-grid">
-				<div
-					className={
-						this.state.modalOpen ? 'modal-image open' : 'modal-image'
-					}
-				>
+				<div className={this.state.modalOpen ? 'modal-image open' : 'modal-image'}>
 					<div className="inner-modal">
-						<div
-							className="close-modal"
-							onClick={() => this.setState({ modalOpen: false })}
-						>
+						<div className="close-modal" onClick={() => this.setState({ modalOpen: false })}>
 							&#215;
 						</div>
 						<img src={this.state.currentImage} alt="" />
