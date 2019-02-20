@@ -43,9 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
 				result.data.allMaterialesJson.edges.forEach(({ node }) => {
 					createPage({
 						path: `materiales/${slugify(node.name, { lower: true })}`,
-						component: path.resolve(
-							`./src/components/materials-template.js`
-						),
+						component: path.resolve(`./src/components/materials-template.js`),
 						context: {
 							slug: slugify(node.name, { lower: true }),
 							name: node.name,

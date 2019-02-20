@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
 	siteMetadata: {
 		title: 'Valerio Oliva',
@@ -15,21 +17,28 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'icons',
-				path: `${__dirname}/src/assets/icons/`
+				path: path.join(__dirname, `src`, `assets`, `icons`)
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'ads',
+				path: path.join(__dirname, `src`, `assets`, `ads`)
 			}
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'images',
-				path: `${__dirname}/src/assets/images/`
+				path: path.join(__dirname, `src`, `assets`, `images`)
 			}
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'brands',
-				path: `${__dirname}/src/assets/brands/`
+				path: path.join(__dirname, `src`, `assets`, `brands`)
 			}
 		},
 		{

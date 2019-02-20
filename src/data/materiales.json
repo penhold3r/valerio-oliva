@@ -3,10 +3,7 @@
 		"name": "Maderas",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/maderas-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
 		"content": [
 			{
 				"item": "Maderas Nacionales e Importadas",
@@ -30,10 +27,7 @@
 		"name": "Placas",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/placas-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/grupo_euro.png", "../assets/ads/corte_placas.png"],
 		"content": [
 			{
 				"item": "MDF",
@@ -148,12 +142,9 @@
 	},
 	{
 		"name": "Corte y Pegado de Canto",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-corte_pegado.jpg",
 		"icon": "../assets/icons/corte-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/rahau_auvisio.png", "../assets/ads/cadesa.png"],
 		"content": [
 			{
 				"item": "Corte de Placas",
@@ -175,12 +166,9 @@
 	},
 	{
 		"name": "Herrajes y Accesorios",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-herrajes.jpg",
 		"icon": "../assets/icons/herrajes-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/tornillos.png"],
 		"content": [
 			{
 				"item": "Tapacantos Rehau",
@@ -234,12 +222,9 @@
 	},
 	{
 		"name": "Techos",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-techos.jpg",
 		"icon": "../assets/icons/techos-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/membranas.png", "../assets/ads/cerro_negro.png"],
 		"content": [
 			{
 				"item": "Vigas Laminadas",
@@ -285,12 +270,9 @@
 	},
 	{
 		"name": "Tejas",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-tejas.jpg",
 		"icon": "../assets/icons/tejas-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/isolant.png", "../assets/ads/servicio_autoelevador.png"],
 		"content": [
 			{
 				"item": "Cerámicas Cerro Negro",
@@ -314,10 +296,7 @@
 		"name": "Membranas",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/membranas-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/grupo_estisol.png", "../assets/ads/holcim.png"],
 		"content": [
 			{
 				"item": "Con aluminio",
@@ -381,10 +360,7 @@
 		"name": "Aislantes",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/aislantes-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/knauf.png", "../assets/ads/techos_laminados.png"],
 		"content": [
 			{
 				"item": "Isolant",
@@ -416,10 +392,7 @@
 		"name": "Construcción Tradicional",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/construccion_tradicional-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-knauff.jpg",
-			"../assets/images/valerio_oliva-banner-holcim.jpg"
-		],
+		"banners": ["../assets/ads/servicio_envios.png", "../assets/ads/knauf.png"],
 		"content": [
 			{
 				"item": "Cemento Holcim",
@@ -475,10 +448,7 @@
 		"name": "Construcción en Seco",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/construccion_seco-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-knauff.jpg"
-		],
+		"banners": ["../assets/ads/osb.png", "../assets/ads/servicio_autoelevador.png"],
 		"content": [
 			{
 				"item": "Placas de yeso Knauf",
@@ -542,10 +512,7 @@
 		"name": "Pisos y Decks",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/pisos-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/holcim.png"],
 		"content": [
 			{
 				"item": "Entablonados",
@@ -638,10 +605,7 @@
 		"name": "Protectores",
 		"image": "../assets/images/material.test.jpg",
 		"icon": "../assets/icons/protectores-icon.svg",
-		"banners": [
-			"../assets/images/valerio_oliva-banner-01.jpg",
-			"../assets/images/valerio_oliva-banner-02.jpg"
-		],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
 		"content": [
 			{
 				"item": "Barniz",
