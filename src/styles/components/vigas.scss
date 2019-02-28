@@ -80,6 +80,8 @@ section.laminated {
 		.specs {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			margin: 0 auto;
+			max-width: 800px;
 
 			.spec-block {
 				padding: 15px;

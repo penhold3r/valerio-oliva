@@ -112,7 +112,7 @@ class LaminatedPage extends React.Component {
 										<img src={estructuraIcon} alt="" />
 									</div>
 									<span>
-										Tipos de <span className="grey">Estructura</span>
+										Tipos de <span className="grey">Estructuras</span>
 									</span>
 								</h2>
 							</div>
@@ -124,7 +124,9 @@ class LaminatedPage extends React.Component {
 									>
 										<img src={caracteristicasIcon} alt="" />
 									</div>
-									<span>Caractéristicas</span>
+									<span>
+										Lista de <span className="grey">Caractéristicas</span>
+									</span>
 								</h2>
 							</div>
 							<div className="spec-block">

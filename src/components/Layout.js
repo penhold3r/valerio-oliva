@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import 'sanitize.css'
 import '../styles/index.scss'
@@ -16,7 +17,7 @@ const Layout = ({ title, children }) => {
 	const pageTitle = title ? `${title} - Valerio Oliva` : 'Valerio Oliva'
 
 	return (
-		<React.Fragment>
+		<PageTransition>
 			<Helmet
 				htmlAttributes={{ lang: 'es' }}
 				title={pageTitle}
@@ -62,7 +63,7 @@ const Layout = ({ title, children }) => {
 			<Carrousel />
 
 			<Footer />
-		</React.Fragment>
+		</PageTransition>
 	)
 }
 

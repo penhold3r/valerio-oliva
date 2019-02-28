@@ -1,12 +1,13 @@
 import React from 'react'
 import slugify from 'slugify'
-import Layout from './Layout'
+import Layout from '../Layout'
+import Link from '../Link'
 
 const Material = ({ pageContext }) => {
 	const { slug, name, image, banners, content } = pageContext
 
 	return (
-		<Layout>
+		<Layout title={name}>
 			<section className={`${slug} material-section`}>
 				<header className="material-header">
 					<h2 className="main-title">{name}</h2>
@@ -72,14 +73,14 @@ const Material = ({ pageContext }) => {
 										)}
 										{link && (
 											<p className="ext-link">
-												<a
-													href={link}
+												<Link
+													to={link}
 													rel="noopener noreferrer"
 													target="_blank"
 													className="link"
 												>
 													<strong>ver más</strong>
-												</a>
+												</Link>
 											</p>
 										)}
 										{subItems &&
@@ -107,14 +108,14 @@ const Material = ({ pageContext }) => {
 															)}
 															{link && (
 																<p className="ext-link">
-																	<a
-																		href={link}
+																	<Link
+																		to={link}
 																		rel="noopener noreferrer"
 																		target="_blank"
 																		className="link"
 																	>
 																		<strong>ver más</strong>
-																	</a>
+																	</Link>
 																</p>
 															)}
 														</dd>

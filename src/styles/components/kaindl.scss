@@ -1,0 +1,128 @@
+section.kaindl-page {
+	.kaindl-header {
+		background: slategrey;
+
+		.main-title {
+			color: #fff;
+			margin: 0;
+			padding: 15px;
+			text-align: center;
+		}
+	}
+	.categories {
+		margin: 30px auto;
+		max-width: 1300px;
+		display: flex;
+
+		.category {
+			background: #ddd;
+			min-height: 50vh;
+			width: 100%;
+
+			.category-link {
+				display: block;
+				height: 100%;
+				position: relative;
+
+				.category-name {
+					color: #fff;
+					font-family: 'Cairo', sans-serif;
+					letter-spacing: 0.05em;
+					position: absolute;
+					text-transform: uppercase;
+					top: 30%;
+					width: 100%;
+					padding: 30px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+section.kaindl-product {
+	background: #fff;
+
+	.kaindl-product-header {
+		background: slategrey;
+		padding: 15px;
+
+		.main-title {
+			color: #fff;
+			margin: 0 0 15px;
+			text-align: center;
+		}
+
+		.product-main-description {
+			color: #fff;
+			margin: 0 auto;
+			max-width: 800px;
+			text-align: center;
+		}
+	}
+
+	.products {
+		margin: 0 auto;
+		max-width: 1330px;
+		padding: 0 15px 30px;
+
+		.product-block {
+			.category-header {
+				display: flex;
+				align-items: center;
+				border-bottom: 1px solid $accent-color;
+				padding: 15px 0;
+				margin-bottom: 30px;
+
+				.product-name {
+					margin: 0;
+					text-transform: uppercase;
+				}
+
+				.product-desc {
+					margin: 0 0 0 15px;
+				}
+			}
+
+			.product-cat {
+				display: grid;
+				grid-gap: 15px;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				margin-bottom: 30px;
+
+				.cat-block {
+					background: #eee;
+					min-height: 250px;
+					position: relative;
+
+					.item-name {
+						background: slategray;
+						bottom: 0;
+						color: #fff;
+						font-family: 'Cairo', sans-serif;
+						font-size: 1em;
+						padding: 6px;
+						position: absolute;
+						margin: 0;
+						text-transform: uppercase;
+						width: 100%;
+					}
+
+					&.cat-intro {
+						background: #fff;
+
+						.cat-name {
+							font-size: 2em;
+							margin: 0 0 15px;
+							color: $accent-color;
+						}
+
+						.cat-desc {
+							color: $main-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
