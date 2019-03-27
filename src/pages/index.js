@@ -7,7 +7,7 @@ import materiales from '../assets/images/maderas.jpg'
 
 const IndexPage = () => (
 	<Layout>
-		<section className="landing">
+		<section className="landing fader">
 			<div className="landing-grid">
 				<div className="products-options">
 					<Link to="/productos/materiales">

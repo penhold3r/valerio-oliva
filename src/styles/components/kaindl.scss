@@ -1,39 +1,83 @@
 section.kaindl-page {
 	.kaindl-header {
-		background: slategrey;
+		background: $kaindl;
 
 		.main-title {
 			color: #fff;
 			margin: 0;
 			padding: 15px;
 			text-align: center;
+
+			img {
+				margin: 0 auto;
+				width: 200px;
+			}
 		}
 	}
 	.categories {
 		margin: 30px auto;
 		max-width: 1300px;
-		display: flex;
+		display: grid;
+		grid-gap: 15px;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		padding: 0 30px;
 
 		.category {
-			background: #ddd;
+			background: $kaindl-light;
 			min-height: 50vh;
-			width: 100%;
+			max-height: 600px;
+			height: 100%;
 
 			.category-link {
 				display: block;
 				height: 100%;
 				position: relative;
+				text-decoration: none;
+				transition: all 0.3s;
+
+				.cat-image {
+					display: block;
+					height: 100%;
+
+					img {
+						object-fit: cover !important;
+						transition: all 0.4s !important;
+					}
+				}
 
 				.category-name {
 					color: #fff;
-					font-family: 'Cairo', sans-serif;
+					display: flex;
+					flex-direction: column;
+					font: 3em 'Cairo', sans-serif;
+					height: 100%;
+					justify-content: center;
 					letter-spacing: 0.05em;
-					position: absolute;
-					text-transform: uppercase;
-					top: 30%;
-					width: 100%;
+					line-height: 1;
+					margin: 0;
 					padding: 30px;
+					position: absolute;
 					text-align: center;
+					text-transform: uppercase;
+					top: 0;
+					transition: all 0.3s;
+					width: 100%;
+				}
+
+				&:hover {
+					.cat-image {
+						img {
+							height: 110% !important;
+							left: -5% !important;
+							top: -5% !important;
+							width: 110% !important;
+						}
+					}
+
+					.category-name {
+						color: $accent-color;
+						text-shadow: $box-shadow;
+					}
 				}
 			}
 		}
@@ -44,13 +88,18 @@ section.kaindl-product {
 	background: #fff;
 
 	.kaindl-product-header {
-		background: slategrey;
+		background: $kaindl;
 		padding: 15px;
 
 		.main-title {
 			color: #fff;
 			margin: 0 0 15px;
 			text-align: center;
+
+			img {
+				margin: 0 auto;
+				width: 200px;
+			}
 		}
 
 		.product-main-description {
@@ -91,12 +140,24 @@ section.kaindl-product {
 				margin-bottom: 30px;
 
 				.cat-block {
-					background: #eee;
-					min-height: 250px;
+					background: $kaindl-light;
+					height: 250px;
 					position: relative;
 
+					.thumb-image {
+						height: 100%;
+						position: relative;
+						z-index: 0;
+
+						picture {
+							img {
+								object-position: center bottom !important;
+							}
+						}
+					}
+
 					.item-name {
-						background: slategray;
+						background: rgba($kaindl, 0.8);
 						bottom: 0;
 						color: #fff;
 						font-family: 'Cairo', sans-serif;
@@ -106,6 +167,7 @@ section.kaindl-product {
 						margin: 0;
 						text-transform: uppercase;
 						width: 100%;
+						z-index: 1;
 					}
 
 					&.cat-intro {

@@ -1,17 +1,24 @@
 import React from 'react'
-//import slugify from 'slugify'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import slugify from 'slugify'
 import Layout from '../Layout'
-//import Link from '../Link'
 
-const KaindlProduct = ({ pageContext }) => {
+import kaindlLogo from '../../assets/images/kaindl_logo.svg'
+
+const KaindlProduct = ({ pageContext, images }) => {
 	const { slug, name, desc, products } = pageContext
 
-	console.log(desc, JSON.stringify(products, null, 2))
 	return (
 		<Layout title={name}>
-			<section className={`${slug} kaindl-product`}>
+			<section className={`${slug} kaindl-product fader`}>
 				<header className="kaindl-product-header">
-					<h2 className="main-title">{name}</h2>
+					<h2 className="main-title">
+						<Link to="/materiales/kaindl">
+							<img src={kaindlLogo} alt="Kaindl" />
+						</Link>
+					</h2>
+					<h3 className="main-title">{name}</h3>
 					<div className="product-main-description">
 						<p dangerouslySetInnerHTML={{ __html: desc }} />
 					</div>
@@ -21,10 +28,10 @@ const KaindlProduct = ({ pageContext }) => {
 						products.map((product, key) => (
 							<div key={key} className="product-block">
 								<header className="category-header">
-									<h3 class="product-name">{product.name}</h3>
+									<h3 className="product-name">{product.name}</h3>
 									{product.desc && (
 										<p
-											class="product-desc"
+											className="product-desc"
 											dangerouslySetInnerHTML={{ __html: product.desc }}
 										/>
 									)}
@@ -36,7 +43,7 @@ const KaindlProduct = ({ pageContext }) => {
 												<h4 className="cat-name">{cat.name}</h4>
 												{cat.desc && (
 													<p
-														class="cat-desc"
+														className="cat-desc"
 														dangerouslySetInnerHTML={{ __html: cat.desc }}
 													/>
 												)}
@@ -44,6 +51,24 @@ const KaindlProduct = ({ pageContext }) => {
 											{cat.items &&
 												cat.items.map((item, key) => (
 													<div key={key} className="cat-block" data-id={item.id}>
+														{images &&
+															images.map(
+																({ node: { id, name, childImageSharp } }) => {
+																	const thumb = childImageSharp.fluid
+																	//console.log(name, slugify(item.id))
+
+																	return (
+																		name === slugify(item.id) && (
+																			<Img
+																				key={id}
+																				className="thumb-image"
+																				fluid={thumb}
+																				alt={name}
+																			/>
+																		)
+																	)
+																}
+															)}
 														<h5 className="item-name">{item.name}</h5>
 													</div>
 												))}
@@ -57,4 +82,27 @@ const KaindlProduct = ({ pageContext }) => {
 	)
 }
 
-export default KaindlProduct
+export default props => (
+	<StaticQuery
+		query={graphql`
+			query KaindlQuery {
+				allFile(filter: { relativeDirectory: { eq: "kaindl" } }) {
+					edges {
+						node {
+							id
+							name
+							publicURL
+							childImageSharp {
+								fluid(maxWidth: 500) {
+									src
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+				}
+			}
+		`}
+		render={({ allFile: { edges } }) => <KaindlProduct images={edges} {...props} />}
+	/>
+)

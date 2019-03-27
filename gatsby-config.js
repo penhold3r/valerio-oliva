@@ -48,6 +48,7 @@ module.exports = {
 				path: `${__dirname}/src/data/`
 			}
 		},
+		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-svgr',
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
@@ -68,13 +69,6 @@ module.exports = {
 				theme_color: '#F2EEEB'
 			}
 		},
-		{
-			resolve: 'gatsby-plugin-page-transitions',
-			options: {
-				transitionTime: 400
-			}
-		},
-		'gatsby-plugin-offline',
-		'gatsby-plugin-react-helmet'
+		'gatsby-plugin-offline'
 	]
 }

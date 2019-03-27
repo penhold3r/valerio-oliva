@@ -1,6 +1,7 @@
 module.exports = [
 	{
 		name: 'Classic Touch',
+		img: '../assets/images/kaindl/kaindl_natural-touch.jpg',
 		desc:
 			'Una mirada al alma de la naturaleza. Las obras maestras de diseño clásico “floor” entusiasman por sus superficies fieles a la naturaleza y su autenticidad inigualable.',
 		products: [
@@ -89,6 +90,7 @@ module.exports = [
 	},
 	{
 		name: 'Natural Touch',
+		img: '../assets/images/kaindl/kaindl_natural-touch.jpg',
 		dec:
 			'Irrupción en la tercera dimensión. No solo ver, sino también sentir: nunca antes un diseño de suelo había estado tan cerca de su modelo natural.',
 		products: [

@@ -8,7 +8,7 @@ const Material = ({ pageContext }) => {
 
 	return (
 		<Layout title={name}>
-			<section className={`${slug} material-section`}>
+			<section className={`${slug} material-section fader`}>
 				<header className="material-header">
 					<h2 className="main-title">{name}</h2>
 					<div className="material-hero">

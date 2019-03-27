@@ -30,22 +30,34 @@ class Header extends React.Component {
 					<nav className={this.state.menuOpen ? 'main-nav open' : 'main-nav'}>
 						<ul className="nav-list">
 							<li className="nav-item">
-								<Link className="nav-link" to="/productos/materiales">
+								<Link
+									className="nav-link"
+									to="/productos/materiales"
+									activeClassName="active-link"
+								>
 									Materiales
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/productos/vigas-laminadas">
+								<Link
+									className="nav-link"
+									to="/productos/vigas-laminadas"
+									activeClassName="active-link"
+								>
 									Vigas Laminadas
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/nuestra-empresa">
+								<Link
+									className="nav-link"
+									to="/nuestra-empresa"
+									activeClassName="active-link"
+								>
 									Nuestra Empresa
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/contacto">
+								<Link className="nav-link" to="/contacto" activeClassName="active-link">
 									Contacto
 								</Link>
 							</li>

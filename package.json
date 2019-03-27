@@ -1,45 +1,45 @@
 {
-   "name": "valerio-oliva",
-   "description": "Valerio Oliva",
-   "version": "1.0.0",
-   "author": "penHolder Designerd <penhold3r@gmail.com>",
-   "repository": {
-      "type": "git",
-      "url": "https://github.com/penhold3r/valerio-oliva"
-   },
-   "license": "MIT",
-   "scripts": {
-      "build": "gatsby build",
-      "develop": "gatsby develop",
-      "test": "echo \"Error: no test specified\" && exit 1"
-   },
-   "dependencies": {
-      "@svgr/webpack": "^4.1.0",
-      "g": "^2.0.1",
-      "gatsby": "^2.0.120",
-      "gatsby-cli": "^2.4.10",
-      "gatsby-image": "^2.0.29",
-      "gatsby-plugin-manifest": "^2.0.17",
-      "gatsby-plugin-offline": "^2.0.24",
-      "gatsby-plugin-page-transitions": "^1.0.7",
-      "gatsby-plugin-react-helmet": "^3.0.6",
-      "gatsby-plugin-react-svg": "^2.0.0",
-      "gatsby-plugin-sass": "^2.0.10",
-      "gatsby-plugin-sharp": "^2.0.20",
-      "gatsby-plugin-sitemap": "^2.0.5",
-      "gatsby-plugin-svgr": "^2.0.1",
-      "gatsby-source-filesystem": "^2.0.23",
-      "gatsby-transformer-json": "^2.1.8",
-      "gatsby-transformer-sharp": "^2.1.13",
-      "google-map-react": "^1.1.2",
-      "node-sass": "^4.11.0",
-      "react": "^16.8.1",
-      "react-dom": "^16.8.1",
-      "react-helmet": "^5.2.0",
-      "react-parallax": "^2.1.0",
-      "react-styled-carousel": "^0.4.12",
-      "sanitize.css": "^8.0.0",
-      "slugify": "^1.3.4"
-   },
-   "devDependencies": {}
+	"name": "valerio-oliva",
+	"description": "Valerio Oliva",
+	"version": "1.0.0",
+	"author": "penHolder Designerd <penhold3r@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/penhold3r/valerio-oliva"
+	},
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@svgr/webpack": "^4.1.0",
+		"classnames": "^2.2.6",
+		"g": "^2.0.1",
+		"gatsby": "^2.0.120",
+		"gatsby-cli": "^2.4.10",
+		"gatsby-image": "^2.0.29",
+		"gatsby-plugin-manifest": "^2.0.17",
+		"gatsby-plugin-offline": "^2.0.24",
+		"gatsby-plugin-react-helmet": "^3.0.6",
+		"gatsby-plugin-react-svg": "^2.0.0",
+		"gatsby-plugin-sass": "^2.0.10",
+		"gatsby-plugin-sharp": "^2.0.20",
+		"gatsby-plugin-sitemap": "^2.0.5",
+		"gatsby-plugin-svgr": "^2.0.1",
+		"gatsby-source-filesystem": "^2.0.23",
+		"gatsby-transformer-json": "^2.1.8",
+		"gatsby-transformer-sharp": "^2.1.13",
+		"google-map-react": "^1.1.2",
+		"node-sass": "^4.11.0",
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1",
+		"react-helmet": "^5.2.0",
+		"react-parallax": "^2.1.0",
+		"react-styled-carousel": "^0.4.12",
+		"sanitize.css": "^8.0.0",
+		"slugify": "^1.3.4"
+	},
+	"devDependencies": {}
 }

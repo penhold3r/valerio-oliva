@@ -6,7 +6,7 @@ import image from '../assets/images/empresa.jpg'
 
 const AboutPage = () => (
 	<Layout>
-		<section className="about">
+		<section className="about fader">
 			<header className="about-header">
 				<h2 className="main-title">Nuestra Empresa</h2>
 				<Parallax

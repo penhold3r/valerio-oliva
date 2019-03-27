@@ -1,8 +1,9 @@
 import React from 'react'
-import { Parallax } from 'react-parallax'
 
 import Layout from '../../components/Layout'
 import Gallery from '../../components/Gallery'
+import VigasTable from '../../components/vigas-table'
+import Slider from '../../components/Slider'
 
 import vigasImg from '../../assets/images/vigas.jpg'
 
@@ -12,8 +13,6 @@ import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.s
 
 import estructuras from '../../assets/images/tipos-de-estructura.svg'
 import cortes from '../../assets/images/tipos-de-corte.svg'
-
-import VigasTable from '../../components/vigas-table'
 
 class LaminatedPage extends React.Component {
 	state = {
@@ -39,7 +38,7 @@ class LaminatedPage extends React.Component {
 	render() {
 		return (
 			<Layout title={'Vigas Laminadas'}>
-				<section className="laminated">
+				<section className="laminated fader">
 					<div className={`specs-modal ${this.state.modalOpen && 'open'}`}>
 						<div className="specs-content">
 							<header className="modal-header">
@@ -57,12 +56,34 @@ class LaminatedPage extends React.Component {
 					<header className="vigas-header">
 						<h2 className="main-title">Vigas Laminadas</h2>
 
-						<Parallax
+						<Slider>
+							<div>
+								<img src={vigasImg} alt="" />
+							</div>
+							<div>
+								Aliquam non modi fugiat adipisci. Commodi, explicabo reprehenderit.
+								Provident aspernatur corrupti consequuntur minus dolore accusamus! Unde
+								cumque modi voluptates id temporibus ipsum at. Perferendis, recusandae optio
+								repellat rem quod ut.
+							</div>
+							<div>
+								Officiis alias, ipsa asperiores, minus laborum doloribus ratione error
+								dolorum minima iste quisquam eum eos tenetur aut sequi obcaecati, quibusdam
+								rem nemo dolores ab repellendus. Ipsam veniam optio explicabo fuga.
+							</div>
+							<div>
+								Laboriosam velit accusamus nam doloribus voluptates quam consequatur
+								suscipit laborum id voluptatum ut labore sint sit iste rem vero eligendi
+								esse sunt voluptatem, quod odio similique beatae nostrum placeat. Quas.
+							</div>
+						</Slider>
+
+						{/* <Parallax
 							bgImage={vigasImg}
 							bgImageAlt={'[ Vigas Laminadas ]'}
 							strength={400}
 							className="vigas-img"
-						/>
+						/> */}
 					</header>
 					<div className="vigas-content">
 						<div className="vigas-block">

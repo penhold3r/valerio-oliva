@@ -28,6 +28,7 @@ header.header {
 				display: block;
 				padding: 12px 0;
 				text-decoration: none;
+				outline: none;
 
 				@include tablet {
 					padding: 6px 0;

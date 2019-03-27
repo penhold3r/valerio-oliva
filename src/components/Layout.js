@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import PageTransition from 'gatsby-plugin-page-transitions'
+
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Carrousel from '../components/Carrousel'
 
 import 'sanitize.css'
 import '../styles/index.scss'
@@ -9,15 +12,11 @@ import '../styles/index.scss'
 import favicon from '../assets/images/favicon.ico'
 import bookmark from '../assets/images/bookmark-image.png'
 
-import Header from './Header'
-import Footer from './Footer'
-import Carrousel from './Carrousel'
-
 const Layout = ({ title, children }) => {
 	const pageTitle = title ? `${title} - Valerio Oliva` : 'Valerio Oliva'
 
 	return (
-		<PageTransition>
+		<React.Fragment>
 			<Helmet
 				htmlAttributes={{ lang: 'es' }}
 				title={pageTitle}
@@ -63,7 +62,7 @@ const Layout = ({ title, children }) => {
 			<Carrousel />
 
 			<Footer />
-		</PageTransition>
+		</React.Fragment>
 	)
 }
 

@@ -1,17 +1,22 @@
 import React from 'react'
 import slugify from 'slugify'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../../components/Layout'
 
+import kaindlLogo from '../../assets/images/kaindl_logo.svg'
 import products from '../../data/kaindl-products'
 
-const Kaindl = ({ products: data }) => {
-	console.log(data)
+const Kaindl = ({ products: data, images }) => {
+	const imgs = Object.values(images)
+
 	return (
 		<Layout title={'Kaindl'}>
-			<section className="kaindl-page">
+			<section className="kaindl-page fader">
 				<header className="kaindl-header">
-					<h2 className="main-title">Kaindl</h2>
+					<h2 className="main-title">
+						<img src={kaindlLogo} alt="Kaindl" />
+					</h2>
 				</header>
 				<div className="categories">
 					{data &&
@@ -26,6 +31,24 @@ const Kaindl = ({ products: data }) => {
 										lower: true
 									})}`}
 								>
+									{imgs &&
+										imgs.map(({ childImageSharp }, key) => {
+											const { originalName } = childImageSharp.fluid
+											const currentName = `kaindl_${slugify(category.name, {
+												lower: true
+											})}.jpg`
+
+											return (
+												originalName === currentName && (
+													<Img
+														key={key}
+														className="cat-image"
+														fluid={childImageSharp.fluid}
+														alt={category.name}
+													/>
+												)
+											)
+										})}
 									<h4 className="category-name">{category.name}</h4>
 								</Link>
 							</div>
@@ -40,4 +63,30 @@ Kaindl.defaultProps = {
 	products
 }
 
-export default Kaindl
+export default props => (
+	<StaticQuery
+		query={graphql`
+			query KaindlHomeQuery {
+				natural: file(relativePath: { eq: "kaindl/kaindl_natural-touch.jpg" }) {
+					childImageSharp {
+						fluid(maxWidth: 1000) {
+							src
+							originalName
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+				classic: file(relativePath: { eq: "kaindl/kaindl_classic-touch.jpg" }) {
+					childImageSharp {
+						fluid(maxWidth: 800) {
+							src
+							originalName
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+			}
+		`}
+		render={data => <Kaindl images={data} {...props} />}
+	/>
+)

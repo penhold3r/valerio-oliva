@@ -11,7 +11,7 @@ const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
 	return (
 		<Layout title={'Maderas y Materiales'}>
-			<section className="materials animated fadeIn">
+			<section className="materials fader">
 				<header className="materials-header">
 					<h2 className="main-title">Maderas y Materiales</h2>
 
