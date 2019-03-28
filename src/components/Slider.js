@@ -52,6 +52,7 @@ const styles = {
 	navigationArrows: {
 		backgroundColor: 'rgba(0, 0, 0, 0)',
 		border: 'none',
+		cursor: 'pointer',
 		outline: 'none'
 	},
 	tile: {
@@ -181,7 +182,6 @@ class Slider extends React.Component {
 				)
 			})
 
-		console.log(navigation)
 		return (
 			<div className="slider" style={this.styles.slider} ref={this.slider}>
 				<div className="slides">{slides}</div>

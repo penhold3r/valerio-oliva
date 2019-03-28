@@ -37,8 +37,15 @@ section.laminated {
 				}
 			}
 
-			.prev-next {
-				position: relative;
+			.slider-navigation {
+				.nav-btn {
+					color: rgba(#fff, 0.5);
+					font-size: 3em;
+
+					&:hover {
+						color: #fff;
+					}
+				}
 			}
 		}
 

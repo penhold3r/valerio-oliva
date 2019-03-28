@@ -5,7 +5,8 @@ import Gallery from '../../components/Gallery'
 import VigasTable from '../../components/vigas-table'
 import Slider from '../../components/Slider'
 
-import vigasImg from '../../assets/images/vigas.jpg'
+import vigasImg01 from '../../assets/images/vigas.jpg'
+import vigasImg02 from '../../assets/images/vigas_laminadas.jpg'
 
 import estructuraIcon from '../../assets/icons/vigas_estructura-icon.svg'
 import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
@@ -57,33 +58,9 @@ class LaminatedPage extends React.Component {
 						<h2 className="main-title">Vigas Laminadas</h2>
 
 						<Slider>
-							<div>
-								<img src={vigasImg} alt="" />
-							</div>
-							<div>
-								Aliquam non modi fugiat adipisci. Commodi, explicabo reprehenderit.
-								Provident aspernatur corrupti consequuntur minus dolore accusamus! Unde
-								cumque modi voluptates id temporibus ipsum at. Perferendis, recusandae optio
-								repellat rem quod ut.
-							</div>
-							<div>
-								Officiis alias, ipsa asperiores, minus laborum doloribus ratione error
-								dolorum minima iste quisquam eum eos tenetur aut sequi obcaecati, quibusdam
-								rem nemo dolores ab repellendus. Ipsam veniam optio explicabo fuga.
-							</div>
-							<div>
-								Laboriosam velit accusamus nam doloribus voluptates quam consequatur
-								suscipit laborum id voluptatum ut labore sint sit iste rem vero eligendi
-								esse sunt voluptatem, quod odio similique beatae nostrum placeat. Quas.
-							</div>
+							<img src={vigasImg01} alt="" />
+							<img src={vigasImg02} alt="" />
 						</Slider>
-
-						{/* <Parallax
-							bgImage={vigasImg}
-							bgImageAlt={'[ Vigas Laminadas ]'}
-							strength={400}
-							className="vigas-img"
-						/> */}
 					</header>
 					<div className="vigas-content">
 						<div className="vigas-block">
