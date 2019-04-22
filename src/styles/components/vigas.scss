@@ -19,47 +19,6 @@ section.laminated {
 			width: 100%;
 			z-index: 2;
 		}
-
-		.slider {
-			position: relative;
-			top: 0;
-			z-index: 1;
-
-			.slides {
-				.slide {
-					background: $main-color;
-
-					img {
-						height: 100%;
-						object-fit: cover;
-						width: 100%;
-					}
-				}
-			}
-
-			.slider-navigation {
-				.nav-btn {
-					color: rgba(#fff, 0.5);
-					font-size: 3em;
-
-					&:hover {
-						color: #fff;
-					}
-				}
-			}
-		}
-
-		.vigas-img {
-			height: 100%;
-			width: 100%;
-			position: absolute !important;
-			top: 0;
-			z-index: 0;
-
-			img {
-				width: 100% !important;
-			}
-		}
 	}
 
 	.vigas-content {

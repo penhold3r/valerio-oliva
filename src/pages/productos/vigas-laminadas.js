@@ -5,8 +5,10 @@ import Gallery from '../../components/Gallery'
 import VigasTable from '../../components/vigas-table'
 import Slider from '../../components/Slider'
 
-import vigasImg01 from '../../assets/images/vigas.jpg'
-import vigasImg02 from '../../assets/images/vigas_laminadas.jpg'
+import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
+import vigasImg02 from '../../assets/images/valerio_oliva-vigas_laminadas02.jpg'
+import vigasImg03 from '../../assets/images/valerio_oliva-vigas_laminadas03.jpg'
+import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
 
 import estructuraIcon from '../../assets/icons/vigas_estructura-icon.svg'
 import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
@@ -60,6 +62,8 @@ class LaminatedPage extends React.Component {
 						<Slider>
 							<img src={vigasImg01} alt="" />
 							<img src={vigasImg02} alt="" />
+							<img src={vigasImg03} alt="" />
+							<img src={vigasImg04} alt="" />
 						</Slider>
 					</header>
 					<div className="vigas-content">

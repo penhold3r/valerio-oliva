@@ -91,7 +91,7 @@ module.exports = [
 	{
 		name: 'Natural Touch',
 		img: '../assets/images/kaindl/kaindl_natural-touch.jpg',
-		dec:
+		desc:
 			'Irrupción en la tercera dimensión. No solo ver, sino también sentir: nunca antes un diseño de suelo había estado tan cerca de su modelo natural.',
 		products: [
 			{

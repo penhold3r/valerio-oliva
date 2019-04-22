@@ -2,10 +2,14 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import slugify from 'slugify'
-import { Parallax } from 'react-parallax'
 
 import Layout from '../../components/Layout'
-import materialesHero from '../../assets/images/maderas.jpg'
+import Slider from '../../components/Slider'
+
+import materialsImg01 from '../../assets/images/valerio_oliva-materiales01.jpg'
+import materialsImg02 from '../../assets/images/valerio_oliva-materiales02.jpg'
+import materialsImg03 from '../../assets/images/valerio_oliva-materiales03.jpg'
+import materialsImg04 from '../../assets/images/valerio_oliva-materiales04.jpg'
 
 const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
@@ -15,12 +19,12 @@ const MaterialsPage = ({ data }) => {
 				<header className="materials-header">
 					<h2 className="main-title">Maderas y Materiales</h2>
 
-					<Parallax
-						bgImage={materialesHero}
-						bgImageAlt={'[ Maderas y Materiales ]'}
-						strength={400}
-						className="materials-img"
-					/>
+					<Slider>
+						<img src={materialsImg01} alt="" />
+						<img src={materialsImg02} alt="" />
+						<img src={materialsImg03} alt="" />
+						<img src={materialsImg04} alt="" />
+					</Slider>
 				</header>
 				<div className="materials-list">
 					{edges &&

@@ -1,31 +1,23 @@
 section.materials {
 	.materials-header {
 		position: relative;
+		height: 350px;
 		z-index: 1;
 
+		@include tablet {
+			height: 250px;
+		}
+
 		.main-title {
-			background: rgba($accent-color, 0.8);
-			margin: 0;
+			background: rgba($main-color, 0.75);
 			color: #fff;
+			margin: 0;
 			padding: 15px;
 			position: absolute;
 			text-align: center;
+			top: 0;
 			width: 100%;
 			z-index: 2;
-		}
-
-		.materials-img {
-			height: 350px;
-			width: 100%;
-			z-index: 1;
-
-			@include tablet {
-				height: 200px;
-			}
-
-			img {
-				width: 100% !important;
-			}
 		}
 	}
 

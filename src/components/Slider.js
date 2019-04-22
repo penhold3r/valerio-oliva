@@ -146,14 +146,14 @@ class Slider extends React.Component {
 				<button
 					className="nav-btn prev"
 					style={this.styles.navigationArrows}
-					onClick={() => this.handlePagination(currentIndex)}
+					onClick={() => this.handlePagination(currentIndex - 1)}
 				>
 					&lang;
 				</button>
 				<button
 					className="nav-btn next"
 					style={this.styles.navigationArrows}
-					onClick={() => this.handlePagination(currentIndex)}
+					onClick={() => this.handlePagination(currentIndex + 1)}
 				>
 					&rang;
 				</button>
@@ -161,7 +161,12 @@ class Slider extends React.Component {
 		)
 	}
 
-	handlePagination = index => this.setState({ currentSlide: index })
+	handlePagination = index => {
+		const i =
+			index > this.state.images.length - 1 ? 0 : index < 1 ? this.state.images.length - 1 : index
+
+		this.setState({ currentSlide: i })
+	}
 
 	render() {
 		const { images, pagination, navigation } = this.state

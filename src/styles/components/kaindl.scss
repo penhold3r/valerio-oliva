@@ -93,8 +93,67 @@ section.kaindl-product {
 
 		.main-title {
 			color: #fff;
-			margin: 0 0 15px;
+			margin: 0 auto 15px;
+			max-width: 1300px;
 			text-align: center;
+
+			&.kaindl-logo {
+				border-bottom: 1px solid #fff;
+				margin-bottom: 30px;
+				padding-bottom: 15px;
+				position: relative;
+
+				.back-btn {
+					background: $kaindl;
+					//bottom: -16px;
+					top: 10px;
+					display: flex;
+					height: 30px;
+					left: 0;
+					padding-right: 6px;
+					position: absolute;
+					width: 30px;
+
+					.arrow {
+						background: transparent;
+						height: 1px;
+						margin: auto;
+						position: relative;
+						transition: all 0.3s;
+						width: 100%;
+
+						&:before,
+						&:after {
+							background: #fff;
+							content: '';
+							height: 1px;
+							left: -3px;
+							position: absolute;
+							transition: all 0.3s;
+							width: 70%;
+						}
+
+						&:before {
+							transform: rotate(-45deg);
+							top: -6px;
+						}
+
+						&:after {
+							transform: rotate(45deg);
+							bottom: -6px;
+						}
+					}
+
+					&:hover {
+						.arrow {
+							&:before,
+							&:after {
+								background: $kaindl-light;
+							}
+						}
+					}
+				}
+			}
 
 			img {
 				margin: 0 auto;
@@ -103,7 +162,7 @@ section.kaindl-product {
 		}
 
 		.product-main-description {
-			color: #fff;
+			color: $kaindl-light;
 			margin: 0 auto;
 			max-width: 800px;
 			text-align: center;

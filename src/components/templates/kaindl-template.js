@@ -13,14 +13,21 @@ const KaindlProduct = ({ pageContext, images }) => {
 		<Layout title={name}>
 			<section className={`${slug} kaindl-product fader`}>
 				<header className="kaindl-product-header">
-					<h2 className="main-title">
+					<h2 className="main-title kaindl-logo">
 						<Link to="/materiales/kaindl">
 							<img src={kaindlLogo} alt="Kaindl" />
+						</Link>
+						<Link to="/materiales/kaindl" title="volver">
+							<div className="back-btn">
+								<div className="arrow" />
+							</div>
 						</Link>
 					</h2>
 					<h3 className="main-title">{name}</h3>
 					<div className="product-main-description">
-						<p dangerouslySetInnerHTML={{ __html: desc }} />
+						<p>
+							<strong dangerouslySetInnerHTML={{ __html: desc }} />
+						</p>
 					</div>
 				</header>
 				<div className="products">

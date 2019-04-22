@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import vigas from '../assets/images/vigas.jpg'
-import materiales from '../assets/images/maderas.jpg'
+import vigas from '../assets/images/valerio_oliva-vigas_laminadas-home.jpg'
+import materiales from '../assets/images/valerio_oliva-materiales-home.jpg'
 
 const IndexPage = () => (
 	<Layout>

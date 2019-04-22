@@ -183,7 +183,7 @@
 		grid-gap: 45px;
 		grid-template-columns: 1fr 1fr;
 		max-width: 1300px;
-		margin: 0 auto 15px;
+		margin: 0 auto 30px;
 		width: 100%;
 
 		@include tablet {
@@ -193,6 +193,7 @@
 
 		img {
 			background: #fff;
+			box-shadow: 0 3px 5px rgba(#000, 0.25);
 			display: block;
 			width: 100%;
 		}
