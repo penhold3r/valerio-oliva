@@ -3,14 +3,12 @@
 	padding: 15px;
 
 	.wrapper {
-		background: #fff;
 		max-width: 1300px;
 		margin: 0 auto;
 
 		.grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 1px;
 
 			@include tablet {
 				grid-template-columns: 1fr;
@@ -18,10 +16,16 @@
 
 			.service-block {
 				background: $accent-color;
+				border-right: 1px solid #fff;
 				padding: 0 15px;
 
 				@include tablet {
+					border: none;
 					padding: 15px;
+				}
+
+				&:last-child {
+					border: none;
 				}
 
 				h3 {

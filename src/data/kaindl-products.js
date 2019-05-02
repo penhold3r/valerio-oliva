@@ -27,7 +27,7 @@ module.exports = [
 					{
 						name: '8mm',
 						desc:
-							'Clase de utilización 32 / 30 años de garantía/ Tránsito residencial alto, comercial alto.',
+							'Clase de utilización 32 / 30 años de garantía / Tránsito residencial alto, comercial alto.',
 						items: [
 							{
 								name: 'Oak Orlando',
@@ -72,7 +72,7 @@ module.exports = [
 					{
 						name: '8mm',
 						desc:
-							'Clase de utilización 32 / 30 años de garantía/ Tránsito residencial alto, comercial alto.',
+							'Clase de utilización 32 / 30 años de garantía / Tránsito residencial alto, comercial alto.',
 						items: [
 							{
 								name: 'Teak Walaba',
@@ -101,7 +101,7 @@ module.exports = [
 					{
 						name: '10mm',
 						desc:
-							'Clase de utilización 32 / 30 años de garantía/ Tránsito residencial alto, comercial intenso.',
+							'Clase de utilización 32 / 30 años de garantía / Tránsito residencial alto, comercial intenso.',
 						items: [
 							{
 								name: 'Hickory Chelsea',

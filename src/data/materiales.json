@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Maderas",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-maderas.jpg",
 		"icon": "../assets/icons/maderas-icon.svg",
 		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
 		"content": [
@@ -25,7 +25,7 @@
 	},
 	{
 		"name": "Placas",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-placas.jpg",
 		"icon": "../assets/icons/placas-icon.svg",
 		"banners": ["../assets/ads/grupo_euro.png", "../assets/ads/corte_placas.png"],
 		"content": [
@@ -294,7 +294,7 @@
 	},
 	{
 		"name": "Membranas",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-membranas.jpg",
 		"icon": "../assets/icons/membranas-icon.svg",
 		"banners": ["../assets/ads/grupo_estisol.png", "../assets/ads/holcim.png"],
 		"content": [
@@ -358,7 +358,7 @@
 	},
 	{
 		"name": "Aislantes",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-aislantes.jpg",
 		"icon": "../assets/icons/aislantes-icon.svg",
 		"banners": ["../assets/ads/knauf.png", "../assets/ads/techos_laminados.png"],
 		"content": [
@@ -390,7 +390,7 @@
 	},
 	{
 		"name": "Construcción Tradicional",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-const_trad.jpg",
 		"icon": "../assets/icons/construccion_tradicional-icon.svg",
 		"banners": ["../assets/ads/servicio_envios.png", "../assets/ads/knauf.png"],
 		"content": [
@@ -446,7 +446,7 @@
 	},
 	{
 		"name": "Construcción en Seco",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-const_seco.jpg",
 		"icon": "../assets/icons/construccion_seco-icon.svg",
 		"banners": ["../assets/ads/osb.png", "../assets/ads/servicio_autoelevador.png"],
 		"content": [
@@ -510,9 +510,9 @@
 	},
 	{
 		"name": "Pisos y Decks",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-pisos.jpg",
 		"icon": "../assets/icons/pisos-icon.svg",
-		"banners": ["../assets/ads/holcim.png", "../assets/ads/holcim.png"],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/osb.png"],
 		"content": [
 			{
 				"item": "Entablonados",
@@ -603,7 +603,7 @@
 	},
 	{
 		"name": "Protectores",
-		"image": "../assets/images/material.test.jpg",
+		"image": "../assets/images/valerio_oliva-protectores.jpg",
 		"icon": "../assets/icons/protectores-icon.svg",
 		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
 		"content": [

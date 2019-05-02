@@ -76,7 +76,10 @@ const KaindlProduct = ({ pageContext, images }) => {
 																	)
 																}
 															)}
-														<h5 className="item-name">{item.name}</h5>
+														<hgroup className="cat-block-foot">
+															<h4 className="item-name">{item.name}</h4>
+															<h5 className="item-id">{item.id}</h5>
+														</hgroup>
 													</div>
 												))}
 										</div>

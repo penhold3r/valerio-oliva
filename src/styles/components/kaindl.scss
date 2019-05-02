@@ -215,18 +215,27 @@ section.kaindl-product {
 						}
 					}
 
-					.item-name {
+					.cat-block-foot {
 						background: rgba($kaindl, 0.8);
 						bottom: 0;
 						color: #fff;
 						font-family: 'Cairo', sans-serif;
-						font-size: 1em;
-						padding: 6px;
+						padding: 9px;
 						position: absolute;
-						margin: 0;
 						text-transform: uppercase;
 						width: 100%;
 						z-index: 1;
+
+						.item-name {
+							font-size: 1em;
+							margin: 0;
+							padding-bottom: 3px;
+						}
+
+						.item-id {
+							font-size: 0.8em;
+							margin: 0;
+						}
 					}
 
 					&.cat-intro {

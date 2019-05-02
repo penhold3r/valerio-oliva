@@ -34,6 +34,12 @@ section.materials {
 		top: -30px;
 		z-index: 2;
 
+		@include tablet {
+			grid-gap: 15px;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			padding: 30px 15px;
+		}
+
 		.product-icon {
 			color: $main-color;
 			position: relative;
@@ -42,7 +48,7 @@ section.materials {
 			.icon {
 				align-items: center;
 				background: #fff;
-				border-radius: 100%;
+				border-radius: 50%;
 				box-shadow: 0 2px 3px rgba(#000, 0.5);
 				display: flex;
 				height: 100px;
@@ -53,6 +59,11 @@ section.materials {
 				position: relative;
 				transition: all 0.3s;
 				width: 100px;
+
+				@include tablet {
+					height: 80px;
+					width: 80px;
+				}
 
 				&:after {
 					border-radius: 50%;

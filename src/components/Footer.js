@@ -42,8 +42,8 @@ const Footer = () => {
 				<div className="copy">
 					<p>
 						<em>
-							<strong>&copy; 2018 Valerio Oliva</strong> - Maderas y Materiales. Todos los
-							derechos reservados.
+							<strong>&copy; {new Date().getFullYear()} Valerio Oliva</strong> - Maderas y
+							Materiales. Todos los derechos reservados.
 						</em>
 					</p>
 				</div>

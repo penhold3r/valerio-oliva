@@ -66,7 +66,7 @@ module.exports = {
 				scope: '/',
 				short_name: 'Valerio Oliva',
 				start_url: '.',
-				theme_color: '#F2EEEB'
+				theme_color: '#f39200'
 			}
 		},
 		'gatsby-plugin-offline'
