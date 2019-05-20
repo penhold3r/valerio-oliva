@@ -1,5 +1,4 @@
 import React from 'react'
-import { Parallax } from 'react-parallax'
 
 import Layout from '../components/Layout'
 import image from '../assets/images/empresa.jpg'
@@ -9,12 +8,7 @@ const AboutPage = () => (
 		<section className="about fader">
 			<header className="about-header">
 				<h2 className="main-title">Nuestra Empresa</h2>
-				<Parallax
-					bgImage={image}
-					bgImageAlt={'[ Empresa ]'}
-					strength={400}
-					className="about-image"
-				/>
+				<img src={image} className="about-image" alt="[ empresa ]" />
 			</header>
 			<div className="about-content">
 				<div className="about-block">

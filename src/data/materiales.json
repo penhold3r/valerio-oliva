@@ -90,7 +90,7 @@
 				"link": null,
 				"subItems": [
 					{
-						"subItem": "Sobre MDL y sobre aglomerado",
+						"subItem": "Sobre MDF y sobre Aglomerado",
 						"desc": "Paraiso, Guatambu, Cerejeira, Cedro, Goiabao, Laurel, Pino, Peteriby, Itauba",
 						"thickness": "3mm, 5.5mm, 19mm",
 						"measure": "1.83m x 2.60m",
@@ -131,11 +131,19 @@
 				"subItems": null
 			},
 			{
-				"item": "Fenólicos",
-				"desc": "Comunes y con Film",
+				"item": "Fenólicos Comunes",
+				"desc": null,
 				"thickness": "6mm, 10mm, 12mm, 15mm, 18mm, 25mm",
 				"measure": "1.22m x 2.44m, 1.60m x 2.20m",
-				"link": null,
+				"link": "http://www.tapebicua.com.ar/",
+				"subItems": null
+			},
+			{
+				"item": "Fenólicos con Film",
+				"desc": null,
+				"thickness": "6mm, 10mm, 12mm, 15mm, 18mm, 25mm",
+				"measure": "1.22m x 2.44m, 1.60m x 2.20m",
+				"link": "http://www.miraluz.com.br/",
 				"subItems": null
 			}
 		]
