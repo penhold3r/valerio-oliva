@@ -34,6 +34,10 @@ module.exports = [
 								id: '34242 AV'
 							},
 							{
+								name: 'Oak Orlando',
+								id: '37218 AH'
+							},
+							{
 								name: 'Walnut Limana',
 								id: '37503 MO'
 							},
@@ -48,10 +52,6 @@ module.exports = [
 							{
 								name: 'Walnut Sabo – Borde Biselado',
 								id: 'K4367 AV'
-							},
-							{
-								name: 'Oak Orlando',
-								id: '37218 AH'
 							},
 							{
 								name: 'Roble Satriano',

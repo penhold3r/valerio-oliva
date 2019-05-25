@@ -176,7 +176,7 @@
 		"name": "Herrajes y Accesorios",
 		"image": "../assets/images/valerio_oliva-herrajes.jpg",
 		"icon": "../assets/icons/herrajes-icon.svg",
-		"banners": ["../assets/ads/holcim.png", "../assets/ads/tornillos.png"],
+		"banners": ["../assets/ads/tornillos.png", "../assets/ads/servicio_envios.png"],
 		"content": [
 			{
 				"item": "Tapacantos Rehau",
@@ -400,7 +400,7 @@
 		"name": "Construcción Tradicional",
 		"image": "../assets/images/valerio_oliva-const_trad.jpg",
 		"icon": "../assets/icons/construccion_tradicional-icon.svg",
-		"banners": ["../assets/ads/servicio_envios.png", "../assets/ads/knauf.png"],
+		"banners": ["../assets/ads/holcim.png", "../assets/ads/chirino.png"],
 		"content": [
 			{
 				"item": "Cemento Holcim",
@@ -456,7 +456,7 @@
 		"name": "Construcción en Seco",
 		"image": "../assets/images/valerio_oliva-const_seco.jpg",
 		"icon": "../assets/icons/construccion_seco-icon.svg",
-		"banners": ["../assets/ads/osb.png", "../assets/ads/servicio_autoelevador.png"],
+		"banners": ["../assets/ads/osb.png", "../assets/ads/knauf.png"],
 		"content": [
 			{
 				"item": "Placas de yeso Knauf",
@@ -520,7 +520,7 @@
 		"name": "Pisos y Decks",
 		"image": "../assets/images/valerio_oliva-pisos.jpg",
 		"icon": "../assets/icons/pisos-icon.svg",
-		"banners": ["../assets/ads/holcim.png", "../assets/ads/osb.png"],
+		"banners": ["../assets/ads/petrilac.png", "../assets/ads/kaindl.png"],
 		"content": [
 			{
 				"item": "Entablonados",

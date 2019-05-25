@@ -36,14 +36,6 @@ const Layout = ({ title, children }) => {
 				]}
 				link={[
 					{
-						href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700,700i',
-						rel: 'stylesheet'
-					},
-					{
-						href: 'https://fonts.googleapis.com/css?family=Cairo:300',
-						rel: 'stylesheet'
-					},
-					{
 						href: 'https://file.myfontastic.com/SnS98Lv4hKuJ5pWJ47AKjb/icons.css',
 						rel: 'stylesheet'
 					},

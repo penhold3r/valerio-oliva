@@ -45,7 +45,22 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'data',
-				path: `${__dirname}/src/data/`
+				path: path.join(__dirname, `src`, `data`)
+			}
+		},
+		{
+			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			options: {
+				fonts: [
+					{
+						family: `Open Sans`,
+						variants: [`300`, `700`, `300i`, `700i`]
+					},
+					{
+						family: `Cairo`,
+						variants: [`300`]
+					}
+				]
 			}
 		},
 		'gatsby-plugin-react-helmet',
