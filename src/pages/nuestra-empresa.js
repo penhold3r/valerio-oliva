@@ -1,14 +1,27 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import image from '../assets/images/empresa.jpg'
+import Slider from '../components/Slider'
+
+import empresaImg01 from '../assets/images/valerio_oliva-empresa01.jpg'
+import empresaImg02 from '../assets/images/valerio_oliva-empresa02.jpg'
+import empresaImg03 from '../assets/images/valerio_oliva-empresa03.jpg'
+import empresaImg04 from '../assets/images/valerio_oliva-empresa04.jpg'
+import empresaImg05 from '../assets/images/valerio_oliva-empresa05.jpg'
 
 const AboutPage = () => (
 	<Layout>
 		<section className="about fader">
 			<header className="about-header">
 				<h2 className="main-title">Nuestra Empresa</h2>
-				<img src={image} className="about-image" alt="[ empresa ]" />
+
+				<Slider>
+					<img src={empresaImg01} alt="" />
+					<img src={empresaImg02} alt="" />
+					<img src={empresaImg03} alt="" />
+					<img src={empresaImg04} alt="" />
+					<img src={empresaImg05} alt="" />
+				</Slider>
 			</header>
 			<div className="about-content">
 				<div className="about-block">

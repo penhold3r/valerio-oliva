@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import slugify from 'slugify'
@@ -90,6 +91,11 @@ const KaindlProduct = ({ pageContext, images }) => {
 			</section>
 		</Layout>
 	)
+}
+
+KaindlProduct.propTypes = {
+	pageContext: PropTypes.object,
+	images: PropTypes.array
 }
 
 export default props => (

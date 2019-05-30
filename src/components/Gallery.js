@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -43,6 +44,10 @@ class Gallery extends React.Component {
 			</div>
 		)
 	}
+}
+
+Gallery.propTypes = {
+	data: PropTypes.object
 }
 
 export default props => (

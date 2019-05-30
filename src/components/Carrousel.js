@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Slider from 'react-styled-carousel'
 import Img from 'gatsby-image'
@@ -31,6 +32,10 @@ const Carrousel = ({ data }) => {
 			</Slider>
 		</div>
 	)
+}
+
+Carrousel.propTypes = {
+	data: PropTypes.object
 }
 
 export default props => (

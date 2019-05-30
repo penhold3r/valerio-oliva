@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import slugify from 'slugify'
 import Layout from '../Layout'
 import Link from '../Link'
@@ -30,7 +31,7 @@ const Material = ({ pageContext }) => {
 										'.material-item'
 									)
 
-									for (let item of allItems) item.classList.remove('active')
+									allItems.forEach(item => item.classList.remove('active'))
 
 									isActive
 										? e.currentTarget.classList.remove('active')
@@ -136,6 +137,10 @@ const Material = ({ pageContext }) => {
 			</section>
 		</Layout>
 	)
+}
+
+Material.propTypes = {
+	pageContext: PropTypes.object
 }
 
 export default Material

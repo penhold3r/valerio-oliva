@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import slugify from 'slugify'
@@ -10,6 +11,7 @@ import materialsImg01 from '../../assets/images/valerio_oliva-materiales01.jpg'
 import materialsImg02 from '../../assets/images/valerio_oliva-materiales02.jpg'
 import materialsImg03 from '../../assets/images/valerio_oliva-materiales03.jpg'
 import materialsImg04 from '../../assets/images/valerio_oliva-materiales04.jpg'
+import materialsImg05 from '../../assets/images/valerio_oliva-materiales05.jpg'
 
 const MaterialsPage = ({ data }) => {
 	const { edges } = data.allMaterialesJson
@@ -24,6 +26,7 @@ const MaterialsPage = ({ data }) => {
 						<img src={materialsImg02} alt="" />
 						<img src={materialsImg03} alt="" />
 						<img src={materialsImg04} alt="" />
+						<img src={materialsImg05} alt="" />
 					</Slider>
 				</header>
 				<div className="materials-list">
@@ -47,6 +50,10 @@ const MaterialsPage = ({ data }) => {
 			</section>
 		</Layout>
 	)
+}
+
+MaterialsPage.propTypes = {
+	data: PropTypes.object
 }
 
 export default MaterialsPage

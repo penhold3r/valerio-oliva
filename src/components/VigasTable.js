@@ -1,5 +1,4 @@
 import React from 'react'
-
 import specs from '../data/vigas'
 
 const VigasTable = () => {

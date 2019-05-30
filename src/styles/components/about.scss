@@ -2,6 +2,7 @@ section.about {
 	.about-header {
 		position: relative;
 		height: 350px;
+		z-index: 1;
 
 		@include tablet {
 			height: 250px;
@@ -9,12 +10,14 @@ section.about {
 
 		.main-title {
 			background: rgba($main-color, 0.75);
-			margin: 0;
 			color: #fff;
+			margin: 0;
 			padding: 15px;
+			position: absolute;
 			text-align: center;
-			position: relative;
-			z-index: 1;
+			top: 0;
+			width: 100%;
+			z-index: 2;
 		}
 
 		.about-image {
@@ -32,6 +35,8 @@ section.about {
 		margin: 0 auto;
 		max-width: 1330px;
 		padding: 0 15px;
+		position: relative;
+		z-index: 2;
 
 		.about-block {
 			background: #fff;

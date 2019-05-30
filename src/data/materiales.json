@@ -3,7 +3,7 @@
 		"name": "Maderas",
 		"image": "../assets/images/valerio_oliva-maderas.jpg",
 		"icon": "../assets/icons/maderas-icon.svg",
-		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
+		"banners": ["../assets/ads/servicio_envios.png", "../assets/ads/fortex.png"],
 		"content": [
 			{
 				"item": "Maderas Nacionales e Importadas",
@@ -176,7 +176,7 @@
 		"name": "Herrajes y Accesorios",
 		"image": "../assets/images/valerio_oliva-herrajes.jpg",
 		"icon": "../assets/icons/herrajes-icon.svg",
-		"banners": ["../assets/ads/tornillos.png", "../assets/ads/servicio_envios.png"],
+		"banners": ["../assets/ads/tornillos.png", "../assets/ads/servicio_corte.png"],
 		"content": [
 			{
 				"item": "Tapacantos Rehau",
@@ -232,7 +232,7 @@
 		"name": "Techos",
 		"image": "../assets/images/valerio_oliva-techos.jpg",
 		"icon": "../assets/icons/techos-icon.svg",
-		"banners": ["../assets/ads/membranas.png", "../assets/ads/cerro_negro.png"],
+		"banners": ["../assets/ads/membranas.png", "../assets/ads/techos_laminados.png"],
 		"content": [
 			{
 				"item": "Vigas Laminadas",
@@ -280,7 +280,7 @@
 		"name": "Tejas",
 		"image": "../assets/images/valerio_oliva-tejas.jpg",
 		"icon": "../assets/icons/tejas-icon.svg",
-		"banners": ["../assets/ads/isolant.png", "../assets/ads/servicio_autoelevador.png"],
+		"banners": ["../assets/ads/cerro_negro.png", "../assets/ads/servicio_autoelevador.png"],
 		"content": [
 			{
 				"item": "Cerámicas Cerro Negro",
@@ -368,7 +368,7 @@
 		"name": "Aislantes",
 		"image": "../assets/images/valerio_oliva-aislantes.jpg",
 		"icon": "../assets/icons/aislantes-icon.svg",
-		"banners": ["../assets/ads/knauf.png", "../assets/ads/techos_laminados.png"],
+		"banners": ["../assets/ads/knauf.png", "../assets/ads/isolant.png"],
 		"content": [
 			{
 				"item": "Isolant",
@@ -613,7 +613,7 @@
 		"name": "Protectores",
 		"image": "../assets/images/valerio_oliva-protectores.jpg",
 		"icon": "../assets/icons/protectores-icon.svg",
-		"banners": ["../assets/ads/holcim.png", "../assets/ads/fortex.png"],
+		"banners": ["../assets/ads/petrilac.png", "../assets/ads/fortex.png"],
 		"content": [
 			{
 				"item": "Barniz",

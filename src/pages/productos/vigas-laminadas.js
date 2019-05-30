@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import Gallery from '../../components/Gallery'
-import VigasTable from '../../components/vigas-table'
+import VigasTable from '../../components/VigasTable'
 import Slider from '../../components/Slider'
 
 import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
