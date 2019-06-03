@@ -80,7 +80,7 @@ module.exports = {
 				orientation: 'portrait',
 				scope: '/',
 				short_name: 'Valerio Oliva',
-				start_url: '.',
+				start_url: '/',
 				theme_color: '#f39200'
 			}
 		},

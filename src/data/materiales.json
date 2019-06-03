@@ -520,7 +520,7 @@
 		"name": "Pisos y Decks",
 		"image": "../assets/images/valerio_oliva-pisos.jpg",
 		"icon": "../assets/icons/pisos-icon.svg",
-		"banners": ["../assets/ads/petrilac.png", "../assets/ads/kaindl.png"],
+		"banners": ["../assets/ads/servicio_autoelevador.png", "../assets/ads/kaindl.png"],
 		"content": [
 			{
 				"item": "Entablonados",

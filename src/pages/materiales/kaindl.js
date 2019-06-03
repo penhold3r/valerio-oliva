@@ -18,41 +18,43 @@ const Kaindl = ({ products: data, images }) => {
 						<img src={kaindlLogo} alt="Kaindl" />
 					</h2>
 				</header>
-				<div className="categories">
-					{data &&
-						data.map((category, key) => (
-							<div
-								key={key}
-								className={`category ${slugify(category.name, { lower: true })}`}
-							>
-								<Link
-									className="category-link"
-									to={`/materiales/kaindl/${slugify(category.name, {
-										lower: true
-									})}`}
+				<div className="categories-wrapper">
+					<div className="categories">
+						{data &&
+							data.map((category, key) => (
+								<div
+									key={key}
+									className={`category ${slugify(category.name, { lower: true })}`}
 								>
-									{imgs &&
-										imgs.map(({ childImageSharp }, key) => {
-											const { originalName } = childImageSharp.fluid
-											const currentName = `kaindl_${slugify(category.name, {
-												lower: true
-											})}.jpg`
+									<Link
+										className="category-link"
+										to={`/materiales/kaindl/${slugify(category.name, {
+											lower: true
+										})}`}
+									>
+										{imgs &&
+											imgs.map(({ childImageSharp }, key) => {
+												const { originalName } = childImageSharp.fluid
+												const currentName = `kaindl_${slugify(category.name, {
+													lower: true
+												})}.jpg`
 
-											return (
-												originalName === currentName && (
-													<Img
-														key={key}
-														className="cat-image"
-														fluid={childImageSharp.fluid}
-														alt={category.name}
-													/>
+												return (
+													originalName === currentName && (
+														<Img
+															key={key}
+															className="cat-image"
+															fluid={childImageSharp.fluid}
+															alt={category.name}
+														/>
+													)
 												)
-											)
-										})}
-									<h4 className="category-name">{category.name}</h4>
-								</Link>
-							</div>
-						))}
+											})}
+										<h4 className="category-name">{category.name}</h4>
+									</Link>
+								</div>
+							))}
+					</div>
 				</div>
 			</section>
 		</Layout>
