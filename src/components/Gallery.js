@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-//import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Gallery = ({ data }) => {
