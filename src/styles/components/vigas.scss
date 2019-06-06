@@ -232,29 +232,106 @@ section.laminated {
 	}
 
 	.float-btn-wrapper {
-		position: sticky;
-		bottom: 21px;
+		top: 115px;
 		display: flex;
-		z-index: 10;
-		margin: 15px auto;
+		height: 0;
+		margin: 0 auto;
 		max-width: 1300px;
+		position: sticky;
+		z-index: 10;
 
 		.float-btn {
-			background: $accent-color;
-			border-radius: 50%;
-			box-shadow: 0 3px 4px rgba(#000, 0.5);
+			width: 250px;
+			background: rgba(85, 79, 70, 0.75);
+			box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+			height: calc(60vh - 130px);
+			position: absolute;
 			display: flex;
-			height: 80px;
-			margin: 0 15px 0 auto;
-			text-decoration: none;
-			width: 80px;
+			flex-direction: column;
+			right: 15px;
+			top: 0;
+			max-height: 600px;
+			min-height: 400px;
 
-			span {
-				margin: auto;
+			img {
+				display: block;
+				object-fit: cover;
+				min-height: 150px;
+				height: 30%;
+				width: 100%;
+			}
+
+			.tag {
 				color: #fff;
-				font-weight: bold;
-				line-height: 1;
+				margin: 30px 15px;
+				font-weight: normal;
+
+				span {
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+			}
+
+			.link {
+				margin: auto 15px 15px;
+				background: $accent-color;
+				padding: 6px 12px;
+				text-align: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #fff;
 			}
 		}
+
+		// .float-btn {
+		// 	background: $accent-color;
+		// 	border-radius: 40px;
+		// 	box-shadow: 0 3px 4px rgba(#000, 0.5);
+		// 	display: flex;
+		// 	height: 80px;
+		// 	margin: 0 15px 0 auto;
+		// 	overflow: hidden;
+		// 	position: relative;
+		// 	text-decoration: none;
+		// 	transform: translateY(-90px);
+		// 	transition: all 0.4s;
+		// 	width: 80px;
+
+		// 	.tag {
+		// 		color: #fff;
+		// 		line-height: 1;
+		// 		margin: auto 0;
+		// 		opacity: 0;
+		// 		text-align: center;
+		// 		text-overflow: clip;
+		// 		text-transform: uppercase;
+		// 		transition: all 0.6s;
+		// 		white-space: nowrap;
+		// 		width: 1px;
+		// 	}
+
+		// 	.icon {
+		// 		color: #fff;
+		// 		font-weight: bold;
+		// 		height: 100%;
+		// 		line-height: 80px;
+		// 		margin: 0 auto;
+		// 		position: absolute;
+		// 		right: 6px;
+		// 		text-align: center;
+		// 		width: 68px;
+		// 	}
+
+		// 	&:hover {
+		// 		background: $main-color;
+		// 		width: 240px;
+
+		// 		.tag {
+		// 			margin: auto 80px auto auto;
+		// 			opacity: 1;
+		// 			width: calc(100% - 80px);
+		// 		}
+		// 	}
+		// }
 	}
 }

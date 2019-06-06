@@ -28,7 +28,7 @@ const Layout = ({ title, children }) => {
 						content: opengraph
 					},
 					{
-						property: 'twitter:image',
+						name: 'twitter:image',
 						content: opengraph
 					},
 					{
@@ -36,7 +36,7 @@ const Layout = ({ title, children }) => {
 						content: 'Maderas Laminadas para la construcción'
 					},
 					{
-						name: 'og:description',
+						property: 'og:description',
 						content: 'Maderas Laminadas para la construcción'
 					},
 					{
@@ -44,7 +44,7 @@ const Layout = ({ title, children }) => {
 						content: 'Maderas Laminadas para la construcción'
 					},
 					{
-						name: 'og:title',
+						property: 'og:title',
 						content: pageTitle
 					},
 					{
@@ -52,7 +52,7 @@ const Layout = ({ title, children }) => {
 						content: pageTitle
 					},
 					{
-						name: 'og:url',
+						property: 'og:url',
 						content: 'https://valerio-oliva.com/'
 					},
 					{
@@ -60,7 +60,7 @@ const Layout = ({ title, children }) => {
 						content: 'https://valerio-oliva.com/'
 					},
 					{
-						name: 'og:type',
+						property: 'og:type',
 						content: 'Website'
 					},
 					{

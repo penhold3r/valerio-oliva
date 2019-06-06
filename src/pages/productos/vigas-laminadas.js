@@ -14,6 +14,8 @@ import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
 import vigasImg05 from '../../assets/images/valerio_oliva-vigas_laminadas05.jpg'
 import vigasImg06 from '../../assets/images/valerio_oliva-vigas_laminadas06.jpg'
 
+import floatImg from '../../assets/images/valerio-oliva-productos_laminados.jpg'
+
 import estructuraIcon from '../../assets/icons/vigas_estructura-icon.svg'
 import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
 import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.svg'
@@ -81,6 +83,18 @@ const LaminatedPage = () => {
 						<div className="modal-content">
 							{modalState.modalContent && modalState.modalContent}
 						</div>
+					</div>
+				</div>
+
+				<div className="float-btn-wrapper">
+					<div className="float-btn">
+						<img src={floatImg} alt="[ Productos Laminados ]" />
+						<h3 className="tag">
+							Nuevos Productos <span>Multilaminados</span>
+						</h3>
+						<Link className="link" to="/productos/vigas-laminadas/productos-multilaminados">
+							Ver más
+						</Link>
 					</div>
 				</div>
 
@@ -184,11 +198,6 @@ const LaminatedPage = () => {
 							<Gallery data={edges} />
 						</div>
 					</div>
-				</div>
-				<div className="float-btn-wrapper">
-					<Link className="float-btn" to="/productos/vigas-laminadas/productos-multilaminados">
-						<span>P</span>
-					</Link>
 				</div>
 			</section>
 		</Layout>
