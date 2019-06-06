@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
 import Link from '../../components/Link'
 import VigasTable from '../../components/VigasTable'
 import Slider from '../../components/Slider'
+import Gallery from '../../components/Gallery'
 
 import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
 import vigasImg02 from '../../assets/images/valerio_oliva-vigas_laminadas02.jpg'
 import vigasImg03 from '../../assets/images/valerio_oliva-vigas_laminadas03.jpg'
 import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
+import vigasImg05 from '../../assets/images/valerio_oliva-vigas_laminadas05.jpg'
+import vigasImg06 from '../../assets/images/valerio_oliva-vigas_laminadas06.jpg'
 
 import estructuraIcon from '../../assets/icons/vigas_estructura-icon.svg'
 import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
 import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.svg'
-
 import estructuras from '../../assets/images/tipos-de-estructura.svg'
 import cortes from '../../assets/images/tipos-de-corte.svg'
 
@@ -23,6 +26,28 @@ const LaminatedPage = () => {
 		modalContent: '',
 		modalTitle: ''
 	})
+
+	const {
+		allFile: { edges }
+	} = useStaticQuery(graphql`
+		query ObrasQuery {
+			allFile(filter: { relativeDirectory: { eq: "obras" } }) {
+				edges {
+					node {
+						id
+						name
+						publicURL
+						childImageSharp {
+							fluid(maxWidth: 400) {
+								src
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
 
 	const openModal = (title, content) => {
 		const open = {
@@ -67,6 +92,8 @@ const LaminatedPage = () => {
 						<img src={vigasImg02} alt="" />
 						<img src={vigasImg03} alt="" />
 						<img src={vigasImg04} alt="" />
+						<img src={vigasImg05} alt="" />
+						<img src={vigasImg06} alt="" />
 					</Slider>
 				</header>
 				<div className="vigas-content">
@@ -145,18 +172,23 @@ const LaminatedPage = () => {
 							</h2>
 						</div>
 					</div>
-					<div className="vigas-galleries">
-						<h3 className="vigas-galleries-title">Galerías de Imágenes</h3>
-						<Link className="vigas-galleries-link" to="/productos/vigas-laminadas/obras">
-							Obras
-						</Link>
-						<Link
-							className="vigas-galleries-link"
-							to="/productos/vigas-laminadas/productos-multilaminados"
-						>
-							Productos Laminados
-						</Link>
+					<div className="vigas-gallery">
+						<h2 className="vigas-gallery-title">Obras destacadas</h2>
+						<div className="vigas-gallery-content">
+							<div className="intro-text">
+								<p>
+									Múltiples obras a lo largo de todo el país avalan la trayectoria de
+									nuestra empresa.
+								</p>
+							</div>
+							<Gallery data={edges} />
+						</div>
 					</div>
+				</div>
+				<div className="float-btn-wrapper">
+					<Link className="float-btn" to="/productos/vigas-laminadas/productos-multilaminados">
+						<span>P</span>
+					</Link>
 				</div>
 			</section>
 		</Layout>

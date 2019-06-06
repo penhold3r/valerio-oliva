@@ -9,8 +9,10 @@ import Carrousel from '../components/Carrousel'
 import 'sanitize.css'
 import '../styles/index.scss'
 
-import favicon from '../assets/images/favicon.ico'
-import bookmark from '../assets/images/bookmark-image.png'
+import faviconICO from '../assets/images/favicon.ico'
+import faviconPNG from '../assets/images/favicon.png'
+//import bookmark from '../assets/images/bookmark-image.png'
+import opengraph from '../assets/images/valerio-oliva-og.jpg'
 
 const Layout = ({ title, children }) => {
 	const pageTitle = title ? `${title} - Valerio Oliva` : 'Valerio Oliva'
@@ -23,11 +25,47 @@ const Layout = ({ title, children }) => {
 				meta={[
 					{
 						property: 'og:image',
-						content: bookmark
+						content: opengraph
+					},
+					{
+						property: 'twitter:image',
+						content: opengraph
 					},
 					{
 						name: 'description',
 						content: 'Maderas Laminadas para la construcción'
+					},
+					{
+						name: 'og:description',
+						content: 'Maderas Laminadas para la construcción'
+					},
+					{
+						name: 'twitter:description',
+						content: 'Maderas Laminadas para la construcción'
+					},
+					{
+						name: 'og:title',
+						content: pageTitle
+					},
+					{
+						name: 'twitter:title',
+						content: pageTitle
+					},
+					{
+						name: 'og:url',
+						content: 'https://valerio-oliva.com/'
+					},
+					{
+						name: 'twitter:site',
+						content: 'https://valerio-oliva.com/'
+					},
+					{
+						name: 'og:type',
+						content: 'Website'
+					},
+					{
+						name: 'twitter:card',
+						content: 'summary_large_image'
 					},
 					{
 						name: 'keywords',
@@ -40,9 +78,15 @@ const Layout = ({ title, children }) => {
 						rel: 'stylesheet'
 					},
 					{
-						href: favicon,
+						href: faviconICO,
 						rel: 'shortcut icon',
 						type: 'image/x-icon'
+					},
+					{
+						href: faviconPNG,
+						rel: 'shortcut icon',
+						type: 'image/png',
+						sizes: '32x32 192x192'
 					}
 				]}
 			/>
