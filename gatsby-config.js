@@ -1,4 +1,5 @@
 const path = require(`path`)
+const globImporter = require('node-sass-glob-importer')
 
 module.exports = {
 	siteMetadata: {
@@ -9,7 +10,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-sass`,
 			options: {
-				precision: 8
+				precision: 8,
+				importer: globImporter()
 			}
 		},
 		`gatsby-transformer-json`,

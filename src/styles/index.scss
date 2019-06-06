@@ -1,8 +1,7 @@
 /**********************
 *  DEPENDENCIES
 ***********************/
-@import './dependencies/mixines';
-@import './dependencies/variables';
+@import './dependencies/*.scss';
 
 /**********************
 *  GLOBAL STYLES
@@ -53,17 +52,4 @@ body {
 *  COMPONENTS
 ***********************/
 
-@import './components/header';
-@import './components/landing';
-@import './components/materials';
-@import './components/single-material';
-@import './components/slider';
-@import './components/kaindl';
-@import './components/vigas';
-@import './components/vigas-modal';
-@import './components/about';
-@import './components/contact';
-@import './components/carrousel';
-@import './components/services';
-@import './components/footer';
-@import './components/404';
+@import './components/*.scss';

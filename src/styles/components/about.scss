@@ -29,6 +29,12 @@ section.about {
 			object-fit: cover;
 			object-position: center 80%;
 		}
+
+		.slide {
+			img {
+				object-position: center 80%;
+			}
+		}
 	}
 
 	.about-content {

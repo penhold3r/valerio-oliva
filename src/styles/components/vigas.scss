@@ -188,97 +188,40 @@ section.laminated {
 			}
 		}
 
-		.vigas-gallery {
-			background: rgba(#fff, 0.25);
-			border-top: 1px solid $accent-color;
-			margin: 30px 0;
-			padding: 30px;
+		.vigas-galleries {
+			background: #fff;
+			padding: 15px;
+			margin: 0 auto 30px;
+			max-width: 1330px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 
-			.gallery-title {
-				color: $main-color;
+			&-title {
+				margin: 0 0 15px;
+				text-align: center;
+				color: $accent-color;
 				font-family: 'Cairo', sans-serif;
-				font-weight: normal;
-				letter-spacing: 0.05em;
 				text-transform: uppercase;
+				width: 100%;
 			}
 
-			.gallery-content {
-				.gallery-grid {
-					display: grid;
-					grid-gap: 15px;
-					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			&-link {
+				display: inline-flex;
+				background: $accent-color;
+				color: #fff;
+				font-family: 'Cairo', sans-serif;
+				text-decoration: none;
+				padding: 6px 15px;
+				text-transform: uppercase;
+				margin: 0 6px;
+				transition: all 0.3s;
+				box-shadow: 0 2px 3px rgba(#000, 0.3);
 
-					.modal-image {
-						display: none;
-
-						&.open {
-							background: rgba(#fff, 0.75);
-							display: block;
-							height: calc(100vh - 100px);
-							left: 0;
-							padding: 30px 60px;
-							position: fixed;
-							top: 100px;
-							width: 100vw;
-							z-index: 90;
-
-							@include tablet {
-								height: calc(100vh - 60px);
-								padding: 15px;
-								top: 60px;
-							}
-
-							.inner-modal {
-								margin: 0 auto;
-								max-width: 900px;
-								box-shadow: $box-shadow;
-								position: relative;
-								height: 100%;
-
-								.close-modal {
-									background: #fff;
-									color: $accent-color;
-									cursor: pointer;
-									font-size: 30px;
-									font-weight: bold;
-									height: 26px;
-									line-height: 20px;
-									padding: 3px;
-									position: absolute;
-									right: 3px;
-									text-align: center;
-									top: 3px;
-									width: 26px;
-								}
-
-								img {
-									display: block;
-									height: 100%;
-									object-fit: cover;
-									width: 100%;
-								}
-							}
-						}
-					}
-
-					.gallery-item {
-						cursor: pointer;
-						filter: grayscale(0.5);
-						height: 300px;
-						opacity: 0.75;
-						transition: all 0.3s;
-
-						&:hover {
-							filter: grayscale(0);
-							opacity: 1;
-						}
-
-						.thumb-image {
-							height: 100%;
-							object-fit: cover;
-							width: 100%;
-						}
-					}
+				&:hover {
+					box-shadow: 0 2px 5px rgba(#000, 0.4);
+					opacity: 0.8;
+					transform: translateY(-2px);
 				}
 			}
 		}

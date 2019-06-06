@@ -1,0 +1,86 @@
+.gallery {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	margin-bottom: 30px;
+
+	.modal-image {
+		display: none;
+
+		&.open {
+			background: rgba(#fff, 0.75);
+			display: flex;
+			height: calc(100vh - 100px);
+			left: 0;
+			padding: 30px 60px;
+			position: fixed;
+			top: 100px;
+			width: 100vw;
+			z-index: 90;
+
+			@include tablet {
+				height: calc(100vh - 60px);
+				padding: 15px;
+				top: 60px;
+			}
+
+			.inner-modal {
+				margin: auto;
+				max-width: 1000px;
+				min-width: 500px;
+				width: 70%;
+				box-shadow: $box-shadow;
+				position: relative;
+				height: 100%;
+				max-height: 800px;
+
+				@include phone {
+					width: 100%;
+					min-width: 100%;
+				}
+
+				.close-modal {
+					background: #fff;
+					color: $accent-color;
+					cursor: pointer;
+					font-size: 30px;
+					font-weight: bold;
+					height: 26px;
+					line-height: 20px;
+					padding: 3px;
+					position: absolute;
+					right: 3px;
+					text-align: center;
+					top: 3px;
+					width: 26px;
+				}
+
+				img {
+					display: block;
+					height: 100%;
+					object-fit: cover;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.gallery-item {
+		cursor: pointer;
+		filter: grayscale(0.5);
+		height: 300px;
+		opacity: 0.75;
+		transition: all 0.3s;
+
+		&:hover {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		.thumb-image {
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+}

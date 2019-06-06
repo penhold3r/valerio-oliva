@@ -1,0 +1,39 @@
+.gallery-page {
+	background: #fff;
+	border-top: 1px solid $accent-color;
+	margin: 30px auto;
+	max-width: 1330px;
+	padding: 30px 15px;
+
+	&-title {
+		color: $accent-color;
+		font-family: 'Cairo', sans-serif;
+		text-align: center;
+		margin: 0 0 15px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	&-content {
+		.intro-text {
+			border: 1px solid $light;
+			padding: 15px;
+			margin-bottom: 30px;
+
+			p {
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.laminated-subtitle {
+			background: $accent-color;
+			margin: 0 0 15px;
+			padding: 6px 15px;
+			color: #fff;
+			font-weight: normal;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+	}
+}
