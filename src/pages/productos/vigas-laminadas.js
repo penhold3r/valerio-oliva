@@ -154,44 +154,41 @@ const LaminatedPage = () => {
 					</div>
 					<div className="specs">
 						<div className="spec-block">
+							<div
+								className="specs-icon"
+								onClick={() =>
+									openModal('Tipos de Estructuras', <img src={estructuras} alt="" />)
+								}
+							>
+								<img src={estructuraIcon} alt="" />
+							</div>
 							<h2 className="specs-title">
-								<div
-									className="specs-icon"
-									onClick={() =>
-										openModal('Tipos de Estructuras', <img src={estructuras} alt="" />)
-									}
-								>
-									<img src={estructuraIcon} alt="" />
-								</div>
-								<span>
-									Tipos de <span className="grey">Estructuras</span>
-								</span>
+								<span>Tipos de </span>
+								<span className="grey">Estructuras</span>
 							</h2>
 						</div>
 						<div className="spec-block">
+							<div
+								className="specs-icon"
+								onClick={() => openModal('Caracteristicas', <VigasTable />)}
+							>
+								<img src={caracteristicasIcon} alt="" />
+							</div>
 							<h2 className="specs-title">
-								<div
-									className="specs-icon"
-									onClick={() => openModal('Caracteristicas', <VigasTable />)}
-								>
-									<img src={caracteristicasIcon} alt="" />
-								</div>
-								<span>
-									Lista de <span className="grey">Caractéristicas</span>
-								</span>
+								<span>Lista de </span>
+								<span className="grey">Caractéristicas</span>
 							</h2>
 						</div>
 						<div className="spec-block">
+							<div
+								className="specs-icon"
+								onClick={() => openModal('Tipos de Cortes', <img src={cortes} alt="" />)}
+							>
+								<img src={cortesIcon} alt="" />
+							</div>
 							<h2 className="specs-title">
-								<div
-									className="specs-icon"
-									onClick={() => openModal('Tipos de Cortes', <img src={cortes} alt="" />)}
-								>
-									<img src={cortesIcon} alt="" />
-								</div>
-								<span>
-									Tipos de <span className="grey">Cortes</span>
-								</span>
+								<span>Tipos de </span>
+								<span className="grey">Cortes</span>
 							</h2>
 						</div>
 					</div>

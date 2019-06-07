@@ -23,7 +23,7 @@ const AboutPage = () => {
 				<div className="about-content">
 					<div className="about-block">
 						<div className="about-text">
-							<h3 className="sub-title">VALERIO OLIVA S.A.C.I.A.,</h3>
+							<h3 className="sub-title">VALERIO OLIVA S.A.C.I.A.</h3>
 							<p>
 								Comenzó su trayectoria en{' '}
 								<strong>

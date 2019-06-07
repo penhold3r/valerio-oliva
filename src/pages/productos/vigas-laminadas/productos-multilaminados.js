@@ -45,7 +45,7 @@ const ProductosLaminadosPage = () => {
 
 	return (
 		<Layout title="Productos Multilaminados">
-			<section className="laminated gallery-page">
+			<section className="laminated gallery-page fader">
 				<h2 className="gallery-page-title">Productos Multilaminados</h2>
 				<div className="gallery-page-content">
 					<div className="intro-text">
