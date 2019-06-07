@@ -7,14 +7,16 @@ import slugify from 'slugify'
 import Layout from '../../components/Layout'
 import Slider from '../../components/Slider'
 
-import materialsImg01 from '../../assets/images/valerio_oliva-materiales01.jpg'
-import materialsImg02 from '../../assets/images/valerio_oliva-materiales02.jpg'
-import materialsImg03 from '../../assets/images/valerio_oliva-materiales03.jpg'
-import materialsImg04 from '../../assets/images/valerio_oliva-materiales04.jpg'
-import materialsImg05 from '../../assets/images/valerio_oliva-materiales05.jpg'
+const context = require.context(
+	'../../assets/images',
+	true,
+	/valerio_oliva-materiales(\d+)\.jp(e?)g/
+)
 
 const MaterialsPage = ({ data }) => {
+	const images = context.keys().map(key => context(key))
 	const { edges } = data.allMaterialesJson
+
 	return (
 		<Layout title={'Maderas y Materiales'}>
 			<section className="materials fader">
@@ -22,11 +24,9 @@ const MaterialsPage = ({ data }) => {
 					<h2 className="main-title">Maderas y Materiales</h2>
 
 					<Slider>
-						<img src={materialsImg01} alt="" />
-						<img src={materialsImg02} alt="" />
-						<img src={materialsImg03} alt="" />
-						<img src={materialsImg04} alt="" />
-						<img src={materialsImg05} alt="" />
+						{images.map((img, key) => (
+							<img key={key} src={img} alt="" />
+						))}
 					</Slider>
 				</header>
 				<div className="materials-list">

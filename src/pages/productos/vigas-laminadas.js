@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
@@ -6,13 +6,6 @@ import Link from '../../components/Link'
 import VigasTable from '../../components/VigasTable'
 import Slider from '../../components/Slider'
 import Gallery from '../../components/Gallery'
-
-// import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
-// import vigasImg02 from '../../assets/images/valerio_oliva-vigas_laminadas02.jpg'
-// import vigasImg03 from '../../assets/images/valerio_oliva-vigas_laminadas03.jpg'
-// import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
-// import vigasImg05 from '../../assets/images/valerio_oliva-vigas_laminadas05.jpg'
-// import vigasImg06 from '../../assets/images/valerio_oliva-vigas_laminadas06.jpg'
 
 import floatImg from '../../assets/images/valerio-oliva-productos_laminados.jpg'
 
@@ -35,7 +28,7 @@ const LaminatedPage = () => {
 		modalTitle: ''
 	})
 
-	const [floatOpen, setFloatState] = useState(true)
+	const [floatOpen, setFloatState] = useState(false)
 
 	const {
 		allFile: { edges }
@@ -79,7 +72,9 @@ const LaminatedPage = () => {
 
 	const images = context.keys().map(key => context(key))
 
-	//setTimeout(() => setFloatState(true), 1200)
+	useEffect(() => {
+		setTimeout(() => setFloatState(true), 1200)
+	}, [])
 
 	return (
 		<Layout title={'Vigas Laminadas'}>
