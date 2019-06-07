@@ -35,7 +35,7 @@ const Carrousel = ({ data }) => {
 }
 
 Carrousel.propTypes = {
-	data: PropTypes.object
+	data: PropTypes.array
 }
 
 export default props => (

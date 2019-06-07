@@ -7,12 +7,12 @@ import VigasTable from '../../components/VigasTable'
 import Slider from '../../components/Slider'
 import Gallery from '../../components/Gallery'
 
-import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
-import vigasImg02 from '../../assets/images/valerio_oliva-vigas_laminadas02.jpg'
-import vigasImg03 from '../../assets/images/valerio_oliva-vigas_laminadas03.jpg'
-import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
-import vigasImg05 from '../../assets/images/valerio_oliva-vigas_laminadas05.jpg'
-import vigasImg06 from '../../assets/images/valerio_oliva-vigas_laminadas06.jpg'
+// import vigasImg01 from '../../assets/images/valerio_oliva-vigas_laminadas01.jpg'
+// import vigasImg02 from '../../assets/images/valerio_oliva-vigas_laminadas02.jpg'
+// import vigasImg03 from '../../assets/images/valerio_oliva-vigas_laminadas03.jpg'
+// import vigasImg04 from '../../assets/images/valerio_oliva-vigas_laminadas04.jpg'
+// import vigasImg05 from '../../assets/images/valerio_oliva-vigas_laminadas05.jpg'
+// import vigasImg06 from '../../assets/images/valerio_oliva-vigas_laminadas06.jpg'
 
 import floatImg from '../../assets/images/valerio-oliva-productos_laminados.jpg'
 
@@ -21,6 +21,12 @@ import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
 import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.svg'
 import estructuras from '../../assets/images/tipos-de-estructura.svg'
 import cortes from '../../assets/images/tipos-de-corte.svg'
+
+const context = require.context(
+	'../../assets/images',
+	true,
+	/valerio_oliva-vigas_laminadas(\d+)\.jp(e?)g/
+)
 
 const LaminatedPage = () => {
 	const [modalState, setModalState] = useState({
@@ -71,10 +77,9 @@ const LaminatedPage = () => {
 		setModalState(defModal)
 	}
 
-	const openFloat = () => {
-		console.log(floatOpen)
-		setFloatState(!floatOpen)
-	}
+	const images = context.keys().map(key => context(key))
+
+	setTimeout(() => setFloatState(true), 1200)
 
 	return (
 		<Layout title={'Vigas Laminadas'}>
@@ -95,7 +100,7 @@ const LaminatedPage = () => {
 
 				<div className="float-btn-wrapper">
 					<div className={floatOpen ? 'float-btn open' : 'float-btn'}>
-						<div className="arrow" onClick={openFloat}>
+						<div className="arrow" onClick={() => setFloatState(!floatOpen)}>
 							&lsaquo;
 						</div>
 						<img src={floatImg} alt="[ Productos Laminados ]" />
@@ -114,12 +119,9 @@ const LaminatedPage = () => {
 					<h2 className="main-title">Vigas Laminadas</h2>
 
 					<Slider>
-						<img src={vigasImg01} alt="" />
-						<img src={vigasImg02} alt="" />
-						<img src={vigasImg03} alt="" />
-						<img src={vigasImg04} alt="" />
-						<img src={vigasImg05} alt="" />
-						<img src={vigasImg06} alt="" />
+						{images.map((img, key) => (
+							<img key={key} src={img} alt="" />
+						))}
 					</Slider>
 				</header>
 				<div className="vigas-content">

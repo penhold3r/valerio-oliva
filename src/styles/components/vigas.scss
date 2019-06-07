@@ -243,6 +243,7 @@ section.laminated {
 		}
 
 		.float-btn {
+			//animation: slide 0.5s ease-in-out 0.5s forwards;
 			background: rgba(85, 79, 70, 0.75);
 			box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
 			display: flex;
@@ -365,56 +366,14 @@ section.laminated {
 				}
 			}
 		}
+	}
+}
 
-		// .float-btn {
-		// 	background: $accent-color;
-		// 	border-radius: 40px;
-		// 	box-shadow: 0 3px 4px rgba(#000, 0.5);
-		// 	display: flex;
-		// 	height: 80px;
-		// 	margin: 0 15px 0 auto;
-		// 	overflow: hidden;
-		// 	position: relative;
-		// 	text-decoration: none;
-		// 	transform: translateY(-90px);
-		// 	transition: all 0.4s;
-		// 	width: 80px;
-
-		// 	.tag {
-		// 		color: #fff;
-		// 		line-height: 1;
-		// 		margin: auto 0;
-		// 		opacity: 0;
-		// 		text-align: center;
-		// 		text-overflow: clip;
-		// 		text-transform: uppercase;
-		// 		transition: all 0.6s;
-		// 		white-space: nowrap;
-		// 		width: 1px;
-		// 	}
-
-		// 	.icon {
-		// 		color: #fff;
-		// 		font-weight: bold;
-		// 		height: 100%;
-		// 		line-height: 80px;
-		// 		margin: 0 auto;
-		// 		position: absolute;
-		// 		right: 6px;
-		// 		text-align: center;
-		// 		width: 68px;
-		// 	}
-
-		// 	&:hover {
-		// 		background: $main-color;
-		// 		width: 240px;
-
-		// 		.tag {
-		// 			margin: auto 80px auto auto;
-		// 			opacity: 1;
-		// 			width: calc(100% - 80px);
-		// 		}
-		// 	}
-		// }
+@keyframes slide {
+	0% {
+		right: -200px;
+	}
+	100% {
+		right: 0;
 	}
 }
