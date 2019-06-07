@@ -29,6 +29,8 @@ const LaminatedPage = () => {
 		modalTitle: ''
 	})
 
+	const [floatOpen, setFloatState] = useState(false)
+
 	const {
 		allFile: { edges }
 	} = useStaticQuery(graphql`
@@ -69,6 +71,11 @@ const LaminatedPage = () => {
 		setModalState(defModal)
 	}
 
+	const openFloat = () => {
+		console.log(floatOpen)
+		setFloatState(!floatOpen)
+	}
+
 	return (
 		<Layout title={'Vigas Laminadas'}>
 			<section className="laminated fader">
@@ -87,10 +94,15 @@ const LaminatedPage = () => {
 				</div>
 
 				<div className="float-btn-wrapper">
-					<div className="float-btn">
+					<div className={floatOpen ? 'float-btn open' : 'float-btn'}>
+						<div className="arrow" onClick={openFloat}>
+							&lsaquo;
+						</div>
 						<img src={floatImg} alt="[ Productos Laminados ]" />
 						<h3 className="tag">
-							Nuevos Productos <span>Multilaminados</span>
+							Nuevos Productos
+							<br />
+							<span>Multilaminados</span>
 						</h3>
 						<Link className="link" to="/productos/vigas-laminadas/productos-multilaminados">
 							Ver más

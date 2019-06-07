@@ -232,39 +232,80 @@ section.laminated {
 	}
 
 	.float-btn-wrapper {
-		top: 115px;
 		display: flex;
 		height: 0;
-		margin: 0 auto;
-		max-width: 1300px;
 		position: sticky;
+		top: 100px;
 		z-index: 10;
 
+		@include tablet {
+			top: 0;
+		}
+
 		.float-btn {
-			width: 250px;
 			background: rgba(85, 79, 70, 0.75);
 			box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-			height: calc(60vh - 130px);
-			position: absolute;
 			display: flex;
 			flex-direction: column;
-			right: 15px;
-			top: 0;
+			height: calc(100vh - 100px);
 			max-height: 600px;
 			min-height: 400px;
+			opacity: 0.8;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: all 0.4s;
+			width: 50px;
+
+			@include tablet {
+				height: 45px;
+				max-height: initial;
+				min-height: initial;
+				top: 57px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+
+			.arrow {
+				color: #fff;
+				cursor: pointer;
+				font-size: 3em;
+				font-weight: bold;
+				line-height: 30px;
+				opacity: 0.6;
+				padding: 0 15px 15px;
+				position: absolute;
+				top: 0;
+				transition: all 0.3s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
 
 			img {
 				display: block;
-				object-fit: cover;
-				min-height: 150px;
 				height: 30%;
+				min-height: 150px;
+				object-fit: cover;
 				width: 100%;
 			}
 
 			.tag {
 				color: #fff;
-				margin: 30px 15px;
+				font-family: 'Cairo', sans-serif;
+				font-size: 1.5em;
 				font-weight: normal;
+				letter-spacing: 0.05em;
+				margin: 30px 15px;
+				opacity: 0;
+				text-align: center;
+				text-overflow: clip;
+				transition: all 0.3s;
+				white-space: nowrap;
 
 				span {
 					font-weight: bold;
@@ -273,13 +314,55 @@ section.laminated {
 			}
 
 			.link {
-				margin: auto 15px 15px;
-				background: $accent-color;
-				padding: 6px 12px;
-				text-align: center;
-				text-decoration: none;
-				text-transform: uppercase;
+				border-top: 1px solid $light;
 				color: #fff;
+				display: flex;
+				font-family: 'Cairo', sans-serif;
+				justify-content: space-between;
+				margin: auto 0 0;
+				opacity: 0;
+				padding: 9px 12px;
+				text-decoration: none;
+				text-overflow: clip;
+				text-transform: uppercase;
+				transition: all 0.3s;
+				white-space: nowrap;
+
+				&:after {
+					content: '\203A';
+					display: block;
+					font-size: 3em;
+					line-height: 1rem;
+					margin: -3px 0 0;
+					transition: all 0.3s;
+				}
+
+				&:hover {
+					background: $accent-color;
+
+					&:after {
+						margin: -3px -4px 0 0;
+					}
+				}
+			}
+
+			&.open {
+				background: rgba(85, 79, 70, 0.9);
+				opacity: 1;
+				width: 250px;
+
+				@include tablet {
+					height: calc(100vh - 120px);
+				}
+
+				.arrow {
+					transform: rotate(180deg);
+				}
+
+				.tag,
+				.link {
+					opacity: 1;
+				}
 			}
 		}
 
