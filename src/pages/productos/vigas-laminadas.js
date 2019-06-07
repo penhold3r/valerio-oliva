@@ -35,7 +35,7 @@ const LaminatedPage = () => {
 		modalTitle: ''
 	})
 
-	const [floatOpen, setFloatState] = useState(false)
+	const [floatOpen, setFloatState] = useState(true)
 
 	const {
 		allFile: { edges }
@@ -79,7 +79,7 @@ const LaminatedPage = () => {
 
 	const images = context.keys().map(key => context(key))
 
-	setTimeout(() => setFloatState(true), 1200)
+	//setTimeout(() => setFloatState(true), 1200)
 
 	return (
 		<Layout title={'Vigas Laminadas'}>
