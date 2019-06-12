@@ -46,8 +46,6 @@ const ContactPage = () => {
 
 	const textClass = focused ? 'field-block' : 'field-block message icon-bubble'
 
-	console.log(document.querySelector('.mark'))
-
 	return (
 		<Layout title={'Contacto'}>
 			<section className="contact fader">
