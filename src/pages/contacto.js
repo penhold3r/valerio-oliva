@@ -16,7 +16,6 @@ const ContactPage = () => {
 	}
 
 	const handleSubmit = e => {
-		console.log('foo')
 		const submitSettings = {
 			dest: '/email-sender.php',
 			fields: '.field',
