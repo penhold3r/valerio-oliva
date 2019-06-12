@@ -128,19 +128,15 @@ section.contact {
 			}
 
 			.mark {
-				left: 50%;
-				position: absolute;
-				transform: translateX(-50%) translateY(calc(-50% - 30px));
-				top: 50%;
-				z-index: 10;
-
 				span {
 					background: $accent-color;
 					color: #fff;
 					display: block;
 					position: relative;
+					text-align: center;
 					text-transform: uppercase;
 					padding: 9px;
+					width: 100px;
 					z-index: 2;
 
 					&:before {

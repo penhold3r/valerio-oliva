@@ -231,18 +231,16 @@ section.laminated {
 
 		.float-btn {
 			//animation: slide 0.5s ease-in-out 0.8s forwards;
-			background: rgba(85, 79, 70, 0.75);
+			background: rgba(64, 37, 26, 0.75);
 			box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
 			display: flex;
 			flex-direction: column;
-			height: calc(100vh - 100px);
-			max-height: 500px;
-			min-height: 300px;
+			height: 380px;
 			opacity: 0.8;
 			overflow: hidden;
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 24px;
 			transition: all 0.4s;
 			width: 50px;
 
@@ -262,17 +260,24 @@ section.laminated {
 			.arrow {
 				color: #fff;
 				cursor: pointer;
-				font-size: 3em;
-				font-weight: bold;
+				font-size: 2em;
+				display: flex;
 				line-height: 30px;
 				opacity: 0.6;
-				padding: 0 15px 15px;
+				height: 50px;
+				width: 40px;
 				position: absolute;
 				top: 0;
 				transition: all 0.3s;
 
 				@include tablet {
 					transform: rotate(90deg);
+					left: 6px;
+					top: -3px;
+				}
+
+				span {
+					margin: 6px auto auto;
 				}
 
 				&:hover {
@@ -282,36 +287,47 @@ section.laminated {
 
 			img {
 				display: block;
-				height: 30%;
-				min-height: 150px;
+				height: 45%;
 				object-fit: cover;
 				width: 100%;
+
+				@include tablet {
+					min-height: 50px;
+				}
 			}
 
 			.tag {
 				color: #fff;
 				font-family: 'Cairo', sans-serif;
-				font-size: 1.5em;
 				font-weight: normal;
 				letter-spacing: 0.05em;
 				margin: 30px 15px;
 				opacity: 0;
-				text-align: center;
 				text-overflow: clip;
+				text-transform: uppercase;
 				transition: all 0.3s;
 				white-space: nowrap;
 
 				span {
-					font-weight: bold;
-					text-transform: uppercase;
+					display: block;
+					font-size: 1.5em;
+
+					&:nth-child(2) {
+						font-size: 1em;
+					}
+					&:nth-child(3) {
+						font-size: 1.25em;
+						font-weight: bold;
+					}
 				}
 			}
 
 			.link {
 				border-top: 1px solid $light;
-				color: #fff;
+				color: $accent-color;
 				display: flex;
 				font-family: 'Cairo', sans-serif;
+				font-weight: bold;
 				justify-content: space-between;
 				margin: auto 0 0;
 				opacity: 0;
@@ -323,34 +339,44 @@ section.laminated {
 				white-space: nowrap;
 
 				&:after {
-					content: '\203A';
+					color: #fff;
+					content: '\232A';
 					display: block;
-					font-size: 3em;
+					font-size: 1em;
 					line-height: 1rem;
-					margin: -3px 0 0;
+					margin: -1px 0 0;
 					transition: all 0.3s;
 				}
 
 				&:hover {
 					background: $accent-color;
+					color: #fff;
 
 					&:after {
-						margin: -3px -4px 0 0;
+						margin: -1px -4px 0 0;
 					}
 				}
 			}
 
 			&.open {
-				background: rgba(85, 79, 70, 0.9);
+				background: rgba(64, 37, 26, 0.8);
 				opacity: 1;
 				width: 250px;
+				right: 24px;
+				transition: all 0.6s ease-in-out;
 
 				@include tablet {
 					height: calc(100vh - 200px);
+					transition: all 0.4s ease-in-out;
 				}
 
 				.arrow {
 					transform: rotate(180deg);
+
+					@include tablet {
+						top: 0;
+						left: 0;
+					}
 				}
 
 				.tag,

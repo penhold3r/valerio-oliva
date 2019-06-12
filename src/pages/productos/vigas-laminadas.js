@@ -96,12 +96,14 @@ const LaminatedPage = () => {
 				<div className="float-btn-wrapper">
 					<div className={floatOpen ? 'float-btn open' : 'float-btn'}>
 						<div className="arrow" onClick={() => setFloatState(!floatOpen)}>
-							&lsaquo;
+							<span>&lang;</span>
 						</div>
 						<img src={floatImg} alt="[ Productos Laminados ]" />
 						<h3 className="tag">
-							Nuevos Productos
-							<br />
+							<span>Nuevos</span>
+
+							<span>Productos</span>
+
 							<span>Multilaminados</span>
 						</h3>
 						<Link className="link" to="/productos/vigas-laminadas/productos-multilaminados">

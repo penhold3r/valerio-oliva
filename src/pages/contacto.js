@@ -7,8 +7,6 @@ import Layout from '../components/Layout'
 const ContactPage = () => {
 	const [focused, setFocus] = useState(false)
 
-	const textClass = focused ? 'field-block' : 'field-block message icon-bubble'
-
 	const contactMsgs = () => {
 		const successMsg = '¡Mensaje enviado!'
 		const errorMsg = 'Hubo un error, intente más tarde.'
@@ -38,11 +36,23 @@ const ContactPage = () => {
 		human && submitForm(form, submitSettings)
 	}
 
+	const mapProps = {
+		center: {
+			lat: -32.927869,
+			lng: -68.815098
+		},
+		zoom: 15
+	}
+
+	const textClass = focused ? 'field-block' : 'field-block message icon-bubble'
+
+	console.log(document.querySelector('.mark'))
+
 	return (
 		<Layout title={'Contacto'}>
 			<section className="contact fader">
 				<header className="contact-header">
-					<h1 className="main-title">Contacto</h1>
+					<h2 className="main-title">Contacto</h2>
 				</header>
 				<div className="contact-content">
 					<form action="" className="form">
@@ -76,17 +86,15 @@ const ContactPage = () => {
 					<div className="gmap">
 						<GoogleMapReact
 							bootstrapURLKeys={{
-								key: 'AIzaSyBZLEliDhUUlSxi5yjNAB8F9-lDYVVAoYM'
+								key: 'AIzaSyBRs-Luy6KaOFhALbTKyCJ8LJ2ILuB-q8g'
 							}}
-							defaultCenter={{
-								lat: -32.927869,
-								lng: -68.815098
-							}}
-							defaultZoom={15}
-						/>
-						<div className="mark">
-							<span>Valerio Oliva</span>
-						</div>
+							defaultCenter={mapProps.center}
+							defaultZoom={mapProps.zoom}
+						>
+							<div className="mark" lat={mapProps.center.lat} lng={mapProps.center.lng}>
+								<span>Valerio Oliva</span>
+							</div>
+						</GoogleMapReact>
 					</div>
 					<div className="contact-info">
 						<div className="contact-block icon icon-map-mark">

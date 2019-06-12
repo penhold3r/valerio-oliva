@@ -50,8 +50,11 @@ const ProductosLaminadosPage = () => {
 				<div className="gallery-page-content">
 					<div className="intro-text">
 						<p>
-							Múltiples obras a lo largo de todo el país avalan la trayectoria de nuestra
-							empresa.
+							La incorporación de nuevos productos con madera multilaminada es gracias a la
+							versatilidad del material que ofrece múltiples usos y ventajas en la decoración
+							interior. <br />
+							<strong>Mesadas y Escalones</strong>, se suman a nuestra gran familia de
+							multilaminados.
 						</p>
 					</div>
 
