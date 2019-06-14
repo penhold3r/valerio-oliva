@@ -26,14 +26,50 @@
 			}
 		}
 
-		.laminated-subtitle {
-			background: $accent-color;
-			margin: 0 0 15px;
-			padding: 6px 15px;
-			color: #fff;
-			font-weight: normal;
-			text-transform: uppercase;
-			letter-spacing: 0.05em;
+		.galleries {
+			display: grid;
+			grid-gap: 15px;
+			grid-template-columns: 1fr 1fr;
+
+			@include tablet {
+				grid-template-columns: 1fr;
+			}
+
+			&__column {
+				.laminated-subtitle {
+					background: $accent-color;
+					color: #fff;
+					font-weight: normal;
+					letter-spacing: 0.05em;
+					margin: 0 0 15px;
+					padding: 6px 15px;
+					position: relative;
+					text-transform: uppercase;
+
+					&:after {
+						background: $main-color;
+						content: '';
+						height: 100%;
+						left: 0;
+						position: absolute;
+						top: 0;
+						transition: width 0.4s;
+						width: 0%;
+						z-index: 0;
+					}
+
+					span {
+						position: relative;
+						z-index: 1;
+					}
+
+					&:hover {
+						&:after {
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 }

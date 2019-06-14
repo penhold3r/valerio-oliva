@@ -52,17 +52,26 @@ const ProductosLaminadosPage = () => {
 						<p>
 							La incorporación de nuevos productos con madera multilaminada es gracias a la
 							versatilidad del material que ofrece múltiples usos y ventajas en la decoración
-							interior. <br />
-							<strong>Mesadas y Escalones</strong>, se suman a nuestra gran familia de
+							interior. &ldquo;Mesadas y Escalones&rdquo;, se suman a nuestra gran familia de
 							multilaminados.
 						</p>
 					</div>
 
-					<h3 className="laminated-subtitle">Mesadas</h3>
-					<Gallery data={mesadas} />
+					<div className="galleries">
+						<div className="galleries__column">
+							<h3 className="laminated-subtitle">
+								<span>Mesadas</span>
+							</h3>
+							<Gallery data={mesadas} />
+						</div>
 
-					<h3 className="laminated-subtitle">Escalones</h3>
-					<Gallery data={escalones} />
+						<div className="galleries__column">
+							<h3 className="laminated-subtitle">
+								<span>Escalones</span>
+							</h3>
+							<Gallery data={escalones} />
+						</div>
+					</div>
 				</div>
 			</section>
 		</Layout>
