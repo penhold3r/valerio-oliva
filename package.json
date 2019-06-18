@@ -17,7 +17,7 @@
 		"classnames": "^2.2.6",
 		"g": "^2.0.1",
 		"gatsby": "^2.3.34",
-		"gatsby-cli": "^2.6.2",
+		"gatsby-cli": "^2.6.9",
 		"gatsby-image": "^2.0.29",
 		"gatsby-plugin-manifest": "^2.0.17",
 		"gatsby-plugin-offline": "^2.0.24",

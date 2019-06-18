@@ -362,10 +362,11 @@ section.laminated {
 				}
 
 				&:hover {
-					background: rgba(#fff, 0.1);
+					background: rgba(#fff, 0.8);
 					color: $accent-color;
 
 					&:before {
+						height: 3px;
 						width: 100%;
 					}
 
