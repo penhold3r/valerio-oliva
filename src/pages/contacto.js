@@ -1,29 +1,22 @@
 import React, { useState } from 'react'
-import GoogleMapReact from 'google-map-react'
-import submitForm from '../utils/submit-form'
+import { submitFormData } from 'submit-form-data'
 
 import Layout from '../components/Layout'
+import GoogleMap from '../components/Map'
+
+import mapIcon from '../assets/images/map_mark.svg'
 
 const ContactPage = () => {
 	const [focused, setFocus] = useState(false)
 
-	const contactMsgs = () => {
-		const successMsg = '¡Mensaje enviado!'
-		const errorMsg = 'Hubo un error, intente más tarde.'
-		const sending = 'Enviando...'
-
-		return { successMsg, errorMsg, sending }
-	}
-
 	const handleSubmit = e => {
 		const submitSettings = {
-			dest: '/email-sender.php',
+			dest: 'http://valeriooliva.com/contact-form/index.php',
 			fields: '.field',
-			successMsg: contactMsgs().successMsg,
-			errorMsg: contactMsgs().errorMsg,
-			sending: contactMsgs().sending,
+			successMsg: '¡Mensaje enviado!',
+			errorMsg: 'Hubo un error, intente más tarde.',
+			sending: 'Enviando...',
 			urlencoded: true,
-			reciever: 'penhold3r@gmail.com'
 		}
 
 		const form = document.querySelector('.form')
@@ -31,94 +24,94 @@ const ContactPage = () => {
 		const humanForm = document.querySelector('.human')
 		const human = humanForm.value === ''
 
+		console.log('submit')
+
 		e.preventDefault()
-		human && submitForm(form, submitSettings)
+		human && submitFormData(form, submitSettings)
 	}
 
 	const mapProps = {
 		center: {
 			lat: -32.927869,
-			lng: -68.815098
+			lng: -68.815098,
 		},
-		zoom: 15
+		zoom: 15,
+		title: 'Valerio Oliva',
+		icon: mapIcon,
+		link:
+			'https://www.google.com/maps/place/VALERIO+OLIVA+s.a.c.i.a./@-32.9278162,-68.8175899,16.62z/data=!4m5!3m4!1s0x967e0bf90a1bb189:0xec6043c2e6b44dc1!8m2!3d-32.928105!4d-68.815038?hl=es',
 	}
 
 	const textClass = focused ? 'field-block' : 'field-block message icon-bubble'
 
 	return (
 		<Layout title={'Contacto'}>
-			<section className="contact fader">
-				<header className="contact-header">
-					<h2 className="main-title">Contacto</h2>
+			<section className='contact fader'>
+				<header className='contact-header'>
+					<h2 className='main-title'>Contacto</h2>
 				</header>
-				<div className="contact-content">
-					<form action="" className="form">
-						<div className="field-block">
-							<label htmlFor="name">Nombre</label>
-							<input className="field" type="text" name="name" id="name" required />
+				<div className='contact-content'>
+					<form action='' className='form' onSubmit={handleSubmit}>
+						<div className='field-block'>
+							<label htmlFor='name'>Nombre</label>
+							<input className='field' type='text' name='name' id='name' required />
 						</div>
-						<div className="field-block">
-							<label htmlFor="email">Email</label>
-							<input className="field" type="email" name="email" id="email" required />
+						<div className='field-block'>
+							<label htmlFor='email'>Email</label>
+							<input className='field' type='email' name='email' id='email' required />
 						</div>
 						<div className={textClass}>
-							<label htmlFor="msg">Mensaje</label>
+							<label htmlFor='message'>Mensaje</label>
 							<textarea
-								className="field textarea"
-								name="msg"
-								id="msg"
+								className='field textarea'
+								name='message'
+								id='message'
 								onBlur={() => setFocus(true)}
 								onFocus={() => setFocus(true)}
 								required
 							/>
 						</div>
-						<input type="text" className="human" tabIndex="-1" />
-						<input
-							className="submit"
-							type="submit"
-							value="Enviar Mensaje"
-							onClick={handleSubmit}
-						/>
+						<input type='text' className='human' tabIndex='-1' />
+						<input className='submit' type='submit' value='Enviar Mensaje' />
 					</form>
-					<div className="gmap">
-						<GoogleMapReact
-							bootstrapURLKeys={{
-								key: 'AIzaSyBRs-Luy6KaOFhALbTKyCJ8LJ2ILuB-q8g'
-							}}
-							defaultCenter={mapProps.center}
-							defaultZoom={mapProps.zoom}
-						>
-							<div className="mark" lat={mapProps.center.lat} lng={mapProps.center.lng}>
-								<span>Valerio Oliva</span>
-							</div>
-						</GoogleMapReact>
+					<div className='map-holder'>
+						<GoogleMap config={mapProps}></GoogleMap>
 					</div>
-					<div className="contact-info">
-						<div className="contact-block icon icon-map-mark">
+					<div className='contact-info'>
+						<div className='contact-block icon icon-map-mark'>
 							<h4>Visitanos en:</h4>
 							<p>Rodriguez Peña 2250 - (5501) - Godoy Cruz - Mendoza - Argentina.</p>
 						</div>
-						<div className="contact-block icon icon-mail-line">
+						<div className='contact-block icon icon-mail-line'>
 							<h4>Nuestro e-mail:</h4>
 							<p>
-								<a href="mailto:ventas@valeriooliva.com">ventas@valeriooliva.com</a>
+								<a href='mailto:ventas@valeriooliva.com'>ventas@valeriooliva.com</a>
 							</p>
 						</div>
-						<div className="contact-block icon icon-phone">
-							<h4>Llamanos al:</h4>
+						<div className='contact-block icon icon-phone'>
+							<h4>Lamanos al:</h4>
 							<p>
-								<a href="tel:+542614316010">
+								<a href='tel:+54264316010'>
 									54 - 261- <strong>431 6010</strong>
 								</a>
 							</p>
 						</div>
-						<div className="contact-block icon icon-clock">
+						<div className='contact-block icon icon-whatsapp'>
+							<h4>Escribinos al:</h4>
+							<p>
+								<a href='https://wa.me/+542612179863?text=Hola!'>
+									54 - 261- <strong>217 9863</strong>
+								</a>
+							</p>
+						</div>
+
+						<div className='contact-block icon icon-clock'>
 							<h4>Horarios de atención:</h4>
 							<p>
-								Lun a Vier, de <strong>8:30 a 12:30 hs.</strong>
-								<br />y de <strong>15:30 a 20:00 hs.</strong>
+								Lun a Vier, de <strong>9:10 a 18:00 hs.</strong>
+								{/* <br />y de <strong>15:30 a 20:00 hs.</strong> */}
 								<br />
-								Sábados de <strong>8:30 a 13:00 hs.</strong>
+								Sábados de <strong>9:10 a 13:00 hs.</strong>
 							</p>
 						</div>
 					</div>

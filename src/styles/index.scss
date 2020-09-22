@@ -6,6 +6,12 @@
 /**********************
 *  GLOBAL STYLES
 ***********************/
+html,
+body {
+	scroll-behavior: smooth;
+	@include scrollbars(10px, $accent-color, $grey);
+}
+
 body {
 	background: $light;
 	color: #666;

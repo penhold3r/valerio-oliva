@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const styles = {
+const defStyles = {
 	slider: {
 		height: '100%',
 		position: 'relative',
@@ -75,42 +75,34 @@ const styles = {
 	}
 }
 
-class Slider extends React.Component {
-	constructor(props) {
-		super(props)
-		this.state = { images: [], currentSlide: 0, pagination: false, navigation: true }
-		this.slider = React.createRef()
-		this.styles = {
-			...styles,
-			tile: {
-				...styles.tile,
-				...props.paginationStyle
-			},
-			activeTile: {
-				...styles.activeTile,
-				...props.paginationStyle
-			}
+const Slider = ({ config: userConfig, children }) => {
+	const [images, setImages] = useState([])
+	const [currentSlide, setCurrentSlide] = useState(0)
+	const [pagination, setPagination] = useState(false)
+	const [navigation, setNavigation] = useState(true)
+
+	const defConfig = {
+		navigation: true,
+		pagination: false,
+		delay: 4500,
+		paginationStyle: {}
+	}
+
+	const config = { ...defConfig, ...userConfig }
+
+	const styles = {
+		...defStyles,
+		tile: {
+			...defStyles.tile,
+			...config.paginationStyle
+		},
+		activeTile: {
+			...defStyles.activeTile,
+			...config.paginationStyle
 		}
 	}
 
-	componentDidMount() {
-		const { children, pagination, delay = 4500 } = this.props
-		const images = React.Children.map(children, child =>
-			React.cloneElement(child, { style: this.styles.sliderImg })
-		)
-
-		this.setState({ images, pagination })
-
-		images &&
-			setInterval(() => {
-				const onTop = this.state.currentSlide
-				const currentSlide = onTop === images.length - 1 ? 0 : onTop + 1
-
-				this.setState({ currentSlide })
-			}, delay)
-	}
-
-	createPagination = (slides, activeTile) => {
+	const createPagination = (slides, activeTile) => {
 		const tiles =
 			slides &&
 			slides.map((slide, key) => {
@@ -118,42 +110,42 @@ class Slider extends React.Component {
 				const classes = currentIndex === activeTile ? 'tile' : 'tile active-tile'
 				const style =
 					slides.indexOf(slide) === activeTile
-						? { ...this.styles.tile, ...this.styles.activeTile }
-						: this.styles.tile
+						? { ...styles.tile, ...styles.activeTile }
+						: styles.tile
 
 				return (
 					<button
 						key={key}
 						className={classes}
 						style={style}
-						onClick={() => this.handlePagination(currentIndex)}
+						onClick={() => handlePagination(currentIndex)}
 					/>
 				)
 			})
 
 		return (
-			<nav className="pagination" style={this.styles.pagination}>
+			<nav className="pagination" style={styles.pagination}>
 				{tiles}
 			</nav>
 		)
 	}
 
-	createNavigation = (slides, activeSlide) => {
+	const createNavigation = (slides, activeSlide) => {
 		const currentIndex = activeSlide
 
 		return (
-			<nav className="slider-navigation" style={this.styles.navigation}>
+			<nav className="slider-navigation" style={styles.navigation}>
 				<button
 					className="nav-btn prev"
-					style={this.styles.navigationArrows}
-					onClick={() => this.handlePagination(currentIndex - 1)}
+					style={styles.navigationArrows}
+					onClick={() => handlePagination(currentIndex - 1)}
 				>
 					&lang;
 				</button>
 				<button
 					className="nav-btn next"
-					style={this.styles.navigationArrows}
-					onClick={() => this.handlePagination(currentIndex + 1)}
+					style={styles.navigationArrows}
+					onClick={() => handlePagination(currentIndex + 1)}
 				>
 					&rang;
 				</button>
@@ -161,40 +153,51 @@ class Slider extends React.Component {
 		)
 	}
 
-	handlePagination = index => {
-		const i =
-			index > this.state.images.length - 1 ? 0 : index < 1 ? this.state.images.length - 1 : index
+	const handlePagination = index => {
+		const i = index > images.length - 1 ? 0 : index < 1 ? images.length - 1 : index
 
-		this.setState({ currentSlide: i })
+		setCurrentSlide(i)
 	}
 
-	render() {
-		const { images, pagination, navigation } = this.state
-		const slides =
-			images.length > 1 &&
-			images.map((slide, key) => {
-				const classes =
-					images.indexOf(slide) === this.state.currentSlide ? 'slide on-top' : 'slide'
-				const style =
-					images.indexOf(slide) === this.state.currentSlide
-						? { ...this.styles.slide, ...this.styles.onTop }
-						: this.styles.slide
+	const slides =
+		images.length > 1 &&
+		images.map((slide, key) => {
+			const classes = images.indexOf(slide) === currentSlide ? 'slide on-top' : 'slide'
+			const style =
+				images.indexOf(slide) === currentSlide
+					? { ...styles.slide, ...styles.onTop }
+					: styles.slide
 
-				return (
-					<div key={key} className={classes} style={style}>
-						{slide}
-					</div>
-				)
-			})
+			return (
+				<div key={key} className={classes} style={style}>
+					{slide}
+				</div>
+			)
+		})
 
-		return (
-			<div className="slider" style={this.styles.slider} ref={this.slider}>
-				<div className="slides">{slides}</div>
-				{pagination && this.createPagination(slides, this.state.currentSlide)}
-				{navigation && this.createNavigation(slides, this.state.currentSlide)}
-			</div>
+	useEffect(() => {
+		const images = React.Children.map(children, child =>
+			React.cloneElement(child, { style: styles.sliderImg })
 		)
-	}
+
+		setImages(images)
+		setNavigation(config.navigation)
+		setPagination(config.pagination)
+
+		images &&
+			setInterval(() => {
+				const onTop = currentSlide === images.length - 1 ? 0 : currentSlide + 1
+				setCurrentSlide(onTop)
+			}, config.delay)
+	}, [currentSlide])
+
+	return (
+		<div className="slider" style={styles.slider}>
+			<div className="slides">{slides}</div>
+			{pagination && createPagination(slides, currentSlide)}
+			{navigation && createNavigation(slides, currentSlide)}
+		</div>
+	)
 }
 
 export default Slider

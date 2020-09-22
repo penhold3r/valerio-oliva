@@ -14,8 +14,8 @@ const Services = () => {
 						<p>Para todo tipo de consultas</p>
 					</div>
 					<div className="service-block">
-						<h3>chat on line</h3>
-						<p>A travez de Whatsapp</p>
+						<h3>Chat on line</h3>
+						<p>A través de Whatsapp</p>
 					</div>
 				</div>
 			</div>

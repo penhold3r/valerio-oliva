@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
 import slugify from 'slugify'
 
 import Layout from '../../components/Layout'
 import Slider from '../../components/Slider'
+import Link from '../../components/Link'
 
 const context = require.context(
 	'../../assets/images',
@@ -35,7 +35,7 @@ const MaterialsPage = ({ data }) => {
 							<Link
 								key={key}
 								className="product-icon"
-								to={`materiales/${slugify(node.name, {
+								to={`/materiales/${slugify(node.name, {
 									lower: true
 								})}`}
 							>

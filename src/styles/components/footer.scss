@@ -97,6 +97,32 @@
 			color: #fff;
 			font-size: 0.8em;
 			text-align: center;
+
+			.rights {
+				@include phone {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.credit {
+		text-align: center;
+		color: rgba(#fff, 0.6);
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		font-size: 0.7rem;
+
+		.credit-links {
+			.credit-label {
+				@include phone {
+					display: block;
+				}
+			}
+			.credit-link {
+				color: rgba($accent-color, 0.6);
+				text-decoration: none;
+			}
 		}
 	}
 }

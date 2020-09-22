@@ -39,3 +39,27 @@
 		@content;
 	}
 }
+
+/***********************************
+*
+* SCROLLBAR COLOR
+*
+*/
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+	// Webkit
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+
+	// Firefox
+	scrollbar-color: $foreground-color $background-color;
+}

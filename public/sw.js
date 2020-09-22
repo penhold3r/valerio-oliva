@@ -26,23 +26,27 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ec496598dbcab124746f.js"
+    "url": "webpack-runtime-ebd7f0a67880682c5d4e.js"
   },
   {
-    "url": "app-42980f9793735849430a.js"
+    "url": "app-caa6167e437b7336051f.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-17f925ad99559554f8e8.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6fc5127e4c61b641fe1c7324ac648848"
+    "revision": "0173c0b37f21c3fb1418abbb4cf8c58c"
   },
   {
-    "url": "styles.ef462c5d6bf30e6996d8.css"
+    "url": "styles.d4e859b6417e1b4aa103.css"
   },
   {
     "url": "google-fonts/s/cairo/v5/SLXLc1nY6HkvalqKbI6L59Y.woff2",
+    "revision": "7fe2f72fd5919f1160a46a2a64a7358a"
+  },
+  {
+    "url": "google-fonts/s/cairo/v6/SLXLc1nY6HkvalqKbI6L59Y.woff2",
     "revision": "7fe2f72fd5919f1160a46a2a64a7358a"
   },
   {
@@ -62,16 +66,32 @@ self.__precacheManifest = [
     "revision": "6725c3fb1f3abd7ebdcb2d244758f706"
   },
   {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2",
+    "revision": "0edb76284a7a0f8db4665b560ee2b48f"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2",
+    "revision": "24f7b0944e9e03a905f9d7701573b2cd"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/memnYaGs126MiZpBA-UFUKWiUNhrIqM.woff2",
+    "revision": "a49393f2171a2f4d6927ce6c14f73dbc"
+  },
+  {
+    "url": "google-fonts/s/opensans/v17/memnYaGs126MiZpBA-UFUKWyV9hrIqM.woff2",
+    "revision": "6725c3fb1f3abd7ebdcb2d244758f706"
+  },
+  {
     "url": "component---src-pages-404-js-2f7271a975896cfdcfc9.js"
   },
   {
-    "url": "2-7460c86d0ca1a2864eb5.js"
+    "url": "2-e4963bb0d0a7980e882f.js"
   },
   {
-    "url": "1-3ec8400fee36848736a8.js"
+    "url": "1-4a83a45917c6b68e05c4.js"
   },
   {
-    "url": "styles-3e9ab17db580033d6b31.js"
+    "url": "styles-54533ff6c2fc9d7e2e26.js"
   },
   {
     "url": "static/d/285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8.json"

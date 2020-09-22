@@ -58,7 +58,12 @@ const Header = () => {
 						<a href="/AFIP.pdf" target="_blank" rel="noopener noreferrer" title="Data Fiscal">
 							<AFIP className="afip" />
 						</a>
-						<a href="whatsapp://send?text=Hola!&phone=tel:+542615320000" title="Whatsapp">
+						<a
+							href="https://wa.me/+542612179863?text=Hola!"
+							title="Whatsapp"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<i className="icon icon-whatsapp" />
 						</a>
 					</div>

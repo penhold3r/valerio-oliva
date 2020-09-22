@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
 import Link from '../../components/Link'
-import VigasTable from '../../components/VigasTable'
+//import VigasTable from '../../components/VigasTable'
 import Slider from '../../components/Slider'
 import Gallery from '../../components/Gallery'
 
@@ -11,7 +11,7 @@ import floatImg from '../../assets/images/valerio-oliva-productos_laminados.jpg'
 
 import estructuraIcon from '../../assets/icons/vigas_estructura-icon.svg'
 import cortesIcon from '../../assets/icons/vigas_cortes-icon.svg'
-import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.svg'
+//import caracteristicasIcon from '../../assets/icons/vigas_caracteristicas-icon.svg'
 import estructuras from '../../assets/images/tipos-de-estructura.svg'
 import cortes from '../../assets/images/tipos-de-corte.svg'
 
@@ -25,13 +25,13 @@ const LaminatedPage = () => {
 	const [modalState, setModalState] = useState({
 		modalOpen: false,
 		modalContent: '',
-		modalTitle: ''
+		modalTitle: '',
 	})
 
 	const [floatOpen, setFloatState] = useState(false)
 
 	const {
-		allFile: { edges }
+		allFile: { edges },
 	} = useStaticQuery(graphql`
 		query ObrasQuery {
 			allFile(filter: { relativeDirectory: { eq: "obras" } }) {
@@ -56,7 +56,7 @@ const LaminatedPage = () => {
 		const open = {
 			modalOpen: true,
 			modalContent: content,
-			modalTitle: title
+			modalTitle: title,
 		}
 		setModalState(open)
 	}
@@ -65,7 +65,7 @@ const LaminatedPage = () => {
 		const defModal = {
 			modalOpen: false,
 			modalContent: '',
-			modalTitle: ''
+			modalTitle: '',
 		}
 		setModalState(defModal)
 	}
@@ -78,54 +78,54 @@ const LaminatedPage = () => {
 
 	return (
 		<Layout title={'Vigas Laminadas'}>
-			<section className="laminated fader">
+			<section className='laminated fader'>
 				<div className={`specs-modal ${modalState.modalOpen && 'open'}`}>
-					<div className="specs-content">
-						<header className="modal-header">
+					<div className='specs-content'>
+						<header className='modal-header'>
 							<h3>{modalState.modalTitle && modalState.modalTitle}</h3>
-							<div className="close-modal" onClick={() => closeModal()}>
+							<div className='close-modal' onClick={() => closeModal()} role='button'>
 								&times;
 							</div>
 						</header>
-						<div className="modal-content">
+						<div className='modal-content'>
 							{modalState.modalContent && modalState.modalContent}
 						</div>
 					</div>
 				</div>
 
-				<div className="float-btn-wrapper">
+				<div className='float-btn-wrapper'>
 					<div className={floatOpen ? 'float-btn open' : 'float-btn'}>
-						<div className="arrow" onClick={() => setFloatState(!floatOpen)}>
+						<div className='arrow' onClick={() => setFloatState(!floatOpen)}>
 							<span>&lang;</span>
 						</div>
-						<img src={floatImg} alt="[ Productos Laminados ]" />
-						<h3 className="tag">
+						<img src={floatImg} alt='[ Productos Laminados ]' />
+						<h3 className='tag'>
 							<span>Nuevos</span>
 
 							<span>Productos</span>
 
 							<span>Multilaminados</span>
 						</h3>
-						<Link className="link" to="/productos/vigas-laminadas/productos-multilaminados">
+						<Link className='link' to='/productos/vigas-laminadas/productos-multilaminados'>
 							Ver más
 						</Link>
 					</div>
 				</div>
 
-				<header className="vigas-header">
-					<h2 className="main-title">Vigas Laminadas</h2>
+				<header className='vigas-header'>
+					<h2 className='main-title'>Vigas Laminadas</h2>
 
 					<Slider>
 						{images.map((img, key) => (
-							<img key={key} src={img} alt="" />
+							<img key={key} src={img} alt='' />
 						))}
 					</Slider>
 				</header>
-				<div className="vigas-content">
-					<div className="vigas-block">
-						<div className="vigas-text">
-							<h3 className="sub-title">Diseño, Ingeniería y Fabricación</h3>
-							<div className="border-block">
+				<div className='vigas-content'>
+					<div className='vigas-block'>
+						<div className='vigas-text'>
+							<h3 className='sub-title'>Diseño, Ingeniería y Fabricación</h3>
+							<div className='border-block'>
 								<p>
 									La madera multilaminada está constituida por láminas de distintos largos,
 									seleccionados, de un espesor determinado que permite eliminar los
@@ -140,7 +140,7 @@ const LaminatedPage = () => {
 								</p>
 							</div>
 
-							<div className="color-block">
+							<div className='color-block'>
 								<p>
 									La firma elabora industrialmente Maderas Multilaminadas desde hace cuatro
 									décadas.
@@ -154,22 +154,21 @@ const LaminatedPage = () => {
 							</div>
 						</div>
 					</div>
-					<div className="specs">
-						<div className="spec-block">
+					<div className='specs'>
+						<div className='spec-block'>
 							<div
-								className="specs-icon"
+								className='specs-icon'
 								onClick={() =>
-									openModal('Tipos de Estructuras', <img src={estructuras} alt="" />)
-								}
-							>
-								<img src={estructuraIcon} alt="" />
+									openModal('Tipos de Estructuras', <img src={estructuras} alt='' />)
+								}>
+								<img src={estructuraIcon} alt='' />
 							</div>
-							<h2 className="specs-title">
+							<h2 className='specs-title'>
 								<span>Tipos de </span>
-								<span className="grey">Estructuras</span>
+								<span className='grey'>Estructuras</span>
 							</h2>
 						</div>
-						<div className="spec-block">
+						{/* <div className="spec-block">
 							<div
 								className="specs-icon"
 								onClick={() => openModal('Caracteristicas', <VigasTable />)}
@@ -180,24 +179,23 @@ const LaminatedPage = () => {
 								<span>Lista de </span>
 								<span className="grey">Caractéristicas</span>
 							</h2>
-						</div>
-						<div className="spec-block">
+						</div> */}
+						<div className='spec-block'>
 							<div
-								className="specs-icon"
-								onClick={() => openModal('Tipos de Cortes', <img src={cortes} alt="" />)}
-							>
-								<img src={cortesIcon} alt="" />
+								className='specs-icon'
+								onClick={() => openModal('Tipos de Cortes', <img src={cortes} alt='' />)}>
+								<img src={cortesIcon} alt='' />
 							</div>
-							<h2 className="specs-title">
+							<h2 className='specs-title'>
 								<span>Tipos de </span>
-								<span className="grey">Cortes</span>
+								<span className='grey'>Cortes</span>
 							</h2>
 						</div>
 					</div>
-					<div className="vigas-gallery">
-						<h2 className="vigas-gallery-title">Obras destacadas</h2>
-						<div className="vigas-gallery-content">
-							<div className="intro-text">
+					<div className='vigas-gallery'>
+						<h2 className='vigas-gallery-title'>Obras destacadas</h2>
+						<div className='vigas-gallery-content'>
+							<div className='intro-text'>
 								<p>
 									Múltiples obras a lo largo de todo el país avalan la trayectoria de
 									nuestra empresa.

@@ -60,6 +60,7 @@ const submitFormData = (form, settings) => {
 	//
 	console.log('data: ', opt)
 	//
+	msg.querySelector('p').className = 'msg-sending'
 	msg.querySelector('p').innerHTML = !settings.sending ? 'Sending...' : settings.sending
 	msg.classList.add('visible')
 
@@ -81,7 +82,13 @@ const submitFormData = (form, settings) => {
 				console.warn('failed')
 			}
 		})
-		.catch(err => console.error('Error: ', err))
+		.catch(err => {
+			msg.querySelector('p').innerHTML = !settings.errorMsg ? 'error' : settings.errorMsg
+			msg.querySelector('p').className = 'msg-error'
+			msg.classList.add('visible')
+			form.reset()
+			console.error('Error: ', err)
+		})
 }
 //
 /**

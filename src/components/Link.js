@@ -10,15 +10,12 @@ const Link = ({ children, to, activeClassName, ...other }) => {
 	const internal = /^\/(?!\/)/.test(to)
 
 	// Use Gatsby Link for internal links, and <a> for others
-	if (internal) {
-		return (
-			<GatsbyLink to={to} activeClassName={activeClassName} {...other}>
-				{children}
-			</GatsbyLink>
-		)
-	}
-	return (
-		<a href={to} {...other}>
+	return internal ? (
+		<GatsbyLink to={to} activeClassName={activeClassName} {...other}>
+			{children}
+		</GatsbyLink>
+	) : (
+		<a href={to} {...other} rel="noreferal noopener">
 			{children}
 		</a>
 	)

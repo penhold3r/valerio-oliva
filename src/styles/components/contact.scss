@@ -13,18 +13,18 @@ section.contact {
 
 		.main-title {
 			color: $accent-color;
-			padding: 0 30px 30px 0;
 			margin: 0 auto 0 0;
+			padding: 0 30px 30px 0;
 			position: relative;
 
 			&:after {
+				background: $main-color;
 				content: '';
+				height: 1px;
+				left: 100%;
 				position: absolute;
 				top: 30%;
-				left: 100%;
 				width: 100vw;
-				height: 1px;
-				background: $main-color;
 			}
 		}
 	}
@@ -34,13 +34,19 @@ section.contact {
 		grid-gap: 30px;
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
+		@include tablet {
+			grid-template-areas: 'form' 'info' 'map';
+		}
+
 		.form {
 			display: flex;
 			flex-direction: column;
 			position: relative;
 
 			@include tablet {
+				grid-area: form;
 				grid-column: 1 / -1;
+				margin-bottom: 2rem;
 			}
 
 			.field-block {
@@ -80,11 +86,11 @@ section.contact {
 						background: #fff;
 					}
 					&:before {
-						font-size: 1.5em;
-						top: 39px;
-						left: 15px;
 						color: $accent-color;
+						font-size: 1.5em;
+						left: 15px;
 						position: absolute;
+						top: 39px;
 					}
 				}
 			}
@@ -95,16 +101,13 @@ section.contact {
 				color: $accent-color;
 				cursor: pointer;
 				display: inline-block;
-				font-weight: bold;
 				font-size: 0.8em;
+				font-weight: bold;
 				letter-spacing: 0.05em;
 				padding: 15px;
 				text-transform: uppercase;
 				transition: all 0.3s;
 				width: fit-content;
-				position: absolute;
-				bottom: 0;
-				left: 0;
 
 				&:hover {
 					background: rgba($accent-color, 0.15);
@@ -114,41 +117,85 @@ section.contact {
 					outline: none;
 				}
 			}
+
+			.output-msg {
+				p {
+					margin: 0;
+					padding: 0;
+
+					&.msg-sending {
+						position: relative;
+						padding: 0 0 0 30px;
+
+						&:before {
+							animation: spin 1s linear infinite;
+							content: '';
+							border: 3px solid $accent-color;
+							border-left: 3px solid $main-color;
+							position: absolute;
+							top: 0;
+							left: 0;
+							border-radius: 50%;
+							height: 20px;
+							width: 20px;
+						}
+					}
+
+					&.msg-ok {
+						color: aquamarine;
+					}
+
+					&.msg-error {
+						color: tomato;
+					}
+				}
+			}
 		}
 
-		.gmap {
-			background: $main-color;
-			border: 3px solid #ddd;
+		.map-holder {
+			width: 100%;
+			height: 100%;
 			position: relative;
 
 			@include tablet {
-				grid-column: 1 / -1;
+				grid-area: map;
 				height: 300px;
-				margin-bottom: 30px;
 			}
 
-			.mark {
-				span {
-					background: $accent-color;
-					color: #fff;
-					display: block;
-					position: relative;
-					text-align: center;
-					text-transform: uppercase;
-					padding: 9px;
-					width: 100px;
-					z-index: 2;
+			.gmap {
+				background: $main-color;
+				border: 3px solid #ddd;
+				position: relative;
 
-					&:before {
+				@include tablet {
+					grid-column: 1 / -1;
+					height: 300px;
+					margin-bottom: 30px;
+				}
+
+				.mark {
+					span {
 						background: $accent-color;
-						top: calc(100% - 10px);
-						content: '';
-						height: 20px;
-						left: calc(50% - 10px);
-						position: absolute;
-						transform: rotate(45deg);
-						width: 20px;
-						z-index: -1;
+						color: #fff;
+						display: block;
+						position: relative;
+						text-align: center;
+						text-transform: uppercase;
+						padding: 9px;
+						width: 100px;
+						z-index: 2;
+
+						&:before {
+							background: $accent-color;
+							top: calc(100% - 10px);
+							content: '';
+							height: 20px;
+							left: calc(50% - 10px);
+							position: absolute;
+							transform: rotate(45deg);
+							width: 20px;
+							z-index: -1;
+						}
 					}
 				}
 			}
@@ -156,6 +203,7 @@ section.contact {
 
 		.contact-info {
 			@include tablet {
+				grid-area: info;
 				grid-column: 1 / -1;
 			}
 
@@ -191,5 +239,12 @@ section.contact {
 				}
 			}
 		}
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
