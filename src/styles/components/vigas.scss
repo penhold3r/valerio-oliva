@@ -99,6 +99,7 @@ section.laminated {
 
 				.specs-icon {
 					background: #fff;
+					border: none;
 					border-radius: 50%;
 					cursor: pointer;
 					height: 100px;
@@ -258,6 +259,8 @@ section.laminated {
 			}
 
 			.arrow {
+				background: transparent;
+				border: none;
 				color: #fff;
 				cursor: pointer;
 				font-size: 2em;
@@ -266,6 +269,7 @@ section.laminated {
 				opacity: 0.6;
 				height: 50px;
 				width: 40px;
+				outline: none;
 				position: absolute;
 				top: 0;
 				transition: all 0.3s;

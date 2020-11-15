@@ -4,7 +4,7 @@ const defStyles = {
 	slider: {
 		height: '100%',
 		position: 'relative',
-		width: '100%'
+		width: '100%',
 	},
 	slide: {
 		height: '100%',
@@ -14,18 +14,18 @@ const defStyles = {
 		top: 0,
 		transition: 'all 0.3s',
 		width: '100%',
-		zIndex: 3
+		zIndex: 3,
 	},
 	sliderImg: {
 		height: '100%',
 		objectFit: 'cover',
 		opacity: 1,
 		display: 'block',
-		width: '100%'
+		width: '100%',
 	},
 	onTop: {
 		opacity: 1,
-		zIndex: 1
+		zIndex: 1,
 	},
 	pagination: {
 		bottom: 0,
@@ -35,7 +35,7 @@ const defStyles = {
 		margin: '0 auto',
 		position: 'absolute',
 		right: 0,
-		zIndex: 99
+		zIndex: 99,
 	},
 	navigation: {
 		bottom: 0,
@@ -47,13 +47,13 @@ const defStyles = {
 		right: 0,
 		top: 0,
 		width: '100%',
-		zIndex: 99
+		zIndex: 99,
 	},
 	navigationArrows: {
 		backgroundColor: 'rgba(0, 0, 0, 0)',
 		border: 'none',
 		cursor: 'pointer',
-		outline: 'none'
+		outline: 'none',
 	},
 	tile: {
 		background: '#CCC',
@@ -67,12 +67,12 @@ const defStyles = {
 		padding: 0,
 		transition: 'all 0.3s',
 		WebkitAppearance: 'none',
-		width: '20px'
+		width: '20px',
 	},
 	activeTile: {
 		background: '#999',
-		opacity: 1
-	}
+		opacity: 1,
+	},
 }
 
 const Slider = ({ config: userConfig, children }) => {
@@ -85,7 +85,7 @@ const Slider = ({ config: userConfig, children }) => {
 		navigation: true,
 		pagination: false,
 		delay: 4500,
-		paginationStyle: {}
+		paginationStyle: {},
 	}
 
 	const config = { ...defConfig, ...userConfig }
@@ -94,12 +94,12 @@ const Slider = ({ config: userConfig, children }) => {
 		...defStyles,
 		tile: {
 			...defStyles.tile,
-			...config.paginationStyle
+			...config.paginationStyle,
 		},
 		activeTile: {
 			...defStyles.activeTile,
-			...config.paginationStyle
-		}
+			...config.paginationStyle,
+		},
 	}
 
 	const createPagination = (slides, activeTile) => {
@@ -119,12 +119,13 @@ const Slider = ({ config: userConfig, children }) => {
 						className={classes}
 						style={style}
 						onClick={() => handlePagination(currentIndex)}
+						aria-label={key}
 					/>
 				)
 			})
 
 		return (
-			<nav className="pagination" style={styles.pagination}>
+			<nav className='pagination' style={styles.pagination}>
 				{tiles}
 			</nav>
 		)
@@ -134,19 +135,17 @@ const Slider = ({ config: userConfig, children }) => {
 		const currentIndex = activeSlide
 
 		return (
-			<nav className="slider-navigation" style={styles.navigation}>
+			<nav className='slider-navigation' style={styles.navigation}>
 				<button
-					className="nav-btn prev"
+					className='nav-btn prev'
 					style={styles.navigationArrows}
-					onClick={() => handlePagination(currentIndex - 1)}
-				>
+					onClick={() => handlePagination(currentIndex - 1)}>
 					&lang;
 				</button>
 				<button
-					className="nav-btn next"
+					className='nav-btn next'
 					style={styles.navigationArrows}
-					onClick={() => handlePagination(currentIndex + 1)}
-				>
+					onClick={() => handlePagination(currentIndex + 1)}>
 					&rang;
 				</button>
 			</nav>
@@ -176,24 +175,38 @@ const Slider = ({ config: userConfig, children }) => {
 		})
 
 	useEffect(() => {
-		const images = React.Children.map(children, child =>
+		console.log('mount')
+		const styledImages = React.Children.map(children, child =>
 			React.cloneElement(child, { style: styles.sliderImg })
 		)
 
-		setImages(images)
+		setImages(styledImages)
 		setNavigation(config.navigation)
 		setPagination(config.pagination)
 
-		images &&
-			setInterval(() => {
-				const onTop = currentSlide === images.length - 1 ? 0 : currentSlide + 1
-				setCurrentSlide(onTop)
-			}, config.delay)
-	}, [currentSlide])
+		//eslint-disable-next-line
+	}, [])
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			const onTop = currentSlide === images.length - 1 ? 0 : currentSlide + 1
+			console.log('----------\nslide')
+			console.log('currSlide', currentSlide)
+			console.log('total', images.length - 1)
+			console.log('on top', onTop)
+			setCurrentSlide(onTop)
+		}, config.delay)
+
+		return () => {
+			console.log('unmount')
+			clearInterval(interval)
+		}
+		//eslint-disable-next-line
+	}, [images])
 
 	return (
-		<div className="slider" style={styles.slider}>
-			<div className="slides">{slides}</div>
+		<div className='slider' style={styles.slider}>
+			<div className='slides'>{slides}</div>
 			{pagination && createPagination(slides, currentSlide)}
 			{navigation && createNavigation(slides, currentSlide)}
 		</div>

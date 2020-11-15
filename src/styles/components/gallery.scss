@@ -41,12 +41,15 @@
 
 				.close-modal {
 					background: #fff;
+					border: none;
+					border-radius: 0;
 					color: $accent-color;
 					cursor: pointer;
 					font-size: 30px;
 					font-weight: bold;
 					height: 26px;
 					line-height: 20px;
+					outline: none;
 					padding: 3px;
 					position: absolute;
 					right: 3px;
@@ -78,6 +81,8 @@
 		}
 
 		.thumb-image {
+			display: block;
+			text-decoration: none;
 			height: 100%;
 			object-fit: cover;
 			width: 100%;

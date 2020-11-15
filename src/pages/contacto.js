@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { submitFormData } from 'submit-form-data'
+import submitForm from '../utils/submit-form'
 
 import Layout from '../components/Layout'
 import GoogleMap from '../components/Map'
@@ -27,7 +27,7 @@ const ContactPage = () => {
 		console.log('submit')
 
 		e.preventDefault()
-		human && submitFormData(form, submitSettings)
+		human && submitForm(form, submitSettings)
 	}
 
 	const mapProps = {

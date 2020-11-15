@@ -83,9 +83,9 @@ const LaminatedPage = () => {
 					<div className='specs-content'>
 						<header className='modal-header'>
 							<h3>{modalState.modalTitle && modalState.modalTitle}</h3>
-							<div className='close-modal' onClick={() => closeModal()} role='button'>
+							<button className='close-modal' onClick={() => closeModal()}>
 								&times;
-							</div>
+							</button>
 						</header>
 						<div className='modal-content'>
 							{modalState.modalContent && modalState.modalContent}
@@ -95,9 +95,9 @@ const LaminatedPage = () => {
 
 				<div className='float-btn-wrapper'>
 					<div className={floatOpen ? 'float-btn open' : 'float-btn'}>
-						<div className='arrow' onClick={() => setFloatState(!floatOpen)}>
+						<button className='arrow' onClick={() => setFloatState(!floatOpen)}>
 							<span>&lang;</span>
-						</div>
+						</button>
 						<img src={floatImg} alt='[ Productos Laminados ]' />
 						<h3 className='tag'>
 							<span>Nuevos</span>
@@ -156,13 +156,16 @@ const LaminatedPage = () => {
 					</div>
 					<div className='specs'>
 						<div className='spec-block'>
-							<div
+							<button
 								className='specs-icon'
+								onKeyDown={() =>
+									openModal('Tipos de Estructuras', <img src={estructuras} alt='' />)
+								}
 								onClick={() =>
 									openModal('Tipos de Estructuras', <img src={estructuras} alt='' />)
 								}>
 								<img src={estructuraIcon} alt='' />
-							</div>
+							</button>
 							<h2 className='specs-title'>
 								<span>Tipos de </span>
 								<span className='grey'>Estructuras</span>
@@ -181,11 +184,12 @@ const LaminatedPage = () => {
 							</h2>
 						</div> */}
 						<div className='spec-block'>
-							<div
+							<button
 								className='specs-icon'
+								onKeyDown={() => openModal('Tipos de Cortes', <img src={cortes} alt='' />)}
 								onClick={() => openModal('Tipos de Cortes', <img src={cortes} alt='' />)}>
 								<img src={cortesIcon} alt='' />
-							</div>
+							</button>
 							<h2 className='specs-title'>
 								<span>Tipos de </span>
 								<span className='grey'>Cortes</span>

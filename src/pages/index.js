@@ -7,17 +7,17 @@ import materiales from '../assets/images/valerio_oliva-materiales-home.jpg'
 
 const IndexPage = () => (
 	<Layout>
-		<section className="landing fader">
-			<div className="landing-grid">
-				<div className="products-options">
-					<Link to="/productos/materiales">
-						<img src={materiales} alt="" />
+		<section className='landing fader home-page'>
+			<div className='landing-grid'>
+				<div className='products-options'>
+					<Link to='/productos/materiales'>
+						<img src={materiales} alt='' />
 						<h2>Maderas y materiales</h2>
 					</Link>
 				</div>
-				<div className="products-options">
-					<Link to="/productos/vigas-laminadas">
-						<img src={vigas} alt="" />
+				<div className='products-options'>
+					<Link to='/productos/vigas-laminadas'>
+						<img src={vigas} alt='' />
 						<h2>Vigas Laminadas</h2>
 					</Link>
 				</div>

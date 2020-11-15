@@ -1,7 +1,7 @@
 {
 	"name": "valerio-oliva",
 	"description": "Valerio Oliva",
-	"version": "2.0.2",
+	"version": "2.1.1",
 	"author": "penHolder Designerd <penhold3r@gmail.com>",
 	"repository": {
 		"type": "git",
@@ -16,12 +16,12 @@
 		"@svgr/webpack": "^5.4.0",
 		"classnames": "^2.2.6",
 		"g": "^2.0.1",
-		"gatsby": "^2.24.63",
+		"gatsby": "^2.26.1",
 		"gatsby-cli": "^2.12.99",
 		"gatsby-image": "^2.4.19",
+		"gatsby-plugin-google-fonts": "^1.0.1",
 		"gatsby-plugin-manifest": "^2.4.30",
 		"gatsby-plugin-offline": "^3.2.28",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.3",
 		"gatsby-plugin-react-helmet": "^3.3.11",
 		"gatsby-plugin-react-svg": "^3.0.0",
 		"gatsby-plugin-sass": "^2.3.13",

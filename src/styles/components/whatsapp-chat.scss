@@ -1,0 +1,138 @@
+.whatsapp-chat {
+	bottom: 1.5rem;
+	height: 43px;
+	overflow: hidden;
+	position: fixed;
+	right: 1rem;
+	transition: 0.5s ease-in-out;
+	z-index: 99;
+
+	&.open {
+		height: 10rem;
+
+		.button {
+			box-shadow: none;
+			height: 2rem;
+			right: calc(100% - 2rem);
+			width: 2rem;
+		}
+
+		.chat-window {
+			transform: translateY(0);
+		}
+	}
+
+	.button {
+		background: $accent-color;
+		border-radius: 50%;
+		border: none;
+		box-shadow: $box-shadow;
+		cursor: pointer;
+		height: 40px;
+		position: absolute;
+		right: 0.25rem;
+		top: 0;
+		transition: 0.5s ease-in-out;
+		width: 40px;
+		z-index: 1;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		.icon {
+			align-items: center;
+			color: white;
+			display: flex;
+			font-size: 1.25rem;
+			height: 100%;
+			justify-content: center;
+		}
+	}
+
+	.chat-window {
+		box-shadow: $box-shadow;
+		transition: 0.3s ease-in-out;
+		transform: translateY(45px);
+
+		.header {
+			background: $accent-color;
+			color: white;
+			display: flex;
+			font-weight: bold;
+			justify-content: space-between;
+			padding: 0.25rem 0 0.25rem 2.5rem;
+
+			button {
+				background: transparent;
+				border: none;
+				color: white;
+				cursor: pointer;
+				font-size: 1.25rem;
+				opacity: 0.85;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+		}
+
+		.chat {
+			background: $light;
+			padding-top: 1rem;
+
+			.bubble {
+				background: rgba($accent-color, 0.2);
+				border-radius: 0.5rem;
+				margin: 0 3rem 2rem 0.5rem;
+				padding: 0.5rem;
+
+				p {
+					font-size: 0.8rem;
+					margin: 0;
+				}
+			}
+
+			.message {
+				background: $accent-color;
+				display: flex;
+				gap: 0.5rem;
+				padding: 0.5rem;
+
+				.input {
+					background: rgba(white, 0.15);
+					border-radius: 0;
+					border: none;
+					color: white;
+					outline: none;
+					padding: 0.1rem 0.25rem;
+
+					@include placeholder {
+						color: rgba(white, 0.5);
+						opacity: 1;
+					}
+
+					&:focus {
+						border: 1px solid rgba(white, 0.5);
+
+						@include placeholder {
+							color: transparent;
+						}
+					}
+				}
+
+				.submit {
+					background: none;
+					border-radius: none;
+					border: none;
+					color: white;
+					cursor: pointer;
+
+					&:hover {
+						background: rgba(white, 0.15);
+					}
+				}
+			}
+		}
+	}
+}

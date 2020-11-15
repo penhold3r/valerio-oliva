@@ -2,10 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Carrousel from '../components/Carrousel'
-
 import 'sanitize.css'
 import '../fonts/icons.css'
 import '../styles/index.scss'
@@ -82,18 +78,13 @@ const Layout = ({ title, children }) => {
 						href: faviconPNG,
 						rel: 'shortcut icon',
 						type: 'image/png',
+
 						sizes: '32x32 192x192',
 					},
 				]}
 			/>
 
-			<Header />
-
 			<main>{children}</main>
-
-			<Carrousel />
-
-			<Footer />
 		</React.Fragment>
 	)
 }

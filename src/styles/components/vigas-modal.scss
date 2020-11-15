@@ -45,12 +45,15 @@
 			}
 
 			.close-modal {
+				align-self: flex-start;
+				background: transparent;
+				border: none;
 				color: #f39200;
+				cursor: pointer;
 				font-size: 30px;
 				font-weight: bold;
-				cursor: pointer;
-				align-self: flex-start;
 				height: 20px;
+				outline: none;
 				line-height: 20px;
 				text-align: center;
 
