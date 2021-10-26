@@ -9,7 +9,7 @@ import Carrousel from './src/components/Carrousel'
 export const wrapPageElement = ({ element }) => (
 	<>
 		<Header />
-		<AdsModal active={window && window.activeModal} />
+		<AdsModal />
 		{element}
 		<Carrousel />
 		<Footer />

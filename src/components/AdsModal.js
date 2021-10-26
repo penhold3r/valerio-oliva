@@ -1,12 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
-const AdsModal = ({ active = false }) => {
+const AdsModal = () => {
+	const [active, setActive] = useState(false)
 	const modal = useRef()
 
 	const closeModal = () => {
-		console.log('modal close')
 		modal.current.classList.add('closed')
 	}
+
+	useEffect(() => {
+		window && setActive(window.activeModal)
+		//eslint-disable-next-line
+	}, [])
 
 	return (
 		<div className={active ? 'ads-modal active' : 'ads-modal'} ref={modal}>

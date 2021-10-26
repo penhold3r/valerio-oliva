@@ -49,11 +49,11 @@ const Layout = ({ title, children }) => {
 					},
 					{
 						property: 'og:url',
-						content: 'https://valerio-oliva.com/',
+						content: 'http://valeriooliva.com/',
 					},
 					{
 						name: 'twitter:site',
-						content: 'https://valerio-oliva.com/',
+						content: 'http://valeriooliva.com/',
 					},
 					{
 						property: 'og:type',

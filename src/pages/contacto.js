@@ -6,6 +6,8 @@ import GoogleMap from '../components/Map'
 
 import mapIcon from '../assets/images/map_mark.svg'
 
+import contact from '../data/contact.json'
+
 const ContactPage = () => {
 	const [focused, setFocus] = useState(false)
 
@@ -80,27 +82,27 @@ const ContactPage = () => {
 					<div className='contact-info'>
 						<div className='contact-block icon icon-map-mark'>
 							<h4>Visitanos en:</h4>
-							<p>Rodriguez Peña 2250 - (5501) - Godoy Cruz - Mendoza - Argentina.</p>
+							<p dangerouslySetInnerHTML={{ __html: contact.address }} />
 						</div>
 						<div className='contact-block icon icon-mail-line'>
 							<h4>Nuestro e-mail:</h4>
 							<p>
-								<a href='mailto:ventas@valeriooliva.com'>ventas@valeriooliva.com</a>
+								<a href={`mailto:${contact.email}`}>{contact.email}</a>
 							</p>
 						</div>
 						<div className='contact-block icon icon-phone'>
 							<h4>Lamanos al:</h4>
 							<p>
-								<a href='tel:+54264316010'>
-									54 - 261- <strong>431 6010</strong>
+								<a href={`tel:${contact.tel.number}`}>
+									<span dangerouslySetInnerHTML={{ __html: contact.tel.formatted }} />
 								</a>
 							</p>
 						</div>
 						<div className='contact-block icon icon-whatsapp'>
 							<h4>Escribinos al:</h4>
 							<p>
-								<a href='https://wa.me/+542612179863?text=Hola!'>
-									54 - 261- <strong>217 9863</strong>
+								<a href={`https://wa.me/${contact.whatsapp.number}?text=${contact.whatsapp.text}`}>
+									<span dangerouslySetInnerHTML={{ __html: contact.whatsapp.content }} />
 								</a>
 							</p>
 						</div>

@@ -3,6 +3,8 @@ import React from 'react'
 import Link from '../components/Link'
 import Services from './Services'
 
+import contact from '../data/contact.json'
+
 const Footer = () => {
 	return (
 		<React.Fragment>
@@ -12,17 +14,11 @@ const Footer = () => {
 					<div className='footer-block'>
 						<h4>Seguinos en</h4>
 						<div className='links'>
-							<a
-								href='https://facebook.com/valerioolivamaderas'
-								title='Facebook'
-								className='social'>
+							<a href={contact.facebook} title='Facebook' className='social'>
 								<i className='icon icon-facebook' />
 								<span>Facebook</span>
 							</a>
-							<a
-								href='https://instagram.com/valeriolivamza'
-								title='Instagram'
-								className='social'>
+							<a href={contact.instagram} title='Instagram' className='social'>
 								<i className='icon icon-instagram' />
 								<span>Instagram</span>
 							</a>
@@ -31,21 +27,17 @@ const Footer = () => {
 					<div className='footer-block'>
 						<h4>Contactenos</h4>
 						<div className='links contact-links'>
-							<a href='tel:tel:+542614316010'>
+							<a href={`tel:${contact.tel.number}`}>
 								<i className='icon icon-phone' />
-								<span>
-									54 - 261- <strong>431 6010</strong>
-								</span>
+								<span dangerouslySetInnerHTML={{ __html: contact.tel.formatted }} />
 							</a>
 							<a
-								href='https://wa.me/+542612179863?text=Hola!'
+								href={`https://wa.me/${contact.whatsapp.number}?text=${contact.whatsapp.text}`}
 								title='WhatsApp'
 								target='_blank'
 								rel='noopener noreferrer'>
 								<i className='icon icon-whatsapp' />
-								<span>
-									+54 261 <strong>217 9863</strong>
-								</span>
+								<span dangerouslySetInnerHTML={{ __html: contact.whatsapp.content }} />
 							</a>
 						</div>
 					</div>
@@ -62,7 +54,7 @@ const Footer = () => {
 					<small>
 						<span className='credit-links'>
 							<span className='credit-label'>Diseño y Desarrollo: </span>
-							<Link to='https://www.instagram.com/cm_brand_agency/' className='credit-link'>
+							<Link to='https://goo.gl/maps/9F6jGeftNPhzphnJ9' className='credit-link'>
 								BeWine
 							</Link>
 							&ensp;&amp;&ensp;

@@ -26,7 +26,7 @@ export const onPreRenderHTML = ({ getHeadComponents }) => {
 export const wrapPageElement = ({ element }) => (
 	<>
 		<Header />
-		<AdsModal active={window && window.activeModal} />
+		<AdsModal />
 		{element}
 		<Carrousel />
 		<Footer />
